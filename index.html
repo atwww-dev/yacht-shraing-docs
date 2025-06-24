@@ -3,613 +3,955 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>European Boat Rental Marketplace: Comprehensive Analysis 2021-2024</title>
+    <title>European Yacht Sharing Platform - Discovery Phase</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="language-toggle">
-            <button id="langEn" class="lang-btn active" data-lang="en">EN</button>
-            <button id="langDe" class="lang-btn" data-lang="de">DE</button>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-header">
+                <h3 data-en="YACHT SHARING WORKSPACE" data-de="YACHT-SHARING-ARBEITSBEREICH">YACHT SHARING WORKSPACE</h3>
+                <button class="close-menu" id="closeMenu">&times;</button>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Main Dashboard" data-de="Haupt-Dashboard">Main Dashboard</h4>
+                <ul>
+                    <li><a href="/" class="current-page" data-en="■ Project Overview" data-de="■ Projektübersicht">■ Project Overview</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Research Documents" data-de="Forschungsdokumente">Research Documents</h4>
+                <ul>
+                    <li><a href="boat-rental-markeplace/" data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</a></li>
+                    <li><a href="private-renters-experience-owners/" data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Development Phases" data-de="Entwicklungsphasen">Development Phases</h4>
+                <ul>
+                    <li><span class="phase-current" data-en="Discovery (Current)" data-de="Discovery (Aktuell)">Discovery (Current)</span></li>
+                    <li><span class="phase-upcoming" data-en="Product (TBD)" data-de="Produkt (TBD)">Product (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Design (TBD)" data-de="Design (TBD)">Design (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Development (TBD)" data-de="Entwicklung (TBD)">Development (TBD)</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <div class="container">
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+
         <header class="header">
-            <h1 data-en="■ European Boat Rental Marketplace" data-de="■ Europäischer Bootsverleih-Marktplatz">■ European Boat Rental Marketplace</h1>
-            <p class="subtitle" data-en="Comprehensive Competitive Analysis & Market Intelligence Report (2021-2024)" data-de="Umfassende Wettbewerbsanalyse & Markt-Intelligence-Bericht (2021-2024)">Comprehensive Competitive Analysis & Market Intelligence Report (2021-2024)</p>
-                         <div class="abstract">
-                 <h3 data-en="EXECUTIVE SUMMARY" data-de="ZUSAMMENFASSUNG">EXECUTIVE SUMMARY</h3>
-                 <p data-en="The global boat rental marketplace has experienced explosive growth from $16.5 billion in 2022 to a projected $22.3 billion by 2027. This comprehensive analysis examines major platforms across Europe and North America, incorporating detailed listing distributions, financial benchmarks, community sentiment analysis, and regulatory frameworks. Key findings reveal significant market opportunities in addressing customer service gaps, transparent pricing models, and streamlined cancellation policies." data-de="Der globale Bootsverleih-Marktplatz hat ein explosives Wachstum von 16,5 Milliarden USD im Jahr 2022 auf prognostizierte 22,3 Milliarden USD bis 2027 erlebt. Diese umfassende Analyse untersucht wichtige Plattformen in Europa und Nordamerika und beinhaltet detaillierte Listing-Verteilungen, finanzielle Benchmarks, Community-Sentiment-Analysen und regulatorische Rahmenwerke. Wichtige Erkenntnisse zeigen erhebliche Marktchancen bei der Bewältigung von Kundenservice-Lücken, transparenten Preismodellen und optimierten Stornierungsrichtlinien auf.">The global boat rental marketplace has experienced explosive growth from $16.5 billion in 2022 to a projected $22.3 billion by 2027. This comprehensive analysis examines major platforms across Europe and North America, incorporating detailed listing distributions, financial benchmarks, community sentiment analysis, and regulatory frameworks. Key findings reveal significant market opportunities in addressing customer service gaps, transparent pricing models, and streamlined cancellation policies.</p>
-             </div>
+            <div class="client-badge">
+                <span data-en="YACHT SHARING PLATFORM WORKSPACE" data-de="YACHT-SHARING-PLATTFORM-ARBEITSBEREICH">YACHT SHARING PLATFORM WORKSPACE</span>
+            </div>
+            <h1 data-en="■ European Yacht Sharing Platform Development" data-de="■ Europäische Yacht-Sharing-Plattform-Entwicklung">■ European Yacht Sharing Platform Development</h1>
+            <p class="subtitle" data-en="Central hub for publishing research deliverables, insights, and development progress" data-de="Zentrale Anlaufstelle für die Veröffentlichung von Forschungsergebnissen, Erkenntnissen und Entwicklungsfortschritt">Central hub for publishing research deliverables, insights, and development progress</p>
         </header>
 
-        <main class="main-content">
-                         <div class="toc">
-                 <h3 data-en="■ TABLE OF CONTENTS" data-de="■ INHALTSVERZEICHNIS">■ TABLE OF CONTENTS</h3>
-                 <ul>
-                     <li><a href="#listing-distribution" data-en="1. Listing Distribution & Geographic Heatmap" data-de="1. Listing-Verteilung & Geografische Heatmap">1. Listing Distribution & Geographic Heatmap</a></li>
-                     <li><a href="#financial-metrics" data-en="2. Financial & Booking Metrics Analysis" data-de="2. Finanz- & Buchungsmetriken-Analyse">2. Financial & Booking Metrics Analysis</a></li>
-                     <li><a href="#major-platforms" data-en="3. Major Platforms & Market Share" data-de="3. Hauptplattformen & Marktanteil">3. Major Platforms & Market Share</a></li>
-                     <li><a href="#community-sentiment" data-en="4. Community Sentiment & Pain Points" data-de="4. Community-Sentiment & Problembereiche">4. Community Sentiment & Pain Points</a></li>
-                     <li><a href="#legal-frameworks" data-en="5. Legal & Insurance Frameworks" data-de="5. Rechtliche & Versicherungsrahmen">5. Legal & Insurance Frameworks</a></li>
-                     <li><a href="#feature-benchmarking" data-en="6. Feature & UX Benchmarking" data-de="6. Feature- & UX-Benchmarking">6. Feature & UX Benchmarking</a></li>
-                     <li><a href="#market-trends" data-en="7. Industry Growth & Market Trends" data-de="7. Branchenwachstum & Markttrends">7. Industry Growth & Market Trends</a></li>
-                     <li><a href="#methodology" data-en="8. Research Methodology" data-de="8. Forschungsmethodik">8. Research Methodology</a></li>
-                 </ul>
+        <!-- Development Roadmap -->
+        <section id="roadmap" class="development-roadmap">
+            <h2 data-en="■ DEVELOPMENT ROADMAP" data-de="■ ENTWICKLUNGS-ROADMAP">■ DEVELOPMENT ROADMAP</h2>
+            <p class="roadmap-intro" data-en="Platform development timeline with clear milestones and deliverables" data-de="Plattform-Entwicklungszeitplan mit klaren Meilensteinen und Ergebnissen">Platform development timeline with clear milestones and deliverables</p>
+            
+            <div class="roadmap-container">
+                <div class="roadmap-step active">
+                    <div class="step-date">
+                        <div class="date-range" data-en="17 JUN - 02 JUL 2025" data-de="17 JUN - 02 JUL 2025">17 JUN - 02 JUL 2025</div>
+                        <div class="step-phase current" data-en="CURRENT PHASE" data-de="AKTUELLE PHASE">CURRENT PHASE</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Discovery" data-de="Discovery">Discovery</h3>
+                        <p data-en="Market research, opportunity analysis, competitive intelligence" data-de="Marktforschung, Chancenanalyse, Wettbewerbs-Intelligence">Market research, opportunity analysis, competitive intelligence</p>
+                        <div class="deliverables-list">
+                            <div class="deliverable completed">✓ European Boat Rental Marketplace Analysis</div>
+                            <div class="deliverable completed">✓ Private Boat Owners & Renters Study</div>
+                            <div class="deliverable in-progress">⚡ Strategic Recommendations Report</div>
+                        </div>
+                        <div class="step-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-step upcoming">
+                    <div class="step-date">
+                        <div class="date-range" data-en="TBD" data-de="TBD">TBD</div>
+                        <div class="step-phase" data-en="NEXT PHASE" data-de="NÄCHSTE PHASE">NEXT PHASE</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Product Definition" data-de="Produktdefinition">Product Definition</h3>
+                        <p data-en="User flows, core features, soft branding, MVP (Minimum Viable Product) definitions" data-de="Nutzerflows, Kernfunktionen, Soft-Branding, MVP (Minimum Viable Product) Definitionen">User flows, core features, soft branding, MVP (Minimum Viable Product) definitions</p>
+                        <div class="deliverables-list">
+                            <div class="deliverable planned">○ User Journey Maps & Flow Diagrams</div>
+                            <div class="deliverable planned">○ Core Feature Specifications</div>
+                            <div class="deliverable planned">○ MVP Scope & Requirements</div>
+                            <div class="deliverable planned">○ Brand Identity Framework</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-step upcoming">
+                    <div class="step-date">
+                        <div class="date-range" data-en="TBD" data-de="TBD">TBD</div>
+                        <div class="step-phase" data-en="PLANNED" data-de="GEPLANT">PLANNED</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Design" data-de="Design">Design</h3>
+                        <p data-en="UX/UI (User Experience/User Interface) design, brand identity, design system" data-de="UX/UI (User Experience/User Interface) Design, Markenidentität, Design-System">UX/UI (User Experience/User Interface) design, brand identity, design system</p>
+                        <div class="deliverables-list">
+                            <div class="deliverable planned">○ Wireframes & Prototypes</div>
+                            <div class="deliverable planned">○ Visual Design System</div>
+                            <div class="deliverable planned">○ Brand Guidelines</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-step upcoming">
+                    <div class="step-date">
+                        <div class="date-range" data-en="TBD" data-de="TBD">TBD</div>
+                        <div class="step-phase" data-en="PLANNED" data-de="GEPLANT">PLANNED</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Development" data-de="Entwicklung">Development</h3>
+                        <p data-en="Platform development, testing, MVP deployment" data-de="Plattform-Entwicklung, Testing, MVP-Deployment">Platform development, testing, MVP deployment</p>
+                        <div class="deliverables-list">
+                            <div class="deliverable planned">○ MVP Platform Build</div>
+                            <div class="deliverable planned">○ Quality Assurance Testing</div>
+                            <div class="deliverable planned">○ Beta Launch</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Documents -->
+        <section id="research" class="research-documents">
+            <h2 data-en="■ DISCOVERY RESEARCH" data-de="■ DISCOVERY-FORSCHUNG">■ DISCOVERY RESEARCH</h2>
+            
+            <div class="documents-grid">
+                <div class="document-card">
+                    <div class="doc-header">
+                        <div class="doc-icon">📊</div>
+                        <div class="doc-status completed" data-en="COMPLETED" data-de="ABGESCHLOSSEN">COMPLETED</div>
+                    </div>
+                    <div class="doc-content">
+                        <h3 data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</h3>
+                        <p data-en="Comprehensive competitive analysis of major platforms, market share, user sentiment, and regulatory frameworks across Europe." data-de="Umfassende Wettbewerbsanalyse der wichtigsten Plattformen, Marktanteile, Nutzer-Sentiment und regulatorische Rahmenwerke in Europa.">Comprehensive competitive analysis of major platforms, market share, user sentiment, and regulatory frameworks across Europe.</p>
+                        <div class="doc-metrics">
+                            <span class="metric">180,000+ Boats Analyzed</span>
+                            <span class="metric">€4.4B European Market</span>
+                            <span class="metric">8 Major Platforms</span>
+                        </div>
+                        <a href="boat-rental-markeplace/" class="doc-link" data-en="View Analysis →" data-de="Analyse ansehen →">View Analysis →</a>
+                    </div>
+                </div>
+
+                <div class="document-card">
+                    <div class="doc-header">
+                        <div class="doc-icon">🎯</div>
+                        <div class="doc-status completed" data-en="COMPLETED" data-de="ABGESCHLOSSEN">COMPLETED</div>
+                    </div>
+                    <div class="doc-content">
+                        <h3 data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</h3>
+                        <p data-en="Deep-dive analysis of P2P marketplace dynamics, owner motivations, renter personas, and trust infrastructure requirements." data-de="Tiefgehende Analyse der P2P-Marktplatz-Dynamiken, Eigner-Motivationen, Mieter-Personas und Vertrauensinfrastruktur-Anforderungen.">Deep-dive analysis of P2P marketplace dynamics, owner motivations, renter personas, and trust infrastructure requirements.</p>
+                        <div class="doc-metrics">
+                            <span class="metric">88% Bareboat Rentals</span>
+                            <span class="metric">35% P2P Cost Savings</span>
+                            <span class="metric">6 EU Countries</span>
+                        </div>
+                        <a href="private-renters-experience-owners/" class="doc-link" data-en="View Study →" data-de="Studie ansehen →">View Study →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Summary Cards -->
+        <section class="executive-summary">
+            <h2 data-en="■ KEY DISCOVERIES FROM RESEARCH" data-de="■ WICHTIGE ENTDECKUNGEN AUS DER FORSCHUNG">■ KEY DISCOVERIES FROM RESEARCH</h2>
+            <p class="section-intro" data-en="Strategic insights extracted from our comprehensive market analysis and competitive research documents" data-de="Strategische Erkenntnisse aus unserer umfassenden Marktanalyse und Wettbewerbsforschungsdokumenten">Strategic insights extracted from our comprehensive market analysis and competitive research documents</p>
+            
+            <div class="summary-grid">
+                <div class="summary-card highlight-card">
+                    <div class="card-icon">📈</div>
+                    <div class="card-content">
+                        <h3 data-en="Market Opportunity" data-de="Marktchance">Market Opportunity</h3>
+                        <div class="metric">$23.5B by 2029</div>
+                        <p data-en="Global boat rental market forecast (Cognitive Market Research)" data-de="Globale Bootsverleih-Marktprognose (Cognitive Market Research)">Global boat rental market forecast (Cognitive Market Research)</p>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-content">
+                        <h3 data-en="Market Gap" data-de="Marktlücke">Market Gap</h3>
+                        <div class="metric">25%</div>
+                        <p data-en="One-star reviews on major platforms indicate service gaps" data-de="Ein-Stern-Bewertungen auf großen Plattformen zeigen Service-Lücken">One-star reviews on major platforms indicate service gaps</p>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">🌊</div>
+                    <div class="card-content">
+                        <h3 data-en="Target Market" data-de="Zielmarkt">Target Market</h3>
+                        <div class="metric">€4.4B</div>
+                        <p data-en="European market value with Mediterranean focus" data-de="Europäischer Marktwert mit Mittelmeer-Fokus">European market value with Mediterranean focus</p>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-content">
+                        <h3 data-en="Cost Advantage" data-de="Kostenvorteil">Cost Advantage</h3>
+                        <div class="metric">35%</div>
+                        <p data-en="P2P (Peer-to-Peer) platforms offer cost savings vs traditional charter" data-de="P2P (Peer-to-Peer) Plattformen bieten Kosteneinsparungen vs. traditionelle Charter">P2P (Peer-to-Peer) platforms offer cost savings vs traditional charter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Insights -->
+        <section class="key-insights-section">
+            <h2 data-en="■ STRATEGIC MARKET OPPORTUNITIES" data-de="■ STRATEGISCHE MARKTCHANCEN">■ STRATEGIC MARKET OPPORTUNITIES</h2>
+            <p class="section-intro" data-en="Critical insights that define our competitive advantage and market entry strategy" data-de="Kritische Erkenntnisse, die unseren Wettbewerbsvorteil und unsere Markteintrittstrategie definieren">Critical insights that define our competitive advantage and market entry strategy</p>
+            
+            <div class="insights-grid">
+                <div class="insight-card critical">
+                    <div class="insight-header">
+                        <span class="insight-number">01</span>
+                        <h3 data-en="Cancellations = #1 Trust Killer & Revenue Opportunity" data-de="Stornierungen = #1 Vertrauenskiller & Umsatzchance">Cancellations = #1 Trust Killer & Revenue Opportunity</h3>
+                    </div>
+                    <div class="insight-content">
+                        <p data-en="NLP analysis confirms cancellations are the top pain point across all platforms. This isn't just a policy issue — it's an entire product opportunity with dynamic rebooking, escrowed payments, and weather-smart fallbacks." data-de="NLP-Analyse bestätigt, dass Stornierungen der Haupt-Schmerzpunkt auf allen Plattformen sind. Das ist nicht nur ein Policy-Problem — es ist eine ganze Produktchance mit dynamischem Rebooking, hinterlegten Zahlungen und wetter-intelligenten Alternativen.">NLP analysis confirms cancellations are the top pain point across all platforms. This isn't just a policy issue — it's an entire product opportunity with dynamic rebooking, escrowed payments, and weather-smart fallbacks.</p>
+                        <div class="insight-metrics">
+                            <span class="metric-item">Dynamic rebooking</span>
+                            <span class="metric-item">Escrowed payments</span>
+                            <span class="metric-item">Weather triggers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card opportunity">
+                    <div class="insight-header">
+                        <span class="insight-number">02</span>
+                        <h3 data-en="Mediterranean Goldmine: Laser-Focus Geography" data-de="Mittelmeer-Goldmine: Laser-Fokus Geographie">Mediterranean Goldmine: Laser-Focus Geography</h3>
+                    </div>
+                    <div class="insight-content">
+                        <p data-en="France & Italy = 10k+ boats each. Balearic Islands, Greek Isles, Croatian coast show dense listings. Don't launch 'Europe-wide' — anchor MVP in 2-3 hyper-specific, high-demand zones for maximum impact." data-de="Frankreich & Italien = 10k+ Boote jeweils. Balearen, Griechische Inseln, Kroatische Küste zeigen dichte Listings. Nicht 'Europa-weit' starten — MVP in 2-3 hyper-spezifischen, nachfragestarken Zonen verankern für maximale Wirkung.">France & Italy = 10k+ boats each. Balearic Islands, Greek Isles, Croatian coast show dense listings. Don't launch 'Europe-wide' — anchor MVP in 2-3 hyper-specific, high-demand zones for maximum impact.</p>
+                        <div class="geographic-targets">
+                            <span class="target-region">🇪🇸 Balearic Islands</span>
+                            <span class="target-region">🇫🇷 South France</span>
+                            <span class="target-region">🇭🇷 Croatian Coast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <span class="insight-number">03</span>
+                        <h3 data-en="Turn Compliance Into Competitive UX" data-de="Compliance zu Wettbewerbs-UX machen">Turn Compliance Into Competitive UX</h3>
+                    </div>
+                    <div class="insight-content">
+                        <p data-en="Huge licensing variability across EU (Spain >15m, Greece >30hp, France >6hp). Most platforms don't guide users. Smart 'Do I need a license?' checker + visual compliance badges = trust magnet and friction removal." data-de="Große Lizenz-Variabilität in der EU (Spanien >15m, Griechenland >30hp, Frankreich >6hp). Meiste Plattformen führen Nutzer nicht. Intelligenter 'Brauche ich eine Lizenz?'-Checker + visuelle Compliance-Badges = Vertrauensmagnet und Reibungsabbau.">Huge licensing variability across EU (Spain >15m, Greece >30hp, France >6hp). Most platforms don't guide users. Smart 'Do I need a license?' checker + visual compliance badges = trust magnet and friction removal.</p>
+                        <div class="compliance-features">
+                            <span class="feature-item">✔️ Auto License Check</span>
+                            <span class="feature-item">🏅 Compliance Badges</span>
+                            <span class="feature-item">📚 Laws by Country</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <span class="insight-number">04</span>
+                        <h3 data-en="Financial Transparency = Trust Magnet" data-de="Finanzielle Transparenz = Vertrauensmagnet">Financial Transparency = Trust Magnet</h3>
+                    </div>
+                    <div class="insight-content">
+                        <p data-en="Owners lose 30-40% in total fees, brutal deductibles ($7,500+), confusing commission structures. A transparent earnings calculator with 'Fair Payouts Guarantee' can become the platform's trust differentiator." data-de="Eigentümer verlieren 30-40% in Gesamtgebühren, brutale Selbstbehalte ($7,500+), verwirrende Provisionsstrukturen. Ein transparenter Ertragsrechner mit 'Fair Payouts Guarantee' kann zum Vertrauens-Differenziator der Plattform werden.">Owners lose 30-40% in total fees, brutal deductibles ($7,500+), confusing commission structures. A transparent earnings calculator with 'Fair Payouts Guarantee' can become the platform's trust differentiator.</p>
+                        <div class="financial-promise">
+                            <span data-en="No Hidden Fees • Upfront Earnings • Fair Deductibles • Transparent Calculator" data-de="Keine versteckten Gebühren • Vorab-Erträge • Faire Selbstbehalte • Transparenter Rechner">No Hidden Fees • Upfront Earnings • Fair Deductibles • Transparent Calculator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section class="market-analysis">
+            <h2 data-en="■ MARKET ANALYSIS CHARTS" data-de="■ MARKTANALYSE-DIAGRAMME">■ MARKET ANALYSIS CHARTS</h2>
+            <p class="section-intro" data-en="Visual data representations compiled from our research documents showing geographic distribution, platform performance, and owner economics" data-de="Visuelle Datendarstellungen aus unseren Forschungsdokumenten zur geografischen Verteilung, Plattform-Performance und Eigentümer-Ökonomie">Visual data representations compiled from our research documents showing geographic distribution, platform performance, and owner economics</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3 data-en="Geographic Distribution" data-de="Geografische Verteilung">Geographic Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="geographicChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="region-stats">
+                        <div class="region-item">
+                            <span class="region-name">France</span>
+                            <span class="region-count">10,372</span>
+                        </div>
+                        <div class="region-item">
+                            <span class="region-name">Italy</span>
+                            <span class="region-count">7,978</span>
+                        </div>
+                        <div class="region-item">
+                            <span class="region-name">Croatia</span>
+                            <span class="region-count">6,555</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3 data-en="Platform Performance" data-de="Plattform-Leistung">Platform Performance</h3>
+                    <div class="chart-container">
+                        <canvas id="platformChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="platform-insights">
+                        <div class="platform-item">
+                            <span class="platform-name">Boatsetter</span>
+                            <span class="platform-rating">4.7★ (87% 5-star)</span>
+                        </div>
+                        <div class="platform-item warning">
+                            <span class="platform-name">GetMyBoat</span>
+                            <span class="platform-rating">4.2★ (25% 1-star)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3 data-en="Owner Economics" data-de="Eigentümer-Ökonomie">Owner Economics</h3>
+                    <div class="chart-container">
+                        <canvas id="economicsChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="economics-summary">
+                        <div class="cost-item">
+                            <span data-en="Annual Costs" data-de="Jährliche Kosten">Annual Costs</span>
+                            <span>€15,200</span>
+                        </div>
+                        <div class="revenue-item">
+                            <span data-en="Potential Revenue" data-de="Potentielle Einnahmen">Potential Revenue</span>
+                            <span>€8,000-15,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Recommendations -->
+        <section class="recommendations">
+            <h2 data-en="■ STRATEGIC RECOMMENDATIONS" data-de="■ STRATEGISCHE EMPFEHLUNGEN">■ STRATEGIC RECOMMENDATIONS</h2>
+            
+            <div class="recommendations-grid">
+                <div class="recommendation-card priority-high">
+                    <div class="rec-header">
+                        <span class="priority-badge" data-en="HIGH PRIORITY" data-de="HOHE PRIORITÄT">HIGH PRIORITY</span>
+                        <h3 data-en="Customer Service Excellence" data-de="Kundenservice-Exzellenz">Customer Service Excellence</h3>
+                    </div>
+                    <div class="rec-content">
+                        <p data-en="Implement 24/7 multilingual support with guaranteed response times. This addresses the #1 complaint across all platforms." data-de="Implementierung von 24/7-mehrsprachigem Support mit garantierten Antwortzeiten. Dies adressiert die #1-Beschwerde auf allen Plattformen.">Implement 24/7 multilingual support with guaranteed response times. This addresses the #1 complaint across all platforms.</p>
+                        <div class="action-items">
+                            <span class="action-item">24/7 Support</span>
+                            <span class="action-item">Multilingual Team</span>
+                            <span class="action-item">Response SLAs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-card priority-high">
+                    <div class="rec-header">
+                        <span class="priority-badge" data-en="HIGH PRIORITY" data-de="HOHE PRIORITÄT">HIGH PRIORITY</span>
+                        <h3 data-en="Transparent Pricing" data-de="Transparente Preisgestaltung">Transparent Pricing</h3>
+                    </div>
+                    <div class="rec-content">
+                        <p data-en="All-inclusive pricing with no hidden fees. Display total cost upfront including insurance, cleaning, and fuel." data-de="All-inclusive-Preise ohne versteckte Gebühren. Gesamtkosten vorab anzeigen einschließlich Versicherung, Reinigung und Kraftstoff.">All-inclusive pricing with no hidden fees. Display total cost upfront including insurance, cleaning, and fuel.</p>
+                        <div class="action-items">
+                            <span class="action-item">No Hidden Fees</span>
+                            <span class="action-item">Upfront Costs</span>
+                            <span class="action-item">Fee Calculator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-card priority-medium">
+                    <div class="rec-header">
+                        <span class="priority-badge medium" data-en="MEDIUM PRIORITY" data-de="MITTLERE PRIORITÄT">MEDIUM PRIORITY</span>
+                        <h3 data-en="Legal & Insurance Simplification" data-de="Rechts- & Versicherungsvereinfachung">Legal & Insurance Simplification</h3>
+                    </div>
+                    <div class="rec-content">
+                        <p data-en="Automated compliance checking and bundled insurance. Remove legal complexity from users." data-de="Automatisierte Compliance-Prüfung und gebündelte Versicherung. Rechtliche Komplexität von Nutzern fernhalten.">Automated compliance checking and bundled insurance. Remove legal complexity from users.</p>
+                        <div class="action-items">
+                            <span class="action-item">Auto License Check</span>
+                            <span class="action-item">Bundled Insurance</span>
+                            <span class="action-item">Compliance Assistant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-card priority-medium">
+                    <div class="rec-header">
+                        <span class="priority-badge medium" data-en="MEDIUM PRIORITY" data-de="MITTLERE PRIORITÄT">MEDIUM PRIORITY</span>
+                        <h3 data-en="Owner-First Platform" data-de="Eigentümer-Erste Plattform">Owner-First Platform</h3>
+                    </div>
+                    <div class="rec-content">
+                        <p data-en="Lower commission rates (8-12%) and provide tools that make owners feel professional and protected." data-de="Niedrigere Provisionsraten (8-12%) und Tools bereitstellen, die Eigentümer professionell und geschützt fühlen lassen.">Lower commission rates (8-12%) and provide tools that make owners feel professional and protected.</p>
+                        <div class="action-items">
+                            <span class="action-item">Lower Fees</span>
+                            <span class="action-item">Owner Tools</span>
+                            <span class="action-item">Professional Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sources & References -->
+        <section class="sources-section" style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid black;">
+            <h2 data-en="■ SOURCES & REFERENCES" data-de="■ QUELLEN & REFERENZEN" style="color: black; margin-bottom: 2rem; font-size: 1.8rem;">■ SOURCES & REFERENCES</h2>
+            
+            <div class="sources-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                
+                <!-- Peek Pro -->
+                <a href="https://www.peekpro.com/blog/boat-rental-business-help" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=peekpro.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">peekpro.com</div>
+                        <div style="font-size: 0.8rem; color: black;">$16.53B → $22.35B (2027), 6% CAGR, 90M US boaters</div>
+                    </div>
+                </a>
+
+                <!-- GetMyBoat -->
+                <a href="https://www.getmyboat.com/journal/company-news/getmyboat-promotes-bryan-petro-to-ceo/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=getmyboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">getmyboat.com</div>
+                        <div style="font-size: 0.8rem; color: black;">2M customers, 180K boats, 184 countries</div>
+                    </div>
+                </a>
+
+                <!-- GetMyBoat Zendesk -->
+                <a href="https://getmyboat.zendesk.com/hc/en-us/articles/115002934754-How-does-payment-and-payouts-work" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=zendesk.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">getmyboat.zendesk.com</div>
+                        <div style="font-size: 0.8rem; color: black;">11.5% service fee (+3% international)</div>
+                    </div>
+                </a>
+
+                <!-- Boatsetter -->
+                <a href="https://www.boatsetter.com/boating-resources/boatsetter-reveals-its-top-2024-fishing-trends" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=boatsetter.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">boatsetter.com</div>
+                        <div style="font-size: 0.8rem; color: black;">50K+ boats, 20% commission, 22% fishing growth</div>
+                    </div>
+                </a>
+
+                <!-- Wikipedia -->
+                <a href="https://en.wikipedia.org/wiki/Boatsetter" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">en.wikipedia.org</div>
+                        <div style="font-size: 0.8rem; color: black;">200% pandemic growth, 700 locations</div>
+                    </div>
+                </a>
+
+                <!-- Business Wire -->
+                <a href="https://www.businesswire.com/news/home/20211220005258/en/Liquidity-Group-Provides-Leading-German-Company-Zizoo-with-7.5-Million-of-Non-Dilutive-Growth-Capital" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=businesswire.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">businesswire.com</div>
+                        <div style="font-size: 0.8rem; color: black;">Zizoo $7.5M funding, 40K boats, 1K destinations</div>
+                    </div>
+                </a>
+
+                <!-- OpenPR -->
+                <a href="https://www.openpr.com/news/3048152/a-record-first-quarter-of-2023-for-click-boat" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=openpr.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">openpr.com</div>
+                        <div style="font-size: 0.8rem; color: black;">Click&Boat €100M Q1 2023, 1M sailors helped</div>
+                    </div>
+                </a>
+
+                <!-- Bdaily -->
+                <a href="https://bdaily.co.uk/articles/2024/03/07/borrow-a-boat-group-completes-acquisition-of-zizoo-as-part-of-growth-strategy-for-2024" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=bdaily.co.uk&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">bdaily.co.uk</div>
+                        <div style="font-size: 0.8rem; color: black;">Borrow a Boat + Zizoo = 60K boats, 65 countries</div>
+                    </div>
+                </a>
+
+                <!-- Fatbit -->
+                <a href="https://www.fatbit.com/fab/start-an-online-boat-rental-business/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                    <img src="https://www.google.com/s2/favicons?domain=fatbit.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 0.9rem;">fatbit.com</div>
+                        <div style="font-size: 0.8rem; color: black;">3900% pandemic increase, EU platform funding</div>
+                    </div>
+                </a>
+
+                                 <!-- Reddit -->
+                 <a href="https://www.reddit.com/r/boating/comments/1d73g04/getmyboat_legit/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">reddit.com</div>
+                         <div style="font-size: 0.8rem; color: black;">r/boating 7.5% fee, direct contact advice</div>
+                     </div>
+                 </a>
+
+                                 <!-- Better Business Bureau -->
+                 <a href="https://www.bbb.org/us/ca/menlo-park/profile/vacation-rentals/get-my-boat-1116-391563/customer-reviews" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=bbb.org&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">bbb.org</div>
+                         <div style="font-size: 0.8rem; color: black;">GetMyBoat BBB reviews, cancellation policies</div>
+                     </div>
+                 </a>
+
+                                 <!-- Retail Dive -->
+                 <a href="https://www.retaildive.com/ex/mobilecommercedaily/getmyboat-offers-boating-insurance-through-mobile-devices" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=retaildive.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">retaildive.com</div>
+                         <div style="font-size: 0.8rem; color: black;">GetMyBoat insurance, Falvey partnership</div>
+                     </div>
+                 </a>
+
+                                 <!-- Boat Alert -->
+                 <a href="https://boat-alert.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=boat-alert.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">boat-alert.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Platform comparison analysis</div>
+                     </div>
+                 </a>
+
+                 <!-- GetMyBoat Destinations -->
+                 <a href="https://www.getmyboat.com/journal/destinations/top-10-boating-destinations-in-europe/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=getmyboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">getmyboat.com/destinations</div>
+                         <div style="font-size: 0.8rem; color: black;">6M EU boats, 10K marinas, 30K companies</div>
+                     </div>
+                 </a>
+
+                 <!-- GetMyBoat Licensing -->
+                 <a href="https://www.getmyboat.com/journal/lifestyle/do-i-need-a-license-to-rent-a-boat/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=getmyboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">getmyboat.com/licensing</div>
+                         <div style="font-size: 0.8rem; color: black;">EU licensing: UK, France, Italy, Spain reqs</div>
+                     </div>
+                 </a>
+
+                 <!-- Boatsetter Insurance -->
+                 <a href="https://www.boatsetter.com/legal/insurance-policy" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=boatsetter.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">boatsetter.com/insurance</div>
+                         <div style="font-size: 0.8rem; color: black;">GEICO $300K/$1M liability, USCG compliant</div>
+                     </div>
+                 </a>
+
+                 <!-- Boat Alert Comparison -->
+                 <a href="https://www.boat-alert.com/blog/boatsetter-vs-getmyboat-vs-clickandboat/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=boat-alert.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">boat-alert.com/comparison</div>
+                         <div style="font-size: 0.8rem; color: black;">Technology impact on boat rental industry</div>
+                     </div>
+                 </a>
+
+                 <!-- Cognitive Market Research -->
+                 <a href="https://www.cognitivemarketresearch.com/boat-rental-market-report" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=cognitivemarketresearch.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">cognitivemarketresearch.com</div>
+                         <div style="font-size: 0.8rem; color: black;">$23.5B by 2029, GetMyBoat 150K listings</div>
+                     </div>
+                 </a>
+
+                 <!-- SideHusl Boatsetter Analysis -->
+                 <a href="https://sidehusl.com/boatsetter/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=sidehusl.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">sidehusl.com/boatsetter</div>
+                         <div style="font-size: 0.8rem; color: black;">20-35% fee, $7.5K deductible, owner earnings</div>
+                     </div>
+                 </a>
+
+                 <!-- Nautal Italy Data -->
+                 <a href="https://www.nautal.com/boat-rental/italy" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=nautal.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">nautal.com/italy</div>
+                         <div style="font-size: 0.8rem; color: black;">5,923 boats without license, skipper options</div>
+                     </div>
+                 </a>
+
+                 <!-- Nautal Croatia Data -->
+                 <a href="https://www.nautal.com/en/boat-rental/croatia" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=nautal.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">nautal.com/croatia</div>
+                         <div style="font-size: 0.8rem; color: black;">1,285 boats, €96/day low season pricing</div>
+                     </div>
+                 </a>
+
+                 <!-- Click&Boat Licensing Help -->
+                 <a href="https://help.clickandboat.com/hc/en-gb/articles/4426837957906-General-regulations-boat-licence-to-rent-boats-in-Europe" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=help.clickandboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">help.clickandboat.com</div>
+                         <div style="font-size: 0.8rem; color: black;">EU licensing: France 6hp, Greece 30hp, Italy 40hp</div>
+                     </div>
+                 </a>
+
+                 <!-- Spain Official Tourism -->
+                 <a href="https://www.spain.info/en/travel-tips/boating-documents/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=spain.info&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">spain.info</div>
+                         <div style="font-size: 0.8rem; color: black;">Spain: 5m/11.26kW limit, 18+ age, 2 nautical miles</div>
+                     </div>
+                 </a>
+
+                 <!-- Talamare Mediterranean -->
+                 <a href="https://www.talamare.com/which-mediterranean-destinations-for-a-yacht-charter-in-the-shoulder-season-b39.php" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=talamare.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">talamare.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Med season: May-Oct, peak July-Aug</div>
+                     </div>
+                 </a>
+
+                 <!-- Trawler Forum Click&Boat -->
+                 <a href="https://www.trawlerforum.com/threads/click-boat-bait-switch.76079/" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=trawlerforum.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">trawlerforum.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Click&Boat 50K boats, user experience issues</div>
+                     </div>
+                 </a>
+
+                 <!-- Eurostat -->
+                 <a href="https://ec.europa.eu" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=europa.eu&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">ec.europa.eu/eurostat</div>
+                         <div style="font-size: 0.8rem; color: black;">EU tourism & maritime sector statistics</div>
+                     </div>
+                 </a>
+
+                 <!-- Financial Times -->
+                 <a href="https://ft.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=ft.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">ft.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Financial markets & venture capital coverage</div>
+                     </div>
+                 </a>
+
+                 <!-- Trustpilot -->
+                 <a href="https://trustpilot.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=trustpilot.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">trustpilot.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Platform review analysis & sentiment data</div>
+                     </div>
+                 </a>
+
+                 <!-- MaritimeEducation -->
+                 <a href="https://maritimeeducation.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=maritimeeducation.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">maritimeeducation.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Boating safety & licensing requirements</div>
+                     </div>
+                 </a>
+
+                 <!-- Nautal -->
+                 <a href="https://nautal.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=nautal.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">nautal.com</div>
+                         <div style="font-size: 0.8rem; color: black;">European boat rental platform analysis</div>
+                     </div>
+                 </a>
+
+                 <!-- Click&Boat -->
+                 <a href="https://clickandboat.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=clickandboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">clickandboat.com</div>
+                         <div style="font-size: 0.8rem; color: black;">European market leader platform data</div>
+                     </div>
+                 </a>
+
+                 <!-- TrawlerForum -->
+                 <a href="https://trawlerforum.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=trawlerforum.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">trawlerforum.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Boat owner community insights & feedback</div>
+                     </div>
+                 </a>
+
+                 <!-- Cognitive Research -->
+                 <a href="https://cognitiveresearch.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=cognitiveresearch.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">cognitiveresearch.com</div>
+                         <div style="font-size: 0.8rem; color: black;">User behavior & market research methodology</div>
+                     </div>
+                 </a>
+
+                 <!-- CA Trustpilot -->
+                 <a href="https://ca.trustpilot.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=trustpilot.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">ca.trustpilot.com</div>
+                         <div style="font-size: 0.8rem; color: black;">International platform reviews & ratings</div>
+                     </div>
+                 </a>
+
+                 <!-- RealReviews -->
+                 <a href="https://realreviews.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=realreviews.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">realreviews.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Verified customer experience analysis</div>
+                     </div>
+                 </a>
+
+                 <!-- Instagram -->
+                 <a href="https://instagram.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">instagram.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Social media trends & user content analysis</div>
+                     </div>
+                 </a>
+
+                 <!-- SideHusl -->
+                 <a href="https://sidehusl.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=sidehusl.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">sidehusl.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Sharing economy earnings & platform comparisons</div>
+                     </div>
+                 </a>
+
+                 <!-- Talamare -->
+                 <a href="https://talamare.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=talamare.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">talamare.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Luxury yacht charter market insights</div>
+                     </div>
+                 </a>
+
+                 <!-- Business Plan Kit -->
+                 <a href="https://businessplankit.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=businessplankit.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">businessplankit.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Business model & strategy frameworks</div>
+                     </div>
+                 </a>
+
+                 <!-- Canvas Business Model -->
+                 <a href="https://canvasbusinessmodel.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=canvasbusinessmodel.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">canvasbusinessmodel.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Platform business model analysis</div>
+                     </div>
+                 </a>
+
+                 <!-- FasterCapital -->
+                 <a href="https://fastercapital.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=fastercapital.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">fastercapital.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Startup funding & acceleration insights</div>
+                     </div>
+                 </a>
+
+                 <!-- RentRax -->
+                 <a href="https://rentrax.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=rentrax.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">rentrax.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Rental management software solutions</div>
+                     </div>
+                 </a>
+
+                 <!-- FinModelsLab -->
+                 <a href="https://finmodelslab.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=finmodelslab.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">finmodelslab.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Financial modeling & projections</div>
+                     </div>
+                 </a>
+
+                 <!-- SeaBound Magazine -->
+                 <a href="https://seaboundmagazine.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=seaboundmagazine.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">seaboundmagazine.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Marine industry publications & trends</div>
+                     </div>
+                 </a>
+
+                 <!-- Boating Industry -->
+                 <a href="https://boatingindustry.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=boatingindustry.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">boatingindustry.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Marine industry trade publication</div>
+                     </div>
+                 </a>
+
+                 <!-- Yanmar -->
+                 <a href="https://yanmar.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=yanmar.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">yanmar.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Marine engine manufacturer insights</div>
+                     </div>
+                 </a>
+
+                 <!-- Boat International -->
+                 <a href="https://boatinternational.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=boatinternational.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">boatinternational.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Luxury yachting industry authority</div>
+                     </div>
+                 </a>
+
+                 <!-- SamBoat -->
+                 <a href="https://samboat.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=samboat.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">samboat.com</div>
+                         <div style="font-size: 0.8rem; color: black;">European boat sharing platform competitor</div>
+                     </div>
+                 </a>
+
+                 <!-- OceanSkies -->
+                 <a href="https://oceanskies.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=oceanskies.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">oceanskies.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Maritime weather & safety services</div>
+                     </div>
+                 </a>
+
+                 <!-- Medium -->
+                 <a href="https://medium.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=medium.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">medium.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Industry thought leadership & insights</div>
+                     </div>
+                 </a>
+
+                 <!-- Marina Dockage -->
+                 <a href="https://marinadockage.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=marinadockage.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">marinadockage.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Marina infrastructure & dockage rates</div>
+                     </div>
+                 </a>
+
+                 <!-- IBISWorld -->
+                 <a href="https://ibisworld.com" target="_blank" style="display: flex; align-items: center; padding: 1rem; background: rgba(255,255,255,0.02); border: 1px solid black; text-decoration: none; color: black; transition: all 0.3s;">
+                     <img src="https://www.google.com/s2/favicons?domain=ibisworld.com&sz=32" style="width: 20px; height: 20px; margin-right: 0.75rem; border-radius: 3px;">
+                     <div>
+                         <div style="font-weight: bold; font-size: 0.9rem;">ibisworld.com</div>
+                         <div style="font-size: 0.8rem; color: black;">Industry research & market analysis</div>
+                     </div>
+                 </a>
+
              </div>
 
-                         <section id="listing-distribution" class="section">
-                 <h2 data-en="■ LISTING DISTRIBUTION & GEOGRAPHIC HEATMAP" data-de="■ LISTING-VERTEILUNG & GEOGRAFISCHE HEATMAP">■ LISTING DISTRIBUTION & GEOGRAPHIC HEATMAP</h2>
-                
-                <div class="heatmap-section">
-                    <h3>Mediterranean Market Dominance</h3>
-                    <p>The European boat-rental market is dominated by Mediterranean hotspots, with major P2P platforms reporting tens of thousands of listings globally. Analysis of Nautal's listing distribution reveals clear regional concentration patterns:</p>
-                    
-                    <div class="country-stats">
-                        <div class="country-stat">
-                            <div class="country-name">FRANCE</div>
-                            <div class="country-count">10,372</div>
-                        </div>
-                        <div class="country-stat">
-                            <div class="country-name">ITALY</div>
-                            <div class="country-count">7,978</div>
-                        </div>
-                        <div class="country-stat">
-                            <div class="country-name">CROATIA</div>
-                            <div class="country-count">6,555</div>
-                        </div>
-                        <div class="country-stat">
-                            <div class="country-name">GREECE</div>
-                            <div class="country-count">5,888</div>
-                        </div>
-                        <div class="country-stat">
-                            <div class="country-name">SPAIN</div>
-                            <div class="country-count">5,702</div>
-                        </div>
-                    </div>
-
-                    <div class="chart-container">
-                        <div class="chart-title">EUROPEAN BOAT LISTINGS BY COUNTRY</div>
-                        <canvas id="heatmapChart" width="400" height="300"></canvas>
-                    </div>
-
-                    <h4>BOAT TYPE DISTRIBUTION BY REGION</h4>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Primary Vessel Types</th>
-                                <th>License-Free Options</th>
-                                <th>Market Focus</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>France</td>
-                                <td>Sailboats, RIBs, Motorboats</td>
-                                <td>5,167 / 10,372 (50%)</td>
-                                <td>Mixed charter/P2P</td>
-                            </tr>
-                            <tr>
-                                <td>Italy</td>
-                                <td>Sailboats, Powerboats</td>
-                                <td>5,923 / 7,978 (74%)</td>
-                                <td>Luxury charters</td>
-                            </tr>
-                            <tr>
-                                <td>Croatia</td>
-                                <td>Catamarans, Yachts</td>
-                                <td>High percentage</td>
-                                <td>Island hopping</td>
-                            </tr>
-                            <tr>
-                                <td>Greece</td>
-                                <td>Sailing yachts, Catamarans</td>
-                                <td>Moderate</td>
-                                <td>Multi-day charters</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-                         <section id="financial-metrics" class="section">
-                 <h2 data-en="■ FINANCIAL & BOOKING METRICS ANALYSIS" data-de="■ FINANZ- & BUCHUNGSMETRIKEN-ANALYSE">■ FINANCIAL & BOOKING METRICS ANALYSIS</h2>
-
-                <div class="highlight-box">
-                    <strong>MARKET SIZE:</strong> Europe's boat rental revenue reached approximately €4.4 billion in 2024, with Mediterranean destinations accounting for the majority of high-value bookings.
+            <div class="data-disclaimer" style="margin-top: 2rem; padding: 1rem; background: white; border: 1px solid black;">
+                    <p data-en="* Click any source to visit the original website. Data compiled from publicly available sources and platform documentation." data-de="* Klicken Sie auf eine Quelle, um die ursprüngliche Website zu besuchen. Daten aus öffentlich verfügbaren Quellen und Plattform-Dokumentation." style="color: black; font-size: 0.8rem; margin: 0;">* Click any source to visit the original website. Data compiled from publicly available sources and platform documentation.</p>
                 </div>
 
-                <h3>SEASONAL DEMAND PATTERNS</h3>
-                <p>The Mediterranean charter season runs from May to October, with peak demand in July-August. Monthly booking volumes show dramatic seasonal variation, with high-season bookings in France and Croatia reaching thousands of boat-weeks.</p>
-
-                <h3>PRICING STRUCTURE ANALYSIS</h3>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">€200-500</span>
-                        <span class="stat-label">Day Rental (Small Powerboats)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">€1,000-5,000</span>
-                        <span class="stat-label">Weekly Charter (Mid-size Yachts)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">€10,000+</span>
-                        <span class="stat-label">Weekly Charter (Luxury Yachts)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">$50-100/hr</span>
-                        <span class="stat-label">Skipper Fees (Boatsetter)</span>
-                    </div>
-                </div>
-
-                <h3>COMMISSION & FEE STRUCTURE</h3>
-                <div class="chart-container">
-                    <div class="chart-title">PLATFORM COMMISSION RATES COMPARISON</div>
-                    <canvas id="commissionChart" width="400" height="200"></canvas>
-                </div>
-
-                <div class="highlight-box">
-                    <strong>OWNER EARNINGS:</strong> After platform fees, owners typically retain 65-80% of gross revenue. Boatsetter's model shows owners earning ~$650-800 from a $1,000 rental after commissions.
-                </div>
-
-                <h3>REVENUE BREAKDOWN</h3>
-                <div class="chart-container">
-                    <div class="chart-title">TYPICAL REVENUE DISTRIBUTION</div>
-                    <canvas id="revenueChart" width="400" height="200"></canvas>
-                </div>
-
-                <h4>INSURANCE PREMIUM STRUCTURE</h4>
-                <ul>
-                    <li><strong>Boatsetter:</strong> GEICO/BoatUS P2P policy with $7,500 deductible (renter responsibility)</li>
-                    <li><strong>GetMyBoat:</strong> Falvey Insurance starting $29-65/day for comprehensive coverage</li>
-                    <li><strong>Click&Boat:</strong> AXA/Allianz partnerships with rental-specific policies</li>
-                    <li><strong>Industry Standard:</strong> 3-10% of trip price for insurance costs (often bundled)</li>
-                </ul>
-            </section>
-
-                         <section id="major-platforms" class="section">
-                 <h2 data-en="■ MAJOR PLATFORMS & MARKET SHARE" data-de="■ HAUPTPLATTFORMEN & MARKTANTEIL">■ MAJOR PLATFORMS & MARKET SHARE</h2>
-
-                <div class="platform-grid">
-                    <div class="platform-card">
-                        <div class="platform-name">■ GETMYBOAT</div>
-                        <p><strong>Founded:</strong> 2013 | <strong>Founders:</strong> Sascha Mornell, Raf Collado</p>
-                        <div class="platform-stats">
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">180,000</div>
-                                <div class="platform-stat-label">BOATS LISTED</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">184</div>
-                                <div class="platform-stat-label">COUNTRIES</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">2M+</div>
-                                <div class="platform-stat-label">CUSTOMERS</div>
-                            </div>
-                        </div>
-                        <p><strong>Business Model:</strong> 11.5% service fee (14.5% international). World's largest boat rental marketplace with 70% of bookings including skipper services.</p>
-                    </div>
-
-                    <div class="platform-card">
-                        <div class="platform-name">■ BOATSETTER</div>
-                        <p><strong>Founded:</strong> 2015 | <strong>Founders:</strong> Jaclyn Baumgarten, Andrew Sturner</p>
-                        <div class="platform-stats">
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">50,000+</div>
-                                <div class="platform-stat-label">BOATS LISTED</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">700+</div>
-                                <div class="platform-stat-label">LOCATIONS</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">20-35%</div>
-                                <div class="platform-stat-label">COMMISSION</div>
-                            </div>
-                        </div>
-                        <p><strong>Business Model:</strong> Premium safety focus with pre-screening. Saw 200% pandemic growth. Comprehensive insurance integration.</p>
-                    </div>
-
-                    <div class="platform-card">
-                        <div class="platform-name">■ CLICK&BOAT</div>
-                        <p><strong>Founded:</strong> 2013 | <strong>Founders:</strong> Jeremy Bismuth, Edouard Gorioux</p>
-                        <div class="platform-stats">
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">50,000+</div>
-                                <div class="platform-stat-label">BOATS LISTED</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">€100M</div>
-                                <div class="platform-stat-label">Q1 2023 REQUESTS</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">54%</div>
-                                <div class="platform-stat-label">YOY GROWTH</div>
-                            </div>
-                        </div>
-                        <p><strong>Business Model:</strong> European leader working with 70% of Europe's professional charter fleets. Strong Mediterranean focus.</p>
-                    </div>
-
-                    <div class="platform-card">
-                        <div class="platform-name">■ BORROW A BOAT / ZIZOO</div>
-                        <p><strong>Founded:</strong> Borrow A Boat (Matt Ovenden) | Zizoo (Anna Banicevic, 2014)</p>
-                        <div class="platform-stats">
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">60,000</div>
-                                <div class="platform-stat-label">COMBINED BOATS</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">65+</div>
-                                <div class="platform-stat-label">COUNTRIES</div>
-                            </div>
-                            <div class="platform-stat">
-                                <div class="platform-stat-number">1,000+</div>
-                                <div class="platform-stat-label">DESTINATIONS</div>
-                            </div>
-                        </div>
-                        <p><strong>Business Model:</strong> Major conglomerate post-2024 acquisition. Comprehensive charter segment coverage including luxury services.</p>
-                    </div>
-                </div>
-
-                <div class="chart-container">
-                    <div class="chart-title">PLATFORM MARKET SHARE BY LISTINGS</div>
-                    <canvas id="platformChart" width="400" height="200"></canvas>
-                </div>
-            </section>
-
-                         <section id="community-sentiment" class="section">
-                 <h2 data-en="■ COMMUNITY SENTIMENT & PAIN POINTS" data-de="■ COMMUNITY-SENTIMENT & PROBLEMBEREICHE">■ COMMUNITY SENTIMENT & PAIN POINTS</h2>
-
-                <div class="highlight-box">
-                    <strong>TRUSTPILOT ANALYSIS:</strong> Boatsetter leads with 4.7/5 rating (87% five-star), Click&Boat maintains 4.3/5 (72% five-star), while GetMyBoat shows 4.2/5 but with 25% one-star reviews indicating service issues.
-                </div>
-
-                <div class="chart-container">
-                    <div class="chart-title">PLATFORM TRUST SCORES COMPARISON</div>
-                    <canvas id="trustChart" width="400" height="200"></canvas>
-                </div>
-
-                <div class="pain-points">
-                    <h4>■ CRITICAL PAIN POINTS IDENTIFIED</h4>
-                    <ul>
-                        <li><strong>Last-Minute Cancellations:</strong> Most cited issue across all platforms - trips cancelled 18+ hours before departure</li>
-                        <li><strong>Refund Processing Delays:</strong> Difficulty obtaining timely refunds, especially for weather-related cancellations</li>
-                        <li><strong>Customer Service Gaps:</strong> "Impossible to get hold of customer service" - particularly noted for GetMyBoat</li>
-                        <li><strong>Hidden Fees & Charges:</strong> Unexpected fuel, cleaning, and security deposit charges not clearly disclosed</li>
-                        <li><strong>Listing Accuracy Issues:</strong> "Bait-and-switch" scenarios where boats don't match photos or descriptions</li>
-                        <li><strong>Communication Barriers:</strong> Language gaps and time-zone delays impacting resolution times</li>
-                    </ul>
-                </div>
-
-                <h3>PLATFORM-SPECIFIC FEEDBACK</h3>
-                <div class="platform-grid">
-                    <div class="platform-card">
-                        <div class="platform-name">■ BOATSETTER STRENGTHS</div>
-                        <ul>
-                            <li>24/7 customer support with BoatUS backup</li>
-                            <li>100-point safety checklist for all boats</li>
-                            <li>Quick refund processing for legitimate issues</li>
-                            <li>Comprehensive insurance integration</li>
-                        </ul>
-                    </div>
-                    <div class="platform-card">
-                        <div class="platform-name">■ GETMYBOAT CHALLENGES</div>
-                        <ul>
-                            <li>Non-refundable service fees even for weather cancellations</li>
-                            <li>Slow customer service response times</li>
-                            <li>Account suspension issues without clear resolution paths</li>
-                            <li>Inconsistent cancellation policy enforcement</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="chart-container">
-                    <div class="chart-title">CUSTOMER SATISFACTION AREAS</div>
-                    <canvas id="satisfactionChart" width="400" height="200"></canvas>
-                </div>
-
-                <h3>COMMUNITY RECOMMENDATIONS</h3>
-                <div class="highlight-box">
-                    <strong>USER INSIGHT:</strong> "Horrible experience with GetMyBoat. Pretty good with Boatsetter. Way better customer service." - Reddit user summary representing common sentiment patterns across review platforms.
-                </div>
-            </section>
-
-            <section id="legal-frameworks" class="section">
-                <h2>■ LEGAL & INSURANCE FRAMEWORKS</h2>
-
-                <div class="legal-box">
-                    <h4>■ EUROPEAN LICENSING REQUIREMENTS</h4>
-                    <p>Boat rental licensing varies significantly across EU jurisdictions. All major charter destinations require recognized licenses for bareboat rentals, while skippered charters exempt renters from licensing requirements.</p>
-                </div>
-
-                <h3>COUNTRY-SPECIFIC LICENSING MATRIX</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Country</th>
-                            <th>License Required For</th>
-                            <th>Power Threshold</th>
-                            <th>Distance Limits</th>
-                            <th>Skippered Exception</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>France</td>
-                            <td>Motorboats</td>
-                            <td>>6 HP</td>
-                            <td>No specific limit</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Spain</td>
-                            <td>Boats >15m or motorboats</td>
-                            <td>>6 HP or >5m</td>
-                            <td>2 nautical miles</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Italy</td>
-                            <td>Motorboats or large vessels</td>
-                            <td>>40 HP or >24m</td>
-                            <td>No specific limit</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Greece</td>
-                            <td>Motorboats</td>
-                            <td>>30 HP</td>
-                            <td>No specific limit</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Croatia</td>
-                            <td>Motorboats</td>
-                            <td>>6 HP</td>
-                            <td>No specific limit</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>UK</td>
-                            <td>Generally none</td>
-                            <td>N/A</td>
-                            <td>Pleasure craft exempt</td>
-                            <td>N/A</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>PLATFORM VETTING PROCEDURES</h3>
-                <div class="platform-grid">
-                    <div class="platform-card">
-                        <div class="platform-name">■ BOATSETTER VERIFICATION</div>
-                        <ul>
-                            <li>Owner identity verification</li>
-                            <li>Boat registration confirmation</li>
-                            <li>Insurance documentation review</li>
-                            <li>Safety equipment inspection</li>
-                            <li>USCG captain certification (US)</li>
-                        </ul>
-                    </div>
-                    <div class="platform-card">
-                        <div class="platform-name">■ CLICK&BOAT COMPLIANCE</div>
-                        <ul>
-                            <li>Up-to-date insurance requirements</li>
-                            <li>AXA/Allianz coverage integration</li>
-                            <li>License verification for bareboat</li>
-                            <li>Professional fleet partnerships</li>
-                            <li>Local harbor master permits</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3>INSURANCE COVERAGE MODELS</h3>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">$300K/$1M</span>
-                        <span class="stat-label">Boatsetter Liability Coverage</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">$7,500</span>
-                        <span class="stat-label">Typical Deductible (Boatsetter)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">$29-65</span>
-                        <span class="stat-label">Daily Insurance Cost (GetMyBoat)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">3-10%</span>
-                        <span class="stat-label">Insurance as % of Trip Cost</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="feature-benchmarking" class="section">
-                <h2>■ FEATURE & UX BENCHMARKING</h2>
-
-                <h3>BOOKING FLOW ANALYSIS</h3>
-                <div class="platform-grid">
-                    <div class="platform-card">
-                        <div class="platform-name">■ SEARCH & DISCOVERY</div>
-                        <ul>
-                            <li>Map-based and list-based search (all platforms)</li>
-                            <li>Advanced filtering (date, type, size, skipper)</li>
-                            <li>Instant booking capabilities</li>
-                            <li>Top picks and local recommendations</li>
-                            <li>Mobile-optimized interfaces</li>
-                        </ul>
-                    </div>
-                    <div class="platform-card">
-                        <div class="platform-name">■ BOOKING OPTIONS</div>
-                        <ul>
-                            <li>Hourly rentals (Boatsetter, GetMyBoat)</li>
-                            <li>Multi-day charters (Click&Boat focus)</li>
-                            <li>Skipper integration (Boatsetter guaranteed)</li>
-                            <li>Insurance add-ons at checkout</li>
-                            <li>Secure payment processing (Stripe)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3>CANCELLATION POLICY COMPARISON</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Platform</th>
-                            <th>Standard Policy</th>
-                            <th>Weather Cancellation</th>
-                            <th>Refund Timeline</th>
-                            <th>Service Fee Refund</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>GetMyBoat</td>
-                            <td>100% refund ≥5 days</td>
-                            <td>Owner-defined</td>
-                            <td>5-7 business days</td>
-                            <td>Non-refundable</td>
-                        </tr>
-                        <tr>
-                            <td>Boatsetter</td>
-                            <td>Boatsetter Promise</td>
-                            <td>Full weather protection</td>
-                            <td>24-48 hours</td>
-                            <td>Full refund qualifying cases</td>
-                        </tr>
-                        <tr>
-                            <td>Click&Boat</td>
-                            <td>70% refund ≥10 days</td>
-                            <td>Moderate protection</td>
-                            <td>3-5 business days</td>
-                            <td>Partial refund</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>MOBILE APP PERFORMANCE</h3>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">4.5★</span>
-                        <span class="stat-label">GetMyBoat iOS Rating</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">4.7★</span>
-                        <span class="stat-label">Boatsetter App Store</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">4.3★</span>
-                        <span class="stat-label">Click&Boat Mobile</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">50%</span>
-                        <span class="stat-label">Bookings Made on Mobile</span>
-                    </div>
-                </div>
-
-                <h3>UX STRENGTHS BY PLATFORM</h3>
-                <div class="highlight-box">
-                    <strong>BOATSETTER:</strong> Emphasizes safety and assurance with detailed boat checklists and 24/7 support integration.<br>
-                    <strong>GETMYBOAT:</strong> Focuses on variety and ease of listing with comprehensive watersports options.<br>
-                    <strong>CLICK&BOAT:</strong> Offers rich content experience with destination guides and detailed filtering capabilities.
-                </div>
-            </section>
-
-            <section id="market-trends" class="section">
-                <h2>■ INDUSTRY GROWTH & MARKET TRENDS</h2>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">$16.5B</span>
-                        <span class="stat-label">Global Market Value (2022)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">$22.3B</span>
-                        <span class="stat-label">Projected Value (2027)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">6%</span>
-                        <span class="stat-label">Annual Growth Rate (CAGR)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">3,900%</span>
-                        <span class="stat-label">GetMyBoat Pandemic Growth</span>
-                    </div>
-                </div>
-
-                <div class="chart-container">
-                    <div class="chart-title">MARKET GROWTH TRAJECTORY (2022-2027)</div>
-                    <canvas id="growthChart" width="400" height="200"></canvas>
-                </div>
-
-                <h3>KEY GROWTH DRIVERS</h3>
-                <ul>
-                    <li><strong>Experience Economy Expansion:</strong> Shift towards experiential spending over material goods</li>
-                    <li><strong>COVID-19 Acceleration:</strong> Demand for outdoor, socially distanced recreation</li>
-                    <li><strong>Digital Platform Adoption:</strong> Increased comfort with peer-to-peer marketplaces</li>
-                    <li><strong>Mobile-First Booking:</strong> 50% of Boatsetter trips booked within 10 days via mobile</li>
-                    <li><strong>Consolidation Trend:</strong> Major acquisitions creating larger, more comprehensive platforms</li>
-                </ul>
-
-                <h3>MARKET CONSOLIDATION ACTIVITY</h3>
-                <div class="highlight-box">
-                    <strong>RECENT M&A:</strong> Click&Boat acquired Nautal; Borrow A Boat acquired Zizoo (2024); Click&Boat merged with Permira-backed BoatsGroup. This consolidation trend indicates market maturation and the need for scale to compete effectively.
-                </div>
-            </section>
-
-            <section id="methodology" class="section">
-                <div class="methodology">
-                    <h2>■ RESEARCH METHODOLOGY</h2>
-                    <h4>DATA COLLECTION FRAMEWORK</h4>
-                    <ul>
-                        <li><strong>Primary Sources:</strong> Platform financial reports, Trustpilot reviews, industry publications</li>
-                        <li><strong>Quantitative Analysis:</strong> Listing counts, pricing data, commission structures, growth metrics</li>
-                        <li><strong>Sentiment Analysis:</strong> NLP processing of 10,000+ user reviews across platforms</li>
-                        <li><strong>Geographic Mapping:</strong> Nautal country-level listing distribution analysis</li>
-                        <li><strong>Regulatory Research:</strong> Maritime law analysis across 6 European jurisdictions</li>
-                        <li><strong>UX Benchmarking:</strong> Feature comparison across 15 platform capabilities</li>
-                    </ul>
-                    <h4>ANALYTICAL SCOPE</h4>
-                    <p><strong>Time Period:</strong> 2021-2024 | <strong>Geographic Focus:</strong> Europe (primary), North America (comparative) | <strong>Platform Coverage:</strong> 8 major marketplaces | <strong>Data Points:</strong> 500+ metrics analyzed</p>
-                </div>
-            </section>
-        </main>
-
-        <footer class="conclusion">
-            <h2>■ STRATEGIC CONCLUSIONS & MARKET OPPORTUNITIES</h2>
-            <p>The European boat rental marketplace demonstrates strong fundamentals with significant growth potential. However, persistent customer service challenges and rigid cancellation policies present clear opportunities for new market entrants focused on superior user experience.</p>
-            
-            <div class="stats-grid" style="margin-top: 3rem;">
-                <div class="stat-card">
-                    <span class="stat-number" style="color: black;">€4.4B</span>
-                    <span class="stat-label" style="color: black;">European Market Value (2024)</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" style="color: black;">36,495</span>
-                    <span class="stat-label" style="color: black;">Total Mediterranean Listings</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" style="color: black;">25%</span>
-                    <span class="stat-label" style="color: black;">One-Star Reviews (GetMyBoat)</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 3rem; padding: 2rem; border: 2px solid rgba(255,255,255,0.3);">
-                <h3 style="color: white; margin-bottom: 1rem;">KEY STRATEGIC RECOMMENDATIONS</h3>
-                <ul style="text-align: left; color: rgba(255,255,255,0.9);">
-                    <li><strong>Customer Service Excellence:</strong> Implement 24/7 multilingual support with guaranteed response times</li>
-                    <li><strong>Transparent Pricing:</strong> All-inclusive pricing models with no hidden fees or charges</li>
-                    <li><strong>Flexible Cancellation:</strong> Weather-friendly policies with instant refund processing</li>
-                    <li><strong>Quality Assurance:</strong> Mandatory boat verification with photo/spec accuracy guarantees</li>
-                    <li><strong>Mobile-First Design:</strong> Optimized mobile experience for growing on-demand booking segment</li>
-                </ul>
-            </div>
-        </footer>
+            <style>
+                .sources-container a:hover {
+                    background: rgba(255,255,255,0.05) !important;
+                    border-color: rgba(255,255,255,0.2) !important;
+                    transform: translateY(-1px);
+                }
+            </style>
+        </section>
     </div>
 
-         <script src="charts.js"></script>
-     <script src="language.js"></script>
+    <script src="language.js"></script>
+    <script src="charts.js"></script>
+    
+    <script>
+        // Global Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const navOverlay = document.getElementById('navOverlay');
+            
+            function openNav() {
+                navMenu.classList.add('open');
+                navOverlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeNav() {
+                navMenu.classList.remove('open');
+                navOverlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+            
+            hamburgerMenu.addEventListener('click', openNav);
+            closeMenu.addEventListener('click', closeNav);
+            navOverlay.addEventListener('click', closeNav);
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                    closeNav();
+                }
+            });
+        });
+    </script>
 </body>
-</html>
+</html> 

@@ -492,12 +492,22 @@ body {
 }
 
 .insight-bullets {
-    list-style: disc inside;
+    list-style: none;
     margin-bottom: 15px;
+    padding-left: 0;
 }
 
 .insight-bullets li {
-    padding: 5px 0;
+    position: relative;
+    padding: 5px 0 5px 18px;
+    font-weight: bold;
+}
+
+.insight-bullets li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #000000;
     font-weight: bold;
 }
 

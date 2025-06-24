@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Boat Rental Experience & Owner Insights</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../navigation.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="language-toggle">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="de">DE</button>
-    </div>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-header">
+                <h3 data-en="YACHT SHARING WORKSPACE" data-de="YACHT-SHARING-ARBEITSBEREICH">YACHT SHARING WORKSPACE</h3>
+                <button class="close-menu" id="closeMenu">&times;</button>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Main Dashboard" data-de="Haupt-Dashboard">Main Dashboard</h4>
+                <ul>
+                    <li><a href="../" data-en="■ Project Overview" data-de="■ Projektübersicht">■ Project Overview</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Research Documents" data-de="Forschungsdokumente">Research Documents</h4>
+                <ul>
+                    <li><a href="../boat-rental-markeplace/" data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</a></li>
+                    <li><a href="./" class="current-page" data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Development Phases" data-de="Entwicklungsphasen">Development Phases</h4>
+                <ul>
+                    <li><span class="phase-current" data-en="Discovery (Current)" data-de="Discovery (Aktuell)">Discovery (Current)</span></li>
+                    <li><span class="phase-upcoming" data-en="Product (TBD)" data-de="Produkt (TBD)">Product (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Design (TBD)" data-de="Design (TBD)">Design (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Development (TBD)" data-de="Entwicklung (TBD)">Development (TBD)</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
 
     <div class="container">
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
         <!-- Header -->
         <header class="header">
             <h1 data-en="■ Private Boat Rental Experience & Owner Insights" data-de="■ Private Bootsverleih-Erfahrungen & Eigner-Einblicke">■ Private Boat Rental Experience & Owner Insights</h1>
@@ -116,34 +161,34 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Italy</td>
-                                <td>ICC/RYA/ASA 104</td>
-                                <td>40.8 HP (30kW)</td>
-                                <td>12nm from coast</td>
+                                <td data-label="Country">Italy</td>
+                                <td data-label="Required License">ICC/RYA/ASA 104</td>
+                                <td data-label="Power Threshold">40.8 HP (30kW)</td>
+                                <td data-label="Distance Limits">12nm from coast</td>
                             </tr>
                             <tr>
-                                <td>Greece</td>
-                                <td>ICC Mandatory</td>
-                                <td>30 HP</td>
-                                <td>5nm from port</td>
+                                <td data-label="Country">Greece</td>
+                                <td data-label="Required License">ICC Mandatory</td>
+                                <td data-label="Power Threshold">30 HP</td>
+                                <td data-label="Distance Limits">5nm from port</td>
                             </tr>
                             <tr>
-                                <td>France</td>
-                                <td>ICC/Permis Plaisance</td>
-                                <td>6 HP</td>
-                                <td>6nm from shelter</td>
+                                <td data-label="Country">France</td>
+                                <td data-label="Required License">ICC/Permis Plaisance</td>
+                                <td data-label="Power Threshold">6 HP</td>
+                                <td data-label="Distance Limits">6nm from shelter</td>
                             </tr>
                             <tr>
-                                <td>Croatia</td>
-                                <td>ICC/RYA/ASA</td>
-                                <td>5 HP</td>
-                                <td>12nm from coast</td>
+                                <td data-label="Country">Croatia</td>
+                                <td data-label="Required License">ICC/RYA/ASA</td>
+                                <td data-label="Power Threshold">5 HP</td>
+                                <td data-label="Distance Limits">12nm from coast</td>
                             </tr>
                             <tr>
-                                <td>Spain</td>
-                                <td>ICC/PER/PNB</td>
-                                <td>15 HP</td>
-                                <td>12nm from coast</td>
+                                <td data-label="Country">Spain</td>
+                                <td data-label="Required License">ICC/PER/PNB</td>
+                                <td data-label="Power Threshold">15 HP</td>
+                                <td data-label="Distance Limits">12nm from coast</td>
                             </tr>
                         </tbody>
                     </table>
@@ -434,7 +479,7 @@
                     <li>Mediterranean = highest rental activity in Europe</li>
                     <li>Post-COVID trend: outdoor, social-distance-friendly travel is now mainstream</li>
                 </ul>
-                <p class="insight-implication">✅ Implication: We're not too late. In fact, we're right on time — but only if we pick a niche and do it better than the rest.</p>
+                <p class="insight-implication"><strong>Implication:</strong> We're not too late. In fact, we're right on time — but only if we pick a niche and do it better than the rest.</p>
             </div>
 
             <div class="insight-item">
@@ -446,7 +491,7 @@
                     <li>Opaque fee structures</li>
                     <li>Weak owner screening</li>
                 </ul>
-                <p class="insight-implication">✅ Implication: Trust is not a feature. It's the brand. Whoever solves "trust and ease of mind" becomes the go-to platform.</p>
+                <p class="insight-implication"><strong>Implication:</strong> Trust is not a feature. It's the brand. Whoever solves "trust and ease of mind" becomes the go-to platform.</p>
             </div>
 
             <div class="insight-item">
@@ -458,25 +503,58 @@
                     <li>Lacking clear support or incentives</li>
                     <li>Some even recommend using platforms just to get discovered, then bypassing them.</li>
                 </ul>
-                <p class="insight-implication">✅ Implication: Make this platform a tool for owners, not just a listings directory. Help them feel professional, protected, and empowered.</p>
+                <p class="insight-implication"><strong>Implication:</strong> Make this platform a tool for owners, not just a listings directory. Help them feel professional, protected, and empowered.</p>
             </div>
 
             <div class="insight-item">
                 <h4>4. The Legal & Insurance Layer Can Be a Differentiator</h4>
                 <p>Most platforms merely link out or offer optional, confusing insurance flows. Regulations differ by country/state — platforms push the responsibility to owners and renters.</p>
-                <p class="insight-implication">✅ Implication: If we simplify and own this layer (e.g. auto-check if a license is required, bundled rental-day insurance), we reduce friction and become trusted by both sides.</p>
+                <p class="insight-implication"><strong>Implication:</strong> If we simplify and own this layer (e.g. auto-check if a license is required, bundled rental-day insurance), we reduce friction and become trusted by both sides.</p>
             </div>
 
             <div class="insight-item">
                 <h4>5. P2P Has a Premium Ceiling, But Huge Mid-Market Potential</h4>
                 <p>Click&Boat, Zizoo, Borrow A Boat chase large charters. Boatsetter has a premium "Lux" brand.</p>
                 <p>However, mid-sized boats for day-trips, friend groups, and holidaymakers are underserved — especially when trust and clarity are missing.</p>
-                <p class="insight-implication">✅ Implication: Win the mid-market first (weekenders, casual renters, smaller professional fleets). Later expand upward.</p>
+                <p class="insight-implication"><strong>Implication:</strong> Win the mid-market first (weekenders, casual renters, smaller professional fleets). Later expand upward.</p>
             </div>
         </section>
     </div>
 
-    <script src="language.js"></script>
+    <script src="../language.js"></script>
     <script src="charts.js"></script>
+    
+    <script>
+        // Global Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const navOverlay = document.getElementById('navOverlay');
+            
+            function openNav() {
+                navMenu.classList.add('open');
+                navOverlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeNav() {
+                navMenu.classList.remove('open');
+                navOverlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+            
+            hamburgerMenu.addEventListener('click', openNav);
+            closeMenu.addEventListener('click', closeNav);
+            navOverlay.addEventListener('click', closeNav);
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                    closeNav();
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

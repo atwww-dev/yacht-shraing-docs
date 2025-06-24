@@ -1,96 +1,24 @@
 // Global charts object for language switching
 window.charts = {};
 
-// Market Growth Chart
-const growthCtx = document.getElementById("growthChart").getContext("2d");
-window.charts.growthChart = new Chart(growthCtx, {
-  type: "line",
-  data: {
-    labels: ["2022", "2023", "2024", "2025", "2026", "2027"],
-    datasets: [
-      {
-        label: "Market Value (Billions USD)",
-        data: [16.5, 17.5, 18.6, 19.7, 21.0, 22.3],
-        borderColor: "#000000",
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
-        borderWidth: 4,
-        fill: true,
-        tension: 0.4,
-        pointBackgroundColor: "#000000",
-        pointBorderColor: "#ffffff",
-        pointBorderWidth: 2,
-        pointRadius: 6,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: false,
-        min: 15,
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-      x: {
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: "MARKET GROWTH TRAJECTORY (2022-2027)",
-        color: "#000000",
-        font: {
-          size: 14,
-          weight: "bold",
-          family: "'Arial', sans-serif",
-        },
-        padding: 20,
-      },
-      legend: {
-        display: false,
-      },
-    },
-  },
-});
-
-// Platform Market Share Chart
-const platformCtx = document.getElementById("platformChart").getContext("2d");
-window.charts.platformShareChart = new Chart(platformCtx, {
+// Geographic Distribution Chart
+const geographicCtx = document
+  .getElementById("geographicChart")
+  .getContext("2d");
+window.charts.geographicChart = new Chart(geographicCtx, {
   type: "doughnut",
   data: {
-    labels: [
-      "GetMyBoat",
-      "Borrow A Boat/Zizoo",
-      "Click&Boat",
-      "Boatsetter",
-      "Others",
-    ],
+    labels: ["France", "Italy", "Croatia", "Greece", "Spain", "Others"],
     datasets: [
       {
-        data: [180000, 60000, 50000, 50000, 40000],
+        data: [10372, 7978, 6555, 5888, 5702, 12000],
         backgroundColor: [
           "#000000",
+          "#1a1a1a",
           "#333333",
+          "#4d4d4d",
           "#666666",
           "#999999",
-          "#cccccc",
         ],
         borderColor: "#ffffff",
         borderWidth: 3,
@@ -102,7 +30,7 @@ window.charts.platformShareChart = new Chart(platformCtx, {
     plugins: {
       title: {
         display: true,
-        text: "PLATFORM MARKET SHARE BY LISTINGS",
+        text: "MEDITERRANEAN BOAT LISTINGS DISTRIBUTION",
         color: "#000000",
         font: {
           size: 14,
@@ -118,248 +46,17 @@ window.charts.platformShareChart = new Chart(platformCtx, {
           font: {
             weight: "bold",
           },
+          usePointStyle: true,
+          padding: 15,
         },
       },
     },
   },
 });
 
-// Commission Rates Chart
-const commissionCtx = document
-  .getElementById("commissionChart")
-  .getContext("2d");
-window.charts.commissionChart = new Chart(commissionCtx, {
-  type: "bar",
-  data: {
-    labels: ["GetMyBoat", "Boatsetter", "Click&Boat", "Industry Avg"],
-    datasets: [
-      {
-        label: "Commission Rate (%)",
-        data: [11.5, 20, 15, 15.5],
-        backgroundColor: ["#000000", "#333333", "#666666", "#dc2626"],
-        borderColor: "#ffffff",
-        borderWidth: 2,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 25,
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-      x: {
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: "PLATFORM COMMISSION RATES COMPARISON",
-        color: "#000000",
-        font: {
-          size: 14,
-          weight: "bold",
-          family: "'Arial', sans-serif",
-        },
-        padding: 20,
-      },
-      legend: {
-        display: false,
-      },
-    },
-  },
-});
-
-// Customer Satisfaction Chart
-const satisfactionCtx = document
-  .getElementById("satisfactionChart")
-  .getContext("2d");
-window.charts.satisfactionChart = new Chart(satisfactionCtx, {
-  type: "radar",
-  data: {
-    labels: [
-      "Booking Process",
-      "Platform Features",
-      "Customer Service",
-      "Cancellation Policy",
-      "Fee Transparency",
-      "Overall Experience",
-    ],
-    datasets: [
-      {
-        label: "Current Performance",
-        data: [8, 7, 4, 3, 4, 6],
-        borderColor: "#000000",
-        backgroundColor: "rgba(0, 0, 0, 0.2)",
-        borderWidth: 3,
-        pointBackgroundColor: "#000000",
-        pointBorderColor: "#ffffff",
-        pointBorderWidth: 2,
-      },
-      {
-        label: "Industry Potential",
-        data: [9, 8, 8, 8, 8, 8],
-        borderColor: "#dc2626",
-        backgroundColor: "rgba(220, 38, 38, 0.1)",
-        borderWidth: 3,
-        borderDash: [5, 5],
-        pointBackgroundColor: "#dc2626",
-        pointBorderColor: "#ffffff",
-        pointBorderWidth: 2,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    scales: {
-      r: {
-        beginAtZero: true,
-        max: 10,
-        grid: {
-          color: "#cccccc",
-        },
-        angleLines: {
-          color: "#cccccc",
-        },
-        pointLabels: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: "CUSTOMER SATISFACTION AREAS",
-        color: "#000000",
-        font: {
-          size: 14,
-          weight: "bold",
-          family: "'Arial', sans-serif",
-        },
-        padding: 20,
-      },
-      legend: {
-        labels: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-    },
-  },
-});
-
-// European Listings Heatmap Chart
-const heatmapCtx = document.getElementById("heatmapChart").getContext("2d");
-window.charts.europeListingsChart = new Chart(heatmapCtx, {
-  type: "bar",
-  data: {
-    labels: [
-      "France",
-      "Italy",
-      "Croatia",
-      "Greece",
-      "Spain",
-      "Turkey",
-      "Others",
-    ],
-    datasets: [
-      {
-        label: "Boat Listings (Nautal Data)",
-        data: [10372, 7978, 6555, 5888, 5702, 3500, 8000],
-        backgroundColor: [
-          "#000000",
-          "#1a1a1a",
-          "#333333",
-          "#4d4d4d",
-          "#666666",
-          "#808080",
-          "#999999",
-        ],
-        borderColor: "#ffffff",
-        borderWidth: 2,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    indexAxis: "y",
-    scales: {
-      x: {
-        beginAtZero: true,
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-      y: {
-        grid: {
-          color: "#cccccc",
-        },
-        ticks: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
-      },
-    },
-    plugins: {
-      title: {
-        display: true,
-        text: "EUROPEAN BOAT LISTINGS BY COUNTRY",
-        color: "#000000",
-        font: {
-          size: 14,
-          weight: "bold",
-          family: "'Arial', sans-serif",
-        },
-        padding: 20,
-      },
-      legend: {
-        display: false,
-      },
-    },
-  },
-});
-
-// Platform Trust Scores Chart
-const trustCtx = document.getElementById("trustChart").getContext("2d");
-window.charts.trustScoresChart = new Chart(trustCtx, {
+// Platform Performance Chart
+const platformCtx = document.getElementById("platformChart").getContext("2d");
+window.charts.platformChart = new Chart(platformCtx, {
   type: "bar",
   data: {
     labels: ["Boatsetter", "Click&Boat", "GetMyBoat"],
@@ -367,7 +64,7 @@ window.charts.trustScoresChart = new Chart(trustCtx, {
       {
         label: "5-Star Reviews (%)",
         data: [87, 72, 70],
-        backgroundColor: "#000000",
+        backgroundColor: "#059669",
         borderColor: "#ffffff",
         borderWidth: 2,
       },
@@ -432,31 +129,56 @@ window.charts.trustScoresChart = new Chart(trustCtx, {
   },
 });
 
-// Revenue Model Comparison Chart
-const revenueCtx = document.getElementById("revenueChart").getContext("2d");
-window.charts.revenueChart = new Chart(revenueCtx, {
-  type: "doughnut",
+// Owner Economics Chart
+const economicsCtx = document.getElementById("economicsChart").getContext("2d");
+window.charts.economicsChart = new Chart(economicsCtx, {
+  type: "bar",
   data: {
-    labels: [
-      "Owner Earnings (65-80%)",
-      "Platform Commission (20-35%)",
-      "Processing Fees (3-7%)",
-    ],
+    labels: ["Marina Fees", "Insurance", "Maintenance", "Depreciation"],
     datasets: [
       {
-        data: [72.5, 22.5, 5],
-        backgroundColor: ["#000000", "#666666", "#cccccc"],
+        label: "Annual Costs (€)",
+        data: [5500, 2200, 3000, 4500],
+        backgroundColor: "#dc2626",
         borderColor: "#ffffff",
-        borderWidth: 3,
+        borderWidth: 2,
       },
     ],
   },
   options: {
     responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        grid: {
+          color: "#cccccc",
+        },
+        ticks: {
+          color: "#000000",
+          font: {
+            weight: "bold",
+          },
+          callback: function (value) {
+            return "€" + value;
+          },
+        },
+      },
+      x: {
+        grid: {
+          color: "#cccccc",
+        },
+        ticks: {
+          color: "#000000",
+          font: {
+            weight: "bold",
+          },
+        },
+      },
+    },
     plugins: {
       title: {
         display: true,
-        text: "TYPICAL REVENUE DISTRIBUTION",
+        text: "ANNUAL BOAT OWNERSHIP COSTS",
         color: "#000000",
         font: {
           size: 14,
@@ -466,14 +188,45 @@ window.charts.revenueChart = new Chart(revenueCtx, {
         padding: 20,
       },
       legend: {
-        position: "bottom",
-        labels: {
-          color: "#000000",
-          font: {
-            weight: "bold",
-          },
-        },
+        display: false,
       },
     },
   },
 });
+
+// Update chart titles when language changes
+function updateChartTitles(lang) {
+  const titleTranslations = {
+    en: {
+      geographic: "MEDITERRANEAN BOAT LISTINGS DISTRIBUTION",
+      platform: "PLATFORM TRUST SCORES COMPARISON",
+      economics: "ANNUAL BOAT OWNERSHIP COSTS",
+    },
+    de: {
+      geographic: "MEDITERRANE BOOTS-LISTINGS-VERTEILUNG",
+      platform: "PLATTFORM-VERTRAUENSWERTE-VERGLEICH",
+      economics: "JÄHRLICHE BOOTSEIGENTUMS-KOSTEN",
+    },
+  };
+
+  if (window.charts.geographicChart) {
+    window.charts.geographicChart.options.plugins.title.text =
+      titleTranslations[lang].geographic;
+    window.charts.geographicChart.update();
+  }
+
+  if (window.charts.platformChart) {
+    window.charts.platformChart.options.plugins.title.text =
+      titleTranslations[lang].platform;
+    window.charts.platformChart.update();
+  }
+
+  if (window.charts.economicsChart) {
+    window.charts.economicsChart.options.plugins.title.text =
+      titleTranslations[lang].economics;
+    window.charts.economicsChart.update();
+  }
+}
+
+// Export for language switching
+window.updateChartTitles = updateChartTitles;
