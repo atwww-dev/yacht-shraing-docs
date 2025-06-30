@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Sharing Platform - Client Summary</title>
+    <link rel="stylesheet" href="../../navigation.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="presentation.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-header">
+                <h3 data-en="yachtsharing.com WORKSPACE" data-de="yachtsharing.com ARBEITSBEREICH">yachtsharing.com WORKSPACE</h3>
+                <button class="close-menu" id="closeMenu">&times;</button>
+            </div>
+            <div class="nav-section">
+                <h4 data-en="Main Dashboard" data-de="Haupt-Dashboard">Main Dashboard</h4>
+                <ul>
+                    <li><a href="../../" data-en="■ Project Overview" data-de="■ Projektübersicht">■ Project Overview</a></li>
+                </ul>
+            </div>
+            <div class="nav-section">
+                <h4 data-en="Research Documents" data-de="Forschungsdokumente">Research Documents</h4>
+                <ul>
+                    <li><a href="../../boat-rental-markeplace/" data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</a></li>
+                    <li><a href="../../private-renters-experience-owners/" data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</a></li>
+                    <li><a href="../../professional-skipper-requirements/" data-en="Professional Skipper Requirements" data-de="Professionelle Skipper-Anforderungen">Professional Skipper Requirements</a></li>
+                </ul>
+            </div>
+            <div class="nav-section">
+                <h4 data-en="Client Summary" data-de="Kunden-Zusammenfassung">Client Summary</h4>
+                <ul>
+                    <li><a href="#" class="current-page" data-en="■ Key Findings Presentation" data-de="■ Präsentation der wichtigsten Erkenntnisse">■ Key Findings Presentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <div class="container">
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Market Snapshot -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en="Boat Rental Market – 2025 Snapshot" data-de="Bootsvermietungsmarkt – Schnappschuss 2025">Boat Rental Market – 2025 Snapshot</h2>
+                        <p data-en="The market has big players, but they aren't perfect. Most focus on professional charter companies, not private boat owners." data-de="Der Markt hat große Akteure, aber sie sind nicht perfekt. Die meisten konzentrieren sich auf professionelle Charterfirmen, nicht auf private Bootsbesitzer.">The market has big players, but they aren't perfect. Most focus on professional charter companies, not private boat owners.</p>
+                        <div class="chart-container half-width">
+                            <canvas id="platformChart"></canvas>
+                        </div>
+                        <div class="competitor-logos">
+                            <div class="logo-item"><img src="https://www.getmyboat.com/favicon.ico" alt="GetMyBoat"><span data-en="GetMyBoat<br><small>180k+ boats, poor user experience</small>" data-de="GetMyBoat<br><small>180k+ Boote, schlechte Nutzererfahrung</small>">GetMyBoat<br><small>180k+ boats, poor user experience</small></span></div>
+                            <div class="logo-item"><img src="https://www.boatsetter.com/favicon.ico" alt="Boatsetter"><span data-en="Boatsetter<br><small>Mix of private & charter</small>" data-de="Boatsetter<br><small>Mix aus Privat & Charter</small>">Boatsetter<br><small>Mix of private & charter</small></span></div>
+                            <div class="logo-item"><img src="https://www.clickandboat.com/favicon.ico" alt="Click&Boat"><span data-en="Click&Boat<br><small>Mix of private & charter</small>" data-de="Click&Boat<br><small>Mix aus Privat & Charter</small>">Click&Boat<br><small>Mix of private & charter</small></span></div>
+                            <div class="logo-item"><img src="https://www.boataround.com/favicon.ico" alt="Boataround"><span data-en="Boataround<br><small>Mostly charter fleets</small>" data-de="Boataround<br><small>Hauptsächlich Charterflotten</small>">Boataround<br><small>Mostly charter fleets</small></span></div>
+                        </div>
+                        <div class="insight-box">
+                            <p data-en="<strong>The bottom line:</strong> No true 'Airbnb of Boats' exists yet. This is our opportunity to build a platform that truly serves private owners and skilled renters." data-de="<strong>Fazit:</strong> Es gibt noch kein echtes 'Airbnb für Boote'. Das ist unsere Chance, eine Plattform zu schaffen, die wirklich privaten Besitzern und erfahrenen Mietern dient."><strong>The bottom line:</strong> No true "Airbnb of Boats" exists yet. This is our opportunity to build a platform that truly serves private owners and skilled renters.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 2: Market Trends -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en="Market Trends & Mobile-First World" data-de="Markttrends & Mobile-First-Welt">Market Trends & Mobile-First World</h2>
+                        <p data-en="The boat rental market is growing steadily, and users are booking on their phones more than ever." data-de="Der Bootsvermietungsmarkt wächst stetig, und Nutzer buchen mehr denn je über ihre Handys.">The boat rental market is growing steadily, and users are booking on their phones more than ever.</p>
+                        <div class="trend-stats">
+                            <div class="stat">
+                                <div class="stat-value">$22.3B</div>
+                                <div class="stat-label" data-en="Projected Market by 2027" data-de="Prognostizierter Markt bis 2027">Projected Market by 2027</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">~6%</div>
+                                <div class="stat-label" data-en="Annual Growth (CAGR)" data-de="Jährliches Wachstum (CAGR)">Annual Growth (CAGR)</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">50%+</div>
+                                <div class="stat-label" data-en="Bookings on Mobile" data-de="Buchungen über Mobilgeräte">Bookings on Mobile</div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="growthChart"></canvas>
+                        </div>
+                         <div class="insight-box">
+                            <p data-en="<strong>Our edge:</strong> A clean, simple experience that works perfectly on a phone is essential, especially for boat owners who may not be tech-savvy." data-de="<strong>Unser Vorteil:</strong> Ein sauberes, einfaches Erlebnis, das auf dem Handy perfekt funktioniert, ist unerlässlich, besonders für Bootsbesitzer, die möglicherweise nicht technikaffin sind."><strong>Our edge:</strong> A clean, simple experience that works perfectly on a phone is essential, especially for boat owners who may not be tech-savvy.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 3: User Pain Points -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en="What Frustrates Users Today?" data-de="Was frustriert Nutzer heute?">What Frustrates Users Today?</h2>
+                        <p data-en="Current platforms have common problems that leave both renters and owners unhappy." data-de="Aktuelle Plattformen haben häufige Probleme, die sowohl Mieter als auch Besitzer unzufrieden machen.">Current platforms have common problems that leave both renters and owners unhappy.</p>
+                         <div class="pain-solution-grid">
+                            <div class="pain-points">
+                                <h4 data-en="❌ Common Complaints" data-de="❌ Häufige Beschwerden">❌ Common Complaints</h4>
+                                <ul>
+                                    <li data-en="Hidden fees & surprise charges" data-de="Versteckte Gebühren & überraschende Kosten">Hidden fees & surprise charges</li>
+                                    <li data-en="Poor earnings for boat owners (15-35% fees)" data-de="Geringe Einnahmen für Bootsbesitzer (15-35% Gebühren)">Poor earnings for boat owners (15-35% fees)</li>
+                                    <li data-en="Last-minute cancellations with no help" data-de="Last-Minute-Stornierungen ohne Hilfe">Last-minute cancellations with no help</li>
+                                    <li data-en="Slow or non-existent customer support" data-de="Langsamer oder nicht existierender Kundensupport">Slow or non-existent customer support</li>
+                                </ul>
+                            </div>
+                            <div class="our-solutions">
+                                <h4 data-en="✅ Our Solutions" data-de="✅ Unsere Lösungen">✅ Our Solutions</h4>
+                                <ul>
+                                    <li data-en="Live fee calculators for 100% transparency" data-de="Live-Gebührenrechner für 100% Transparenz">Live fee calculators for 100% transparency</li>
+                                    <li data-en="Lower booking fees for better owner earnings" data-de="Niedrigere Buchungsgebühren für bessere Einnahmen der Besitzer">Lower booking fees for better owner earnings</li>
+                                    <li data-en="Clear, fair cancellation rules & real support" data-de="Klare, faire Stornierungsregeln & echter Support">Clear, fair cancellation rules & real support</li>
+                                    <li data-en="A platform that respects both sides of the rental" data-de="Eine Plattform, die beide Seiten der Miete respektiert">A platform that respects both sides of the rental</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chart-container half-width">
+                            <canvas id="commissionChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 4: Path to Success -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en='How We Become the "Airbnb of Boats"' data-de='Wie wir zum "Airbnb für Boote" werden'>How We Become the "Airbnb of Boats"</h2>
+                        <p data-en="It comes down to building a platform centered on trust, quality, and fairness." data-de="Es geht darum, eine Plattform zu schaffen, die auf Vertrauen, Qualität und Fairness basiert.">It comes down to building a platform centered on trust, quality, and fairness.</p>
+                        <div class="path-steps">
+                            <div class="step">
+                                <div class="step-icon">🤝</div>
+                                <h4 data-en="1. Verified Trust" data-de="1. Verifiziertes Vertrauen">1. Verified Trust</h4>
+                                <p data-en="We check everyone's ID (<strong>Identity</strong>), boat ownership papers (<strong>Asset</strong>), and skipper licenses (<strong>Qualification</strong>) so you know who you're dealing with." data-de="Wir überprüfen den Ausweis (<strong>Identität</strong>), die Bootspapiere (<strong>Vermögenswert</strong>) und die Skipperlizenzen (<strong>Qualifikation</strong>) von jedem, damit Sie wissen, mit wem Sie es zu tun haben.">We check everyone's ID (<strong>Identity</strong>), boat ownership papers (<strong>Asset</strong>), and skipper licenses (<strong>Qualification</strong>) so you know who you're dealing with.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">⭐</div>
+                                <h4 data-en="2. Quality Boats & People" data-de="2. Qualitätsboote & Menschen">2. Quality Boats & People</h4>
+                                <p data-en="Honest reviews, boat inspections, and smart checks ensure a high-quality, safe experience every time." data-de="Ehrliche Bewertungen, Bootsinspektionen und intelligente Überprüfungen sorgen jedes Mal für ein hochwertiges und sicheres Erlebnis.">Honest reviews, boat inspections, and smart checks ensure a high-quality, safe experience every time.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">透明</div>
+                                <h4 data-en="3. Full Transparency" data-de="3. Volle Transparenz">3. Full Transparency</h4>
+                                <p data-en="No hidden fees. No confusing policies. What you see is what you get, from booking to payout." data-de="Keine versteckten Gebühren. Keine verwirrenden Richtlinien. Was Sie sehen, ist was Sie bekommen, von der Buchung bis zur Auszahlung.">No hidden fees. No confusing policies. What you see is what you get, from booking to payout.</p>
+                            </div>
+                             <div class="step">
+                                <div class="step-icon">💬</div>
+                                <h4 data-en="4. Reliable Support" data-de="4. Zuverlässiger Support">4. Reliable Support</h4>
+                                <p data-en="If something goes wrong, a real human is here to help you quickly and fairly." data-de="Wenn etwas schief geht, ist ein echter Mensch da, um Ihnen schnell und fair zu helfen.">If something goes wrong, a real human is here to help you quickly and fairly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 5: Leveraging AI -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en="Using Smart Tech to Our Advantage" data-de="Smarte Technik zu unserem Vorteil nutzen">Using Smart Tech to Our Advantage</h2>
+                        <p data-en="In 2025, AI helps us build a smarter, safer, and more personal platform." data-de="Im Jahr 2025 hilft uns KI dabei, eine intelligentere, sicherere und persönlichere Plattform zu schaffen.">In 2025, AI helps us build a smarter, safer, and more personal platform.</p>
+                        <div class="ai-features">
+                            <div class="feature" data-en="<strong>Personalized Discovery:</strong> Suggests the perfect boat based on your past activity." data-de="<strong>Personalisierte Entdeckung:</strong> Schlägt das perfekte Boot basierend auf Ihren früheren Aktivitäten vor."><strong>Personalized Discovery:</strong> Suggests the perfect boat based on your past activity.</div>
+                            <div class="feature" data-en="<strong>Instant Document Checks:</strong> AI verifies licenses and IDs in seconds." data-de="<strong>Sofortige Dokumentenprüfung:</strong> KI überprüft Lizenzen und Ausweise in Sekunden."><strong>Instant Document Checks:</strong> AI verifies licenses and IDs in seconds.</div>
+                            <div class="feature" data-en="<strong>Real-time Safety Alerts:</strong> Flags risky profiles or messages automatically to keep our community safe." data-de="<strong>Echtzeit-Sicherheitswarnungen:</strong> Markiert riskante Profile oder Nachrichten automatisch, um unsere Community zu schützen."><strong>Real-time Safety Alerts:</strong> Flags risky profiles or messages automatically to keep our community safe.</div>
+                            <div class="feature" data-en="<strong>Smart Support:</strong> Get instant answers to common questions, with a human ready to step in." data-de="<strong>Smarter Support:</strong> Erhalten Sie sofortige Antworten auf häufige Fragen, wobei ein Mensch bereitsteht, um einzugreifen."><strong>Smart Support:</strong> Get instant answers to common questions, with a human ready to step in.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 6: Challenges -->
+                <section class="swiper-slide">
+                    <div class="slide-content">
+                        <h2 data-en="Challenges to Watch For" data-de="Herausforderungen, auf die man achten sollte">Challenges to Watch For</h2>
+                        <p data-en="Building a trusted platform means finding the right balance." data-de="Eine vertrauenswürdige Plattform aufzubauen bedeutet, die richtige Balance zu finden.">Building a trusted platform means finding the right balance.</p>
+                         <div class="challenge-box">
+                            <h4 data-en="Trust vs. Convenience" data-de="Vertrauen vs. Bequemlichkeit">Trust vs. Convenience</h4>
+                            <p data-en="Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible." data-de="Eine gründliche Überprüfung ist für die Sicherheit von entscheidender Bedeutung, kann aber die Anmeldung verlangsamen. Wir müssen diesen Prozess so reibungslos und schnell wie möglich gestalten.">Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible.</p>
+                        </div>
+                        <div class="challenge-box">
+                            <h4 data-en="High User Expectations" data-de="Hohe Nutzererwartungen">High User Expectations</h4>
+                            <p data-en="Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one." data-de="Benutzer erwarten ein schnelles, hochwertiges und fehlerfreies Erlebnis. Unsere Plattform muss vom ersten Tag an ausgefeilt und zuverlässig sein.">Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../../language.js"></script>
+    <script src="presentation-charts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language switcher logic
+            const langButtons = document.querySelectorAll('.lang-btn');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+
+            function switchLanguage(lang) {
+                // Set active button
+                langButtons.forEach(button => {
+                    button.classList.remove('active');
+                    if(button.getAttribute('data-lang') === lang) {
+                        button.classList.add('active');
+                    }
+                });
+
+                // Translate elements
+                const elements = document.querySelectorAll('[data-en]');
+                elements.forEach(el => {
+                    const translation = el.getAttribute(`data-${lang}`);
+                    if(translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+            }
+
+            // Global Nav
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const navOverlay = document.getElementById('navOverlay');
+            function openNav() {
+                navMenu.classList.add('open');
+                navOverlay.classList.add('show');
+            }
+            function closeNav() {
+                navMenu.classList.remove('open');
+                navOverlay.classList.remove('show');
+            }
+            hamburgerMenu.addEventListener('click', openNav);
+            closeMenu.addEventListener('click', closeNav);
+            navOverlay.addEventListener('click', closeNav);
+
+            // Swiper
+            const swiper = new Swiper('.swiper-container', {
+                loop: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+</body>
+</html> 

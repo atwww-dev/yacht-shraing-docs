@@ -1250,3 +1250,44 @@ body {
     line-height: 1.6;
     font-style: italic;
 }
+
+/* Humanized Deliverables List Styles */
+.deliverables-list.humanized {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.deliverables-list.humanized .deliverable {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.2s;
+}
+
+.deliverables-list.humanized .deliverable:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.deliverable-icon {
+    font-size: 2rem;
+    margin-right: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.deliverables-list.humanized strong {
+    font-size: 1.08rem;
+    color: #222;
+}
+
+.deliverables-list.humanized p {
+    margin: 0.2rem 0 0 0;
+    color: #444;
+    font-size: 0.98rem;
+}

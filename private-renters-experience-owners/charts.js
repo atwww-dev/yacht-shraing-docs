@@ -1,6 +1,20 @@
 // Global charts object for language switching
 window.charts = {};
 
+// Example color palette for charts
+const vibrantPalette = [
+  "#0074D9", // blue
+  "#2ECC40", // green
+  "#FF4136", // red
+  "#FF851B", // orange
+  "#B10DC9", // purple
+  "#FFDC00", // yellow
+  "#39CCCC", // teal
+  "#85144b", // maroon
+  "#3D9970", // olive
+  "#F012BE", // magenta
+];
+
 // Owner Costs Analysis Chart
 const ownerCostsCtx = document
   .getElementById("ownerCostsChart")
@@ -13,7 +27,7 @@ window.charts.ownerCostsChart = new Chart(ownerCostsCtx, {
       {
         label: "Annual Costs (€)",
         data: [5500, 2200, 3000, 4500],
-        backgroundColor: ["#000000", "#333333", "#666666", "#999999"],
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 2,
       },
@@ -82,13 +96,7 @@ window.charts.ownerConcernsChart = new Chart(ownerConcernsCtx, {
     datasets: [
       {
         data: [35, 25, 20, 12, 8],
-        backgroundColor: [
-          "#000000",
-          "#333333",
-          "#666666",
-          "#999999",
-          "#cccccc",
-        ],
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 3,
       },
@@ -133,7 +141,7 @@ window.charts.renterDemographicsChart = new Chart(renterDemographicsCtx, {
       {
         label: "Percentage of Renters",
         data: [15, 28, 35, 18, 4],
-        backgroundColor: "#000000",
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 2,
       },
@@ -206,20 +214,20 @@ window.charts.valuePropositionChart = new Chart(valuePropositionCtx, {
       {
         label: "Traditional Charter",
         data: [6, 5, 4, 8, 9, 7],
-        borderColor: "#666666",
+        borderColor: vibrantPalette[0],
         backgroundColor: "rgba(102, 102, 102, 0.2)",
         borderWidth: 3,
-        pointBackgroundColor: "#666666",
+        pointBackgroundColor: vibrantPalette[0],
         pointBorderColor: "#ffffff",
         pointBorderWidth: 2,
       },
       {
         label: "P2P Platform",
         data: [9, 8, 9, 6, 6, 7],
-        borderColor: "#000000",
+        borderColor: vibrantPalette[1],
         backgroundColor: "rgba(0, 0, 0, 0.2)",
         borderWidth: 3,
-        pointBackgroundColor: "#000000",
+        pointBackgroundColor: vibrantPalette[1],
         pointBorderColor: "#ffffff",
         pointBorderWidth: 2,
       },
@@ -285,14 +293,7 @@ window.charts.vatRatesChart = new Chart(vatRatesCtx, {
       {
         label: "VAT Rate (%)",
         data: [25, 24, 22, 20, 21, 23],
-        backgroundColor: [
-          "#000000",
-          "#1a1a1a",
-          "#333333",
-          "#4d4d4d",
-          "#666666",
-          "#808080",
-        ],
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 2,
       },
@@ -362,13 +363,7 @@ window.charts.trustFrameworkChart = new Chart(trustFrameworkCtx, {
     datasets: [
       {
         data: [25, 20, 25, 15, 15],
-        backgroundColor: [
-          "#000000",
-          "#333333",
-          "#666666",
-          "#999999",
-          "#cccccc",
-        ],
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 3,
       },
@@ -413,7 +408,7 @@ window.charts.insuranceModelChart = new Chart(insuranceModelCtx, {
       {
         label: "Coverage Limits (€)",
         data: [275000, 1500000, 100000, 7500],
-        backgroundColor: ["#000000", "#333333", "#666666", "#999999"],
+        backgroundColor: vibrantPalette,
         borderColor: "#ffffff",
         borderWidth: 2,
       },
@@ -483,8 +478,8 @@ window.charts.competitiveMatrix = new Chart(competitiveMatrixCtx, {
           { x: 8, y: 5 },
           { x: 6, y: 7 },
         ],
-        backgroundColor: "#666666",
-        borderColor: "#666666",
+        backgroundColor: vibrantPalette[0],
+        borderColor: vibrantPalette[0],
         borderWidth: 2,
         pointRadius: 8,
       },
@@ -495,16 +490,16 @@ window.charts.competitiveMatrix = new Chart(competitiveMatrixCtx, {
           { x: 6, y: 7 },
           { x: 4, y: 9 },
         ],
-        backgroundColor: "#000000",
-        borderColor: "#000000",
+        backgroundColor: vibrantPalette[1],
+        borderColor: vibrantPalette[1],
         borderWidth: 2,
         pointRadius: 8,
       },
       {
         label: "Market Opportunity",
         data: [{ x: 9, y: 9 }],
-        backgroundColor: "#dc2626",
-        borderColor: "#dc2626",
+        backgroundColor: vibrantPalette[2],
+        borderColor: vibrantPalette[2],
         borderWidth: 2,
         pointRadius: 12,
       },

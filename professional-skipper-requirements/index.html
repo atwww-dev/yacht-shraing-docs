@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What It Takes to Be a Pro Skipper in Europe - A Compliance Guide</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../navigation.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-header">
+                <h3 data-en="YACHT SHARING WORKSPACE" data-de="YACHT-SHARING-ARBEITSBEREICH">YACHT SHARING WORKSPACE</h3>
+                <button class="close-menu" id="closeMenu">&times;</button>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Main Dashboard" data-de="Haupt-Dashboard">Main Dashboard</h4>
+                <ul>
+                    <li><a href="../" data-en="■ Project Overview" data-de="■ Projektübersicht">■ Project Overview</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Research Documents" data-de="Forschungsdokumente">Research Documents</h4>
+                <ul>
+                    <li><a href="../boat-rental-markeplace/" data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</a></li>
+                    <li><a href="../private-renters-experience-owners/" data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</a></li>
+                    <li><a href="./" class="current-page" data-en="■ Professional Skipper Requirements" data-de="■ Professionelle Skipper-Anforderungen">■ Professional Skipper Requirements</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h4 data-en="Development Phases" data-de="Entwicklungsphasen">Development Phases</h4>
+                <ul>
+                    <li><span class="phase-current" data-en="Discovery (Current)" data-de="Discovery (Aktuell)">Discovery (Current)</span></li>
+                    <li><span class="phase-upcoming" data-en="Product (TBD)" data-de="Produkt (TBD)">Product (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Design (TBD)" data-de="Design (TBD)">Design (TBD)</span></li>
+                    <li><span class="phase-upcoming" data-en="Development (TBD)" data-de="Entwicklung (TBD)">Development (TBD)</span></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h4 data-en="Client Summary" data-de="Kunden-Zusammenfassung">Client Summary</h4>
+                <ul>
+                    <li><a href="../client-presentation/presentation.html" data-en="■ Key Findings Presentation" data-de="■ Präsentation der wichtigsten Erkenntnisse">■ Key Findings Presentation</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <div class="container">
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+
+        <header class="header">
+            <div class="client-badge">
+                <span data-en="RESEARCH DOCUMENT" data-de="FORSCHUNGSDOKUMENT">RESEARCH DOCUMENT</span>
+            </div>
+            <h1 data-en="A Guide to Professional Skipper Requirements in Europe" data-de="Leitfaden zu den Anforderungen für professionelle Skipper in Europa">A Guide to Professional Skipper Requirements in Europe</h1>
+            <p class="subtitle" data-en="Breaking down the complex web of licenses, certificates, and rules for commercial skippers in key European markets." data-de="Eine Aufschlüsselung des komplexen Netzes von Lizenzen, Zertifikaten und Vorschriften für kommerzielle Skipper in den wichtigsten europäischen Märkten.">Breaking down the complex web of licenses, certificates, and rules for commercial skippers in key European markets.</p>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="executive-summary">
+            <h2 data-en="■ WHAT YOU NEED TO KNOW" data-de="■ WAS SIE WISSEN MÜSSEN">■ WHAT YOU NEED TO KNOW</h2>
+            <div class="summary-content">
+                <p data-en="Hiring a skipper seems simple, but when they carry paying passengers, the rules change. While many sailors have recreational licenses (like a driver's license for a car), professional skippers need a whole other level of certification. Think of it as the difference between a private pilot's license and a commercial airline pilot's license." data-de="Einen Skipper zu engagieren scheint einfach, aber wenn er zahlende Passagiere befördert, ändern sich die Regeln. Während viele Segler Freizeitlizenzen haben (wie ein Führerschein für ein Auto), benötigen professionelle Skipper eine ganz andere Zertifizierungsebene. Stellen Sie es sich wie den Unterschied zwischen einer Privatpilotenlizenz und der Lizenz eines kommerziellen Flugkapitäns vor.">Hiring a skipper seems simple, but when they carry paying passengers, the rules change. While many sailors have recreational licenses (like a driver's license for a car), <strong>professional skippers</strong> need a whole other level of certification. Think of it as the difference between a private pilot's license and a commercial airline pilot's license.</p>
+                
+                <p data-en="This guide breaks down the essential legal standards—from international conventions (STCW) to specific national rules—and gives you a clear checklist for verifying every professional skipper you bring onto the platform." data-de="Dieser Leitfaden schlüsselt die wesentlichen rechtlichen Standards auf – von internationalen Konventionen (STCW) bis hin zu spezifischen nationalen Vorschriften – und gibt Ihnen eine klare Checkliste zur Überprüfung jedes professionellen Skippers, den Sie auf die Plattform holen.">This guide breaks down the essential legal standards—from international conventions (STCW) to specific national rules—and gives you a clear checklist for verifying every professional skipper you bring onto the platform.</p>
+            </div>
+        </section>
+
+        <!-- Core Standards Section -->
+        <section class="standards-section">
+            <h2 data-en="■ The Foundations: Europe-Wide Rules" data-de="■ Die Grundlagen: Europaweite Regeln">■ The Foundations: Europe-Wide Rules</h2>
+            
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <div class="standard-number">01</div>
+                    <div class="standard-content">
+                        <h3 data-en="The Global Standard: STCW Convention" data-de="Der globale Standard: STCW-Konvention">The Global Standard: STCW Convention</h3>
+                        <p data-en="This is the international rulebook. Any skipper working on a commercial yacht must have STCW certificates. It's the baseline for safety, covering everything from first-aid and firefighting to survival techniques and radio communication. It's non-negotiable." data-de="Dies ist das internationale Regelwerk. Jeder Skipper, der auf einer kommerziellen Yacht arbeitet, muss STCW-Zertifikate besitzen. Es ist die Grundlage für die Sicherheit und deckt alles von Erste-Hilfe und Brandbekämpfung bis hin zu Überlebenstechniken und Funkkommunikation ab. Es ist nicht verhandelbar.">This is the international rulebook. Any skipper working on a commercial yacht must have STCW certificates. It's the baseline for safety, covering everything from first-aid and firefighting to survival techniques and radio communication. It's non-negotiable.</p>
+                    </div>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-number">02</div>
+                    <div class="standard-content">
+                        <h3 data-en="EU-Wide Recognition: Directive 2005/36/EC" data-de="EU-weite Anerkennung: Richtlinie 2005/36/EG">EU-Wide Recognition: Directive 2005/36/EC</h3>
+                        <p data-en="This directive makes it easier for professionals to work across the EU. For skippers, it means that a certificate issued in one EU country can be officially recognized or 'validated' by another, allowing them to work there legally. We need to check for this validation." data-de="Diese Richtlinie erleichtert es Fachleuten, in der gesamten EU zu arbeiten. Für Skipper bedeutet dies, dass ein in einem EU-Land ausgestelltes Zertifikat von einem anderen offiziell anerkannt oder 'validiert' werden kann, sodass sie dort legal arbeiten können. Wir müssen diese Validierung überprüfen.">This directive makes it easier for professionals to work across the EU. For skippers, it means that a certificate issued in one EU country can be officially recognized or <strong>'validated'</strong> by another, allowing them to work there legally. We need to check for this validation.</p>
+                    </div>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-number">03</div>
+                    <div class="standard-content">
+                        <h3 data-en="Proof of Health: Medical Fitness" data-de="Gesundheitsnachweis: Medizinische Tauglichkeit">Proof of Health: Medical Fitness</h3>
+                        <p data-en="Just like a pilot, a professional skipper needs a valid medical certificate from a specially approved doctor. This confirms they are physically and mentally fit for the job. These certificates are typically valid for one to two years." data-de="Genau wie ein Pilot benötigt ein professioneller Skipper ein gültiges ärztliches Zeugnis von einem speziell zugelassenen Arzt. Dies bestätigt, dass er körperlich und geistig für den Job geeignet ist. Diese Zertifikate sind in der Regel ein bis zwei Jahre gültig.">Just like a pilot, a professional skipper needs a <strong>valid medical certificate</strong> from a specially approved doctor. This confirms they are physically and mentally fit for the job. These certificates are typically valid for one to two years.</p>
+                    </div>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-number">04</div>
+                    <div class="standard-content">
+                        <h3 data-en="License to Talk: VHF Radio License" data-de="Lizenz zum Sprechen: VHF-Funklizenz">License to Talk: VHF Radio License</h3>
+                        <p data-en="Every professional skipper must be licensed to operate a VHF marine radio. It's essential for safety, emergencies, and communicating with ports and other vessels. Look for an SRC or GOC certificate." data-de="Jeder professionelle Skipper muss für den Betrieb eines UKW-Seefunkgeräts lizenziert sein. Dies ist für die Sicherheit, Notfälle und die Kommunikation mit Häfen und anderen Schiffen unerlässlich. Suchen Sie nach einem SRC- oder GOC-Zertifikat.">Every professional skipper must be licensed to operate a VHF marine radio. It's essential for safety, emergencies, and communicating with ports and other vessels. Look for an <strong>SRC or GOC</strong> certificate.</p>
+                    </div>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-number">05</div>
+                    <div class="standard-content">
+                        <h3 data-en="Proof of Experience: The Logbook" data-de="Erfahrungsnachweis: Das Logbuch">Proof of Experience: The Logbook</h3>
+                        <p data-en="Certificates aren't enough; skippers must prove their time on the water. This means a logbook showing a minimum number of days or miles at sea, proving they have real-world experience as both crew and skipper." data-de="Zertifikate allein reichen nicht aus; Skipper müssen ihre Zeit auf dem Wasser nachweisen. Das bedeutet ein Logbuch, das eine Mindestanzahl von Tagen oder Meilen auf See ausweist und beweist, dass sie praktische Erfahrung als Crew und Skipper haben.">Certificates aren't enough; skippers must prove their time on the water. This means a logbook showing a minimum number of days or miles at sea, proving they have <strong>real-world experience</strong> as both crew and skipper.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Country Breakdown Section -->
+        <section class="country-breakdown">
+            <h2 data-en="■ The Local Rules: A Country-by-Country Guide" data-de="■ Die lokalen Regeln: Ein Leitfaden nach Ländern">■ The Local Rules: A Country-by-Country Guide</h2>
+            
+            <div class="country-table">
+                <div class="table-header">
+                    <div class="col-country" data-en="Country" data-de="Land">Country</div>
+                    <div class="col-diploma" data-en="What to Look For (Core Licenses)" data-de="Worauf zu achten ist (Kernlizenzen)">What to Look For (Core Licenses)</div>
+                    <div class="col-additional" data-en="Key Local Requirements" data-de="Wichtige lokale Anforderungen">Key Local Requirements</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇫🇷</div>
+                        <div class="country-name" data-en="France" data-de="Frankreich">France</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li>Brevet de Capitaine 200 voile/yacht</li>
+                            <li>Capitaine 500 yacht, Yacht 3000</li>
+                        </ul>
+                        <p class="human-note" data-en="These are the main professional captain licenses in France." data-de="Dies sind die wichtigsten professionellen Kapitänslizenzen in Frankreich."></p>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="STCW Basic Safety plus French endorsement (CFBS). If they have a foreign STCW, it needs a French 'visa de reconnaissance'." data-de="STCW Basic Safety plus französische Bestätigung (CFBS). Wenn sie ein ausländisches STCW haben, benötigt es ein französisches 'visa de reconnaissance'.">STCW Basic Safety plus French endorsement (CFBS). If they have a foreign STCW, it needs a French 'visa de reconnaissance'.</li>
+                            <li data-en="A valid French maritime medical certificate." data-de="Ein gültiges französisches maritimes ärztliches Zeugnis.">A valid French maritime medical certificate.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇮🇹</div>
+                        <div class="country-name" data-en="Italy" data-de="Italien">Italy</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li>Ufficiale di Navigazione di 2ª Classe</li>
+                        </ul>
+                        <p class="human-note" data-en="The standard professional diploma for navigating yachts." data-de="Das Standard-Berufsdiplom für die Navigation von Yachten."></p>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="Must have graduated from a nautical high school (or equivalent)." data-de="Muss ein nautisches Gymnasium (oder Äquivalent) abgeschlossen haben.">Must have graduated from a nautical high school (or equivalent).</li>
+                            <li data-en="Proof of STCW safety courses (PSSR, Fire, First Aid, Survival)." data-de="Nachweis von STCW-Sicherheitskursen (PSSR, Feuer, Erste Hilfe, Überleben).">Proof of STCW safety courses (PSSR, Fire, First Aid, Survival).</li>
+                            <li data-en="Must be registered with 'Gente di Mare' (Registry of Seafarers)." data-de="Muss bei 'Gente di Mare' (Register der Seeleute) registriert sein.">Must be registered with 'Gente di Mare' (Registry of Seafarers).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇬🇷</div>
+                        <div class="country-name" data-en="Greece" data-de="Griechenland">Greece</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li data-en="No single 'pro' license. Instead, they must hold a recognized international certificate:" data-de="Keine einzelne 'Pro'-Lizenz. Stattdessen müssen sie ein anerkanntes internationales Zertifikat besitzen:">No single 'pro' license. Instead, they must hold a recognized international certificate:</li>
+                            <li data-en="ICC (International Certificate of Competence)" data-de="ICC (International Certificate of Competence)">– ICC (International Certificate of Competence)</li>
+                            <li data-en="IPC, ASA 104, or equivalent" data-de="IPC, ASA 104 oder gleichwertig">_ IPC, ASA 104, or equivalent</li>
+                        </ul>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="Must be at least 18 years old." data-de="Muss mindestens 18 Jahre alt sein.">Must be at least 18 years old.</li>
+                            <li data-en="Proof of sailing competence from an approved body (like the RYA or US Sailing)." data-de="Nachweis der Segelkompetenz von einer anerkannten Stelle (wie RYA oder US Sailing).">Proof of sailing competence from an approved body (like the RYA or US Sailing).</li>
+                            <li data-en="A second competent person (first mate) must co-sign the trip declaration." data-de="Eine zweite kompetente Person (Erster Maat) muss die Reiseerklärung mitunterzeichnen.">A second competent person (first mate) must co-sign the trip declaration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇭🇷</div>
+                        <div class="country-name" data-en="Croatia" data-de="Kroatien">Croatia</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li>Croatian Yacht Master (Category A or B)</li>
+                            <li data-en="Internationally recognized certs (ICC, etc.) are also accepted." data-de="International anerkannte Zertifikate (ICC, etc.) werden ebenfalls akzeptiert.">Internationally recognized certs (ICC, etc.) are also accepted.</li>
+                        </ul>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="A VHF Radio license (SRC) is mandatory." data-de="Eine UKW-Funklizenz (SRC) ist obligatorisch.">A VHF Radio license (SRC) is mandatory.</li>
+                            <li data-en="A valid national medical certificate." data-de="Ein gültiges nationales ärztliches Zeugnis.">A valid national medical certificate.</li>
+                            <li data-en="A logbook proving sea time." data-de="Ein Logbuch zum Nachweis der Seefahrtszeit.">A logbook proving sea time.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇪🇸</div>
+                        <div class="country-name" data-en="Spain" data-de="Spanien">Spain</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li>PER, Patrón de Yate (PY), or Capitán de Yate (CY)</li>
+                        </ul>
+                        <p class="human-note" data-en="These are standard Spanish recreational licenses that can be upgraded for professional use." data-de="Dies sind spanische Standard-Freizeitlizenzen, die für den professionellen Gebrauch aufgerüstet werden können."></p>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="Must complete a Basic Safety (STCW) course." data-de="Muss einen Basic Safety (STCW) Kurs absolvieren.">Must complete a Basic Safety (STCW) course.</li>
+                            <li data-en="Must pass the ISM medical fitness exam." data-de="Muss die ISM-Tauglichkeitsuntersuchung bestehen.">Must pass the ISM medical fitness exam.</li>
+                            <li data-en="Must declare significant sea time (e.g., over 2,500 nautical miles and 5 long passages)." data-de="Muss eine erhebliche Seefahrtszeit nachweisen (z.B. über 2.500 Seemeilen und 5 lange Fahrten).">Must declare significant sea time (e.g., over 2,500 nautical miles and 5 long passages).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-country">
+                        <div class="country-flag">🇵🇹</div>
+                        <div class="country-name" data-en="Portugal" data-de="Portugal">Portugal</div>
+                    </div>
+                    <div class="col-diploma">
+                        <ul>
+                            <li>Carta de Navegador de Recreio (e.g., Patrão de Alto-Mar)</li>
+                        </ul>
+                        <p class="human-note" data-en="The standard Portuguese recreational licenses." data-de="Die portugiesischen Standard-Freizeitlizenzen."></p>
+                    </div>
+                    <div class="col-additional">
+                        <ul>
+                            <li data-en="Medical and psychophysical exam are required." data-de="Ärztliche und psychophysische Untersuchung sind erforderlich.">Medical and psychophysical exam are required.</li>
+                            <li data-en="For commercial activity, must be registered with RNAAT (National Registry of Tourism Agents)." data-de="Für kommerzielle Aktivitäten ist eine Registrierung bei RNAAT (Nationales Register der Tourismusagenten) erforderlich.">For commercial activity, must be registered with RNAAT (National Registry of Tourism Agents).</li>
+                            <li data-en="The vessel itself needs specific insurance and inspections." data-de="Das Schiff selbst benötigt eine spezifische Versicherung und Inspektionen.">The vessel itself needs specific insurance and inspections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation Requirements -->
+        <section class="validation-section">
+            <h2 data-en="■ Your Skipper Verification Checklist" data-de="■ Ihre Skipper-Verifizierungs-Checkliste">■ Your Skipper Verification Checklist</h2>
+            
+            <div class="validation-intro">
+                <div class="distinction-box">
+                    <h3 data-en="🔍 Global Rules vs. Local Flavor" data-de="🔍 Globale Regeln vs. Lokale Besonderheiten">🔍 Global Rules vs. Local Flavor</h3>
+                    <ul>
+                        <li><strong data-en="Global (EU & STCW)" data-de="Global (EU & STCW)">Global (EU & STCW)</strong>: <span data-en="These are the basics every pro skipper needs: safety training, medical clearance, radio license, and proof their certificates are recognized across the EU." data-de="Das sind die Grundlagen, die jeder Profi-Skipper braucht: Sicherheitstraining, ärztliche Freigabe, Funklizenz und der Nachweis, dass seine Zertifikate EU-weit anerkannt sind.">These are the basics every pro skipper needs: safety training, medical clearance, radio license, and proof their certificates are recognized across the EU.</span></li>
+                        <li><strong data-en="Local Flavor" data-de="Lokale Besonderheiten">Local Flavor</strong>: <span data-en="Each country adds its own requirements, like specific national diplomas (e.g., Capitaine 200), minimum sea time, or registration in a national database (like Italy's 'Gente di Mare')." data-de="Jedes Land fügt seine eigenen Anforderungen hinzu, wie z.B. spezifische nationale Diplome (z.B. Capitaine 200), Mindestseefahrtszeit oder die Registrierung in einer nationalen Datenbank (wie Italiens 'Gente di Mare').">Each country adds its own requirements, like specific national diplomas (e.g., Capitaine 200), minimum sea time, or registration in a national database (like Italy's 'Gente di Mare').</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-container">
+                <div class="checklist-header">
+                    <h3 data-en="To safely onboard a professional skipper, ask for and verify these documents:" data-de="Um einen professionellen Skipper sicher an Bord zu holen, fordern Sie diese Dokumente an und überprüfen Sie sie:">To safely onboard a professional skipper, ask for and verify these documents:</h3>
+                </div>
+
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <div class="check-number">1</div>
+                        <div class="check-content">
+                            <h4 data-en="Their Skipper License" data-de="Ihre Skipperlizenz">Their Skipper License</h4>
+                            <p data-en="A certified copy of their core national or professional diploma, plus any STCW certificates." data-de="Eine beglaubigte Kopie ihres nationalen oder beruflichen Kerndiploms sowie aller STCW-Zertifikate.">A certified copy of their core national or professional diploma, plus any STCW certificates.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="check-number">2</div>
+                        <div class="check-content">
+                            <h4 data-en="Their Medical Certificate" data-de="Ihr ärztliches Zeugnis">Their Medical Certificate</h4>
+                            <p data-en="Must be a valid maritime medical certificate from an approved doctor." data-de="Muss ein gültiges maritimes ärztliches Zeugnis von einem zugelassenen Arzt sein.">Must be a valid maritime medical certificate from an approved doctor.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="check-number">3</div>
+                        <div class="check-content">
+                            <h4 data-en="Their Radio License" data-de="Ihre Funklizenz">Their Radio License</h4>
+                            <p data-en="A valid VHF Radio Operator license (SRC or GOC)." data-de="Eine gültige UKW-Funklizenz (SRC oder GOC).">A valid VHF Radio Operator license (SRC or GOC).</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="check-number">4</div>
+                        <div class="check-content">
+                            <h4 data-en="Their Sea Logbook" data-de="Ihr Seelogbuch">Their Sea Logbook</h4>
+                            <p data-en="Proof of their on-the-water experience, showing miles or days at sea." data-de="Nachweis ihrer Erfahrung auf dem Wasser mit Angabe von Meilen oder Tagen auf See.">Proof of their on-the-water experience, showing miles or days at sea.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="check-number">5</div>
+                        <div class="check-content">
+                            <h4 data-en="Proof of Local Registration" data-de="Nachweis der lokalen Registrierung">Proof of Local Registration</h4>
+                            <p data-en="If required by the country (e.g., 'Gente di Mare' in Italy, RNAAT in Portugal)." data-de="Falls vom Land gefordert (z.B. 'Gente di Mare' in Italien, RNAAT in Portugal).">(If required by the country (e.g., 'Gente di Mare' in Italy, RNAAT in Portugal).</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="check-number">6</div>
+                        <div class="check-content">
+                            <h4 data-en="Certificate Validation (if applicable)" data-de="Zertifikatsvalidierung (falls zutreffend)">Certificate Validation (if applicable)</h4>
+                            <p data-en="If their license is from another country, they need an official validation from the local maritime authority." data-de="Wenn ihre Lizenz aus einem anderen Land stammt, benötigen sie eine offizielle Validierung von der örtlichen Seefahrtsbehörde.">If their license is from another country, they need an official validation from the local maritime authority.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compliance-note">
+                <p data-en="Getting these documents right is key to ensuring every trip is safe, legal, and builds trust in your platform." data-de="Die korrekte Beschaffung dieser Dokumente ist der Schlüssel, um sicherzustellen, dass jede Reise sicher und legal ist und das Vertrauen in Ihre Plattform stärkt.">Getting these documents right is key to ensuring every trip is safe, legal, and builds trust in your platform.</p>
+            </div>
+        </section>
+
+        <!-- Sources & References -->
+        <section class="sources-section">
+            <h2 data-en="■ SOURCES & REFERENCES" data-de="■ QUELLEN & REFERENZEN">■ SOURCES & REFERENCES</h2>
+            
+            <div class="sources-container">
+                <a href="https://es.wikipedia.org/wiki/Convenci%C3%B3n_STCW" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Convención STCW - Wikipedia</div>
+                        <div class="source-desc">International Convention on Standards of Training, Certification and Watchkeeping for Seafarers</div>
+                    </div>
+                </a>
+
+                <a href="https://formations.mer.gouv.fr/plaisance-professionnelle-41" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=gouv.fr&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Plaisance professionnelle | Ministère de la transition écologique</div>
+                        <div class="source-desc">French professional maritime training requirements and certifications</div>
+                    </div>
+                </a>
+
+                <a href="https://en.wikipedia.org/wiki/International_Certificate_of_Competence" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">International Certificate of Competence - Wikipedia</div>
+                        <div class="source-desc">ICC standards and international recognition framework</div>
+                    </div>
+                </a>
+
+                <a href="https://www.yachter.fr/location-de-bateaux/formations-pour-skipper-son-bateau-en-activite-commerciale/" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=yachter.fr&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Quelle formation pour skipper son bateau en activité commerciale | The Yachter</div>
+                        <div class="source-desc">French commercial skipper training requirements and certification paths</div>
+                    </div>
+                </a>
+
+                <a href="https://marinacivil.com/index.php/articulo/marina-de-recreo-y-deportiva/11082-real-decreto-875-2014-de-10-de-octubre-por-el-que-se-regulan-las-titulaciones-nauticas-para-el-gobierno-de-las-embarcaciones-de-recreo" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=marinacivil.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Real Decreto 875/2014 - Asociación Española de Marina Civil</div>
+                        <div class="source-desc">Spanish Royal Decree regulating nautical qualifications for recreational vessel operations</div>
+                    </div>
+                </a>
+
+                <a href="https://www.rottedituttoilmondo.com/titolo-professionale-di-skipper-ufficiale-del-diporto-di-ii-classe/" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=rottedituttoilmondo.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Titolo professionale di SKIPPER Ufficiale del diporto di II classe</div>
+                        <div class="source-desc">Italian professional skipper qualification - Class II Recreation Officer requirements</div>
+                    </div>
+                </a>
+
+                <a href="https://it.indeed.com/guida-alla-carriera/trovare-lavoro/chi-e-skipper" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=indeed.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Chi è lo skipper: mansioni e responsabilità | Indeed.com Italia</div>
+                        <div class="source-desc">Skipper role definition, responsibilities and qualification paths in Italy</div>
+                    </div>
+                </a>
+
+                <a href="https://www.sailwiz.com/en/paso-a-paso-para-ser-patron-profesional-de-embarcaciones-de-recreo/blog/63" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=sailwiz.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Paso a paso para ser patrón profesional de embarcaciones de recreo</div>
+                        <div class="source-desc">Step-by-step guide to becoming a professional recreational vessel captain in Spain</div>
+                    </div>
+                </a>
+
+                <a href="https://www.bateaux.com/article/42858/yachtmaster-obtenir-le-commercial-endorsement-pour-utiliser-son-diplome-de-skipper" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=bateaux.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Yachtmaster : Obtenir le Commercial Endorsement</div>
+                        <div class="source-desc">Obtaining commercial endorsement for using skipper diploma in France</div>
+                    </div>
+                </a>
+
+                <a href="https://www.sailingeurope.com/blog/skipper-licenses-top-yacht-charter-destinations" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=sailingeurope.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Skipper License in Top Yacht Charter Destinations - SailingEurope Blog</div>
+                        <div class="source-desc">Comprehensive guide to skipper licensing requirements across European charter destinations</div>
+                    </div>
+                </a>
+
+                <a href="https://navigare-yachting.com/en/faq" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=navigare-yachting.com&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">FAQ | Navigare Yachting</div>
+                        <div class="source-desc">Croatian yacht charter licensing requirements and frequently asked questions</div>
+                    </div>
+                </a>
+
+                <a href="https://sede.transportes.gob.es/areas-actividad/marina-mercantemaritimo/titulaciones/titulos-recreo/habilitaciones-anejas" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=transportes.gob.es&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Habilitaciones anejas | Sede Electrónica</div>
+                        <div class="source-desc">Spanish Ministry of Transport - Additional qualifications for recreational vessel titles</div>
+                    </div>
+                </a>
+
+                <a href="https://riac.azores.gov.pt/web/guest/w/equiparacao-cartas-navegador-de-recreio-pt" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=azores.gov.pt&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Equiparação Carta Navegador de Recreio PT - RIAC</div>
+                        <div class="source-desc">Portuguese recreational navigator license equivalence and recognition procedures</div>
+                    </div>
+                </a>
+
+                <a href="https://www.amn.pt/Paginas/PerguntasFrequentes.aspx" target="_blank" class="source-link">
+                    <img src="https://www.google.com/s2/favicons?domain=amn.pt&sz=32" class="source-favicon">
+                    <div class="source-content">
+                        <div class="source-title">Perguntas Frequentes - Autoridade Marítima Nacional</div>
+                        <div class="source-desc">Portuguese National Maritime Authority - Frequently asked questions on nautical qualifications</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="data-disclaimer">
+                <p data-en="* Click any source to visit the original website. Data compiled from official government sources, maritime authorities, and professional training institutions across European jurisdictions." data-de="* Klicken Sie auf eine Quelle, um die ursprüngliche Website zu besuchen. Daten aus offiziellen Regierungsquellen, Schifffahrtsbehörden und professionellen Ausbildungseinrichtungen in europäischen Rechtsgebieten.">* Click any source to visit the original website. Data compiled from official government sources, maritime authorities, and professional training institutions across European jurisdictions.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../language.js"></script>
+    <script src="../navigation.js"></script>
+</body>
+</html> 

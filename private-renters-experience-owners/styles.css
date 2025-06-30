@@ -62,11 +62,13 @@ body {
 }
 
 .header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 auto 0.7em auto;
+    max-width: 900px;
+    word-break: break-word;
 }
 
 .subtitle {
@@ -185,16 +187,16 @@ body {
 
 /* Charts */
 .chart-container {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 2px solid #000000;
-    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
 }
 
-.chart-container canvas {
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
     max-width: 100%;
-    height: auto;
 }
 
 /* Data Grids */
@@ -342,6 +344,15 @@ body {
     font-weight: bold;
 }
 
+/* Competitor logo alignment in comparison grid */
+.comparison-item h4 img {
+    margin-left: 0.3em;
+    margin-right: 0.1em;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
 /* Tax Complexity */
 .tax-complexity {
     margin: 30px 0;
@@ -465,54 +476,61 @@ body {
 
 /* Key Insights */
 .key-insights {
-    margin: 60px 0;
-    padding: 40px;
-    background-color: #f8f8f8;
-    border: 3px solid #000000;
+    margin: 2.5em 0 2em 0;
+    padding: 0;
+    background: none;
+    border: none;
 }
 
 .key-insights h3 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
 }
 
 .insight-item {
-    margin-bottom: 30px;
+    background: #f6f7fa;
+    border: 2px solid #222c36;
+    border-radius: 10px;
+    padding: 1.2em 1.1em 1em 1.1em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .insight-item h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+    color: #222c36;
 }
 
 .insight-bullets {
-    list-style: none;
-    margin-bottom: 15px;
-    padding-left: 0;
-}
-
-.insight-bullets li {
-    position: relative;
-    padding: 5px 0 5px 18px;
-    font-weight: bold;
-}
-
-.insight-bullets li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: #000000;
-    font-weight: bold;
+    margin: 0.6em 0 0.6em 1.1em;
+    padding: 0;
+    color: #333;
+    font-size: 0.97rem;
 }
 
 .insight-implication {
-    font-weight: bold;
+    background: #f9f6ee;
+    border-left: 4px solid #0074D9;
+    padding: 0.7em 1em;
+    margin-top: 1em;
+    font-weight: 600;
+    color: #1a2a3a;
+    font-size: 1.01rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 116, 217, 0.07);
+}
+
+@media (max-width: 700px) {
+    .insight-item {
+        padding: 1em 0.5em 0.8em 0.5em;
+    }
 }
 
 /* Methodology */
@@ -585,7 +603,8 @@ body {
     }
 
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        padding: 0 0.5em;
     }
 
     .subtitle {
@@ -614,5 +633,12 @@ body {
         right: auto;
         justify-content: center;
         margin-bottom: 20px;
+    }
+}
+
+/* Responsive chart containers */
+@media (max-width: 1000px) {
+    .chart-container {
+        max-width: 98vw;
     }
 }
