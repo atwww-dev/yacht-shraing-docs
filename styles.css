@@ -1152,9 +1152,15 @@ body {
 }
 
 .document-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-black);
+}
+
+.document-card--highlighted {
+    border-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f9ff 100%);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
 }
 
 .doc-header {
