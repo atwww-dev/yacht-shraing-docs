@@ -1,6 +1,20 @@
 // Global charts object for language switching
 window.charts = {};
 
+// Shared vibrant palette for consistency with other reports
+const vibrantPalette = [
+  "#0074D9", // blue
+  "#2ECC40", // green
+  "#FF4136", // red
+  "#FF851B", // orange
+  "#B10DC9", // purple
+  "#FFDC00", // yellow
+  "#39CCCC", // teal
+  "#85144b", // maroon
+  "#3D9970", // olive
+  "#F012BE", // magenta
+];
+
 // Market Growth Chart
 const growthCtx = document.getElementById("growthChart").getContext("2d");
 window.charts.growthChart = new Chart(growthCtx, {
@@ -11,8 +25,8 @@ window.charts.growthChart = new Chart(growthCtx, {
       {
         label: "Market Value (Billions USD)",
         data: [16.5, 17.5, 18.6, 19.7, 21.0, 22.3],
-        borderColor: "#000000",
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        borderColor: vibrantPalette[0],
+        backgroundColor: "rgba(0, 116, 217, 0.1)",
         borderWidth: 4,
         fill: true,
         tension: 0.4,
@@ -85,13 +99,7 @@ window.charts.platformShareChart = new Chart(platformCtx, {
     datasets: [
       {
         data: [180000, 60000, 50000, 50000, 40000],
-        backgroundColor: [
-          "#000000",
-          "#333333",
-          "#666666",
-          "#999999",
-          "#cccccc",
-        ],
+        backgroundColor: vibrantPalette.slice(0, 5),
         borderColor: "#ffffff",
         borderWidth: 3,
       },
@@ -136,8 +144,13 @@ window.charts.commissionChart = new Chart(commissionCtx, {
       {
         label: "Commission Rate (%)",
         data: [11.5, 20, 15, 15.5],
-        backgroundColor: ["#000000", "#333333", "#666666", "#dc2626"],
-        borderColor: "#ffffff",
+        backgroundColor: [
+          vibrantPalette[0],
+          vibrantPalette[1],
+          vibrantPalette[2],
+          vibrantPalette[3],
+        ],
+        borderColor: vibrantPalette[0],
         borderWidth: 2,
       },
     ],
@@ -208,8 +221,8 @@ window.charts.satisfactionChart = new Chart(satisfactionCtx, {
       {
         label: "Current Performance",
         data: [8, 7, 4, 3, 4, 6],
-        borderColor: "#000000",
-        backgroundColor: "rgba(0, 0, 0, 0.2)",
+        borderColor: vibrantPalette[0],
+        backgroundColor: "rgba(0, 116, 217, 0.2)",
         borderWidth: 3,
         pointBackgroundColor: "#000000",
         pointBorderColor: "#ffffff",
@@ -218,8 +231,8 @@ window.charts.satisfactionChart = new Chart(satisfactionCtx, {
       {
         label: "Industry Potential",
         data: [9, 8, 8, 8, 8, 8],
-        borderColor: "#dc2626",
-        backgroundColor: "rgba(220, 38, 38, 0.1)",
+        borderColor: vibrantPalette[2],
+        backgroundColor: "rgba(255, 65, 54, 0.1)",
         borderWidth: 3,
         borderDash: [5, 5],
         pointBackgroundColor: "#dc2626",
@@ -296,16 +309,8 @@ window.charts.europeListingsChart = new Chart(heatmapCtx, {
       {
         label: "Boat Listings (Nautal Data)",
         data: [10372, 7978, 6555, 5888, 5702, 3500, 8000],
-        backgroundColor: [
-          "#000000",
-          "#1a1a1a",
-          "#333333",
-          "#4d4d4d",
-          "#666666",
-          "#808080",
-          "#999999",
-        ],
-        borderColor: "#ffffff",
+        backgroundColor: vibrantPalette.slice(0, 7),
+        borderColor: vibrantPalette[0],
         borderWidth: 2,
       },
     ],
@@ -367,15 +372,15 @@ window.charts.trustScoresChart = new Chart(trustCtx, {
       {
         label: "5-Star Reviews (%)",
         data: [87, 72, 70],
-        backgroundColor: "#000000",
-        borderColor: "#ffffff",
+        backgroundColor: vibrantPalette[0],
+        borderColor: vibrantPalette[0],
         borderWidth: 2,
       },
       {
         label: "1-Star Reviews (%)",
         data: [4, 10, 25],
-        backgroundColor: "#dc2626",
-        borderColor: "#ffffff",
+        backgroundColor: vibrantPalette[2],
+        borderColor: vibrantPalette[2],
         borderWidth: 2,
       },
     ],
@@ -445,8 +450,12 @@ window.charts.revenueChart = new Chart(revenueCtx, {
     datasets: [
       {
         data: [72.5, 22.5, 5],
-        backgroundColor: ["#000000", "#666666", "#cccccc"],
-        borderColor: "#ffffff",
+        backgroundColor: [
+          vibrantPalette[0],
+          vibrantPalette[3],
+          vibrantPalette[5],
+        ],
+        borderColor: vibrantPalette[0],
         borderWidth: 3,
       },
     ],

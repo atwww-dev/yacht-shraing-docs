@@ -53,22 +53,114 @@
             <button class="lang-btn active" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="de">DE</button>
         </div>
+        <!-- Slide Pagination -->
+        <div class="slide-pagination">
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides"></span>
+            </div>
+            <div class="slide-dots" id="slideDots"></div>
+        </div>
+
         <div class="swiper-container">
             <div class="swiper-wrapper">
+                <!-- Table of Contents Slide -->
+                <section class="swiper-slide">
+                    <div class="slide-content toc-slide">
+                        <div class="slide-icon">⛵</div>
+                        <h2 data-en="Yacht Sharing Platform" data-de="Yacht-Sharing-Plattform">Yacht Sharing Platform</h2>
+                        <p class="subtitle" data-en="Strategic Discovery & Market Analysis" data-de="Strategische Entdeckung & Marktanalyse">Strategic Discovery & Market Analysis</p>
+
+                        <div class="toc-grid">
+                            <div class="toc-item" data-slide="1">
+                                <div class="toc-number">01</div>
+                                <div class="toc-content">
+                                    <h3 data-en="Market Growth" data-de="Marktwachstum">Market Growth</h3>
+                                    <p data-en="Industry trends & opportunities" data-de="Branchentrends & Chancen">Industry trends & opportunities</p>
+                                </div>
+                            </div>
+                            <div class="toc-item" data-slide="2">
+                                <div class="toc-number">02</div>
+                                <div class="toc-content">
+                                    <h3 data-en="Current Platforms" data-de="Aktuelle Plattformen">Current Platforms</h3>
+                                    <p data-en="Competitive landscape analysis" data-de="Wettbewerbslandschaftsanalyse">Competitive landscape analysis</p>
+                                </div>
+                            </div>
+                            <div class="toc-item" data-slide="3">
+                                <div class="toc-number">03</div>
+                                <div class="toc-content">
+                                    <h3 data-en="User Challenges" data-de="Nutzerprobleme">User Challenges</h3>
+                                    <p data-en="Pain points & solutions" data-de="Schmerzpunkte & Lösungen">Pain points & solutions</p>
+                                </div>
+                            </div>
+                            <div class="toc-item" data-slide="4">
+                                <div class="toc-number">04</div>
+                                <div class="toc-content">
+                                    <h3 data-en="Our Approach" data-de="Unser Ansatz">Our Approach</h3>
+                                    <p data-en="Strategic positioning" data-de="Strategische Positionierung">Strategic positioning</p>
+                                </div>
+                            </div>
+                            <div class="toc-item" data-slide="5">
+                                <div class="toc-number">05</div>
+                                <div class="toc-content">
+                                    <h3 data-en="AI Technology" data-de="KI-Technologie">AI Technology</h3>
+                                    <p data-en="Smart features & advantages" data-de="Intelligente Features & Vorteile">Smart features & advantages</p>
+                                </div>
+                            </div>
+                            <div class="toc-item" data-slide="6">
+                                <div class="toc-number">06</div>
+                                <div class="toc-content">
+                                    <h3 data-en="Next Steps" data-de="Nächste Schritte">Next Steps</h3>
+                                    <p data-en="Implementation roadmap" data-de="Umsetzungsroadmap">Implementation roadmap</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navigation-hint">
+                            <div class="hint-icon">👆</div>
+                            <p data-en="Click any topic above or use the arrows to navigate" data-de="Klicken Sie auf ein Thema oben oder verwenden Sie die Pfeile zur Navigation">Click any topic above or use the arrows to navigate</p>
+                            <div class="swipe-hint">
+                                <span data-en="Swipe" data-de="Wischen">Swipe</span>
+                                <div class="swipe-arrows">← →</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Slide 1: Market Snapshot -->
                 <section class="swiper-slide">
                     <div class="slide-content">
                         <h2 data-en="Boat Rental Market – 2025 Snapshot" data-de="Bootsvermietungsmarkt – Schnappschuss 2025">Boat Rental Market – 2025 Snapshot</h2>
                         <p data-en="The market has big players, but they aren't perfect. Most focus on professional charter companies, not private boat owners." data-de="Der Markt hat große Akteure, aber sie sind nicht perfekt. Die meisten konzentrieren sich auf professionelle Charterfirmen, nicht auf private Bootsbesitzer.">The market has big players, but they aren't perfect. Most focus on professional charter companies, not private boat owners.</p>
-                        <div class="chart-container half-width">
+                        
+                        <div class="chart-container large">
                             <canvas id="platformChart"></canvas>
                         </div>
+
+                        <h3 data-en="Key Players" data-de="Hauptakteure">Key Players</h3>
                         <div class="competitor-logos">
-                            <div class="logo-item"><img src="https://www.getmyboat.com/favicon.ico" alt="GetMyBoat"><span data-en="GetMyBoat<br><small>180k+ boats, poor user experience</small>" data-de="GetMyBoat<br><small>180k+ Boote, schlechte Nutzererfahrung</small>">GetMyBoat<br><small>180k+ boats, poor user experience</small></span></div>
-                            <div class="logo-item"><img src="https://www.boatsetter.com/favicon.ico" alt="Boatsetter"><span data-en="Boatsetter<br><small>Mix of private & charter</small>" data-de="Boatsetter<br><small>Mix aus Privat & Charter</small>">Boatsetter<br><small>Mix of private & charter</small></span></div>
-                            <div class="logo-item"><img src="https://www.clickandboat.com/favicon.ico" alt="Click&Boat"><span data-en="Click&Boat<br><small>Mix of private & charter</small>" data-de="Click&Boat<br><small>Mix aus Privat & Charter</small>">Click&Boat<br><small>Mix of private & charter</small></span></div>
-                            <div class="logo-item"><img src="https://www.boataround.com/favicon.ico" alt="Boataround"><span data-en="Boataround<br><small>Mostly charter fleets</small>" data-de="Boataround<br><small>Hauptsächlich Charterflotten</small>">Boataround<br><small>Mostly charter fleets</small></span></div>
+                            <div class="logo-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="8" viewBox="0 0 194 33" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3567 32.5122C22.3846 33.6926 29.1048 30.0316 32.1493 23.9457C32.2708 23.7038 32.4427 23.492 32.6531 23.3251C32.8634 23.1583 33.107 23.0404 33.3667 22.98C35.6806 22.4366 37.5582 20.5449 37.9733 18.0392C38.0941 17.312 38.0617 16.5962 37.9532 15.9078C37.8771 15.4181 37.6175 15.1955 37.2192 15.1292C36.8007 15.0585 36.4885 15.2171 36.2513 15.6749C35.8921 16.3679 34.5561 16.9969 33.6039 17.5506C32.748 18.0483 32.4067 18.7252 31.9323 18.8497C31.4455 18.9775 30.725 18.3599 29.9428 18.1259C28.9895 17.8405 28.2958 17.8223 27.5484 17.264C27.4195 17.115 27.2462 17.0135 27.0551 16.9749C26.8641 16.9364 26.6659 16.9631 26.4912 17.0509C26.3164 17.1386 26.1749 17.2826 26.0883 17.4606C26.0017 17.6386 25.9749 17.8407 26.0121 18.0357C26.241 19.3996 26.9177 20.6435 27.931 21.5632C28.806 22.2585 28.9828 23.1067 28.3831 24.1307C27.1165 26.286 24.7052 26.7335 22.7035 26.7335C18.9887 26.7335 16.6501 23.8019 16.5125 20.6294C16.4812 19.8942 16.5975 19.5072 17.1469 19.4467C17.7881 19.376 18.1226 19.4467 18.7917 19.4787C19.2214 19.4992 19.6443 19.5392 20.055 19.6225C20.9994 19.8143 21.2119 19.3668 21.2612 19.0061C21.2936 18.7721 21.1829 18.4547 21.0642 18.2709C20.3929 17.2355 20.3593 16.9786 19.312 16.087C19.0793 15.8884 18.8096 15.5254 18.9987 15.2571C19.4015 14.6852 20.5451 14.0459 23.339 13.5447C24.4658 13.3427 26.1229 13.321 26.9475 13.3952C27.8147 13.4728 28.9168 13.5527 29.6553 13.7513C30.6612 14.0219 31.5048 13.2194 31.6358 12.4317C31.7454 11.7695 31.4567 11.2558 30.9129 10.6257C30.5213 10.1713 30.2159 9.90304 30.0424 8.40528C29.7504 5.89378 27.827 4.31153 26.8759 3.5969C24.8193 2.0489 23.2954 1.44386 20.5842 0.988364C17.2593 0.423259 13.8444 0.944679 10.8273 2.47814C9.97739 2.89825 9.00392 2.97769 8.09937 2.70075C7.75922 2.59769 7.41415 2.51234 7.0655 2.44503C4.83522 2.01335 2.52716 2.41406 0.562358 3.57407C0.451878 3.63933 0.35682 3.72859 0.283922 3.83552C0.211024 3.94245 0.162069 4.06442 0.140527 4.19281C0.0599647 4.67798 0.280391 5.04329 0.868941 5.2191C1.75512 5.48395 2.53948 6.08899 2.96131 6.98057C3.26562 7.64543 3.43194 8.36728 3.44985 9.10083C3.46776 9.83438 3.33686 10.5638 3.06537 11.2433C2.72654 12.1756 2.47442 13.1384 2.31234 14.1189C1.19343 20.8612 4.44611 27.3214 9.9881 30.567C11.649 31.5379 13.4674 32.1976 15.3567 32.5122Z" fill="#0AE9F5"/>
+                                    <path d="M56.9401 7.44895C62.0293 7.44895 64.7291 10.3659 64.7291 15.9207V19.148C64.7291 24.8889 62.1224 27.5266 56.5056 27.5266C55.0471 27.5266 53.5576 27.3714 51.8198 27.0611V23.3062C53.4024 23.6786 54.7989 23.8648 56.1332 23.8648C59.5157 23.8648 60.8501 22.6546 60.8501 19.5824C60.0743 20.8547 58.3055 21.6616 56.3194 21.6616C52.037 21.6616 49.2131 18.8687 49.2131 14.6173C49.2131 10.3659 52.5025 7.44895 56.9401 7.44895ZM56.9401 17.9998C59.2675 17.9998 60.788 16.6654 60.788 14.6173C60.788 12.5692 59.2675 11.1107 56.9401 11.1107C54.6127 11.1107 53.1542 12.5382 53.1542 14.6173C53.1542 16.6964 54.6747 17.9998 56.9401 17.9998ZM73.7594 7.44895C78.321 7.44895 81.207 10.5521 81.207 15.4862C81.207 15.7345 81.176 16.1689 81.145 16.6344H69.7562C70.1286 18.7446 71.5871 19.8617 74.0076 19.8617C75.6213 19.8617 76.9556 19.2411 78.0418 17.9998L80.5553 20.5134C78.9727 22.4063 76.8005 23.3373 73.9456 23.3373C68.9494 23.3373 65.8462 20.3272 65.8462 15.4862C65.8462 10.6452 69.1046 7.44895 73.7594 7.44895ZM77.1418 13.6864C76.9556 11.9175 75.7144 10.9245 73.6973 10.9245C71.6802 10.9245 70.3769 11.8865 69.8804 13.6864H77.1418ZM82.1988 3.66306H86.1399V7.82133H91.5084V11.359H86.1399V15.9207C86.1399 18.4653 87.1019 19.4273 89.7086 19.4273H91.5084V22.9649H88.8397C84.3711 22.9649 82.1988 20.7616 82.1988 16.1379V3.66306ZM99.3284 7.44895C101.563 7.44895 103.176 8.22474 104.48 9.9315C105.535 8.34887 107.397 7.44895 109.6 7.44895C113.665 7.44895 116.148 10.0867 116.148 14.4001V22.9649H112.269V14.6483C112.269 12.1658 111.462 11.1728 109.414 11.1728C107.366 11.1728 106.404 12.1968 106.404 14.6483V22.9649H102.525V14.6483C102.525 12.1658 101.656 11.1728 99.4526 11.1728C97.4665 11.1728 96.5976 12.2279 96.5976 14.6483V22.9649H92.7187V14.4001C92.7187 9.99356 95.1391 7.44895 99.3284 7.44895ZM117.172 7.82133H121.051V14.6483C121.051 16.7895 122.323 17.9998 124.588 17.9998C126.854 17.9998 128.157 16.8206 128.157 14.6483V7.82133H132.036V19.148C132.036 24.8889 129.429 27.5266 123.813 27.5266C122.354 27.5266 120.865 27.3714 119.127 27.0611V23.3062C120.709 23.6786 122.106 23.8648 123.44 23.8648C126.885 23.8648 128.25 22.6546 128.25 19.5824C127.412 20.9168 125.861 21.6616 123.999 21.6616C119.841 21.6616 117.172 19.0549 117.172 14.9276V7.82133ZM133.246 3.66306H137.125V9.52808C138.056 8.16268 139.639 7.44895 141.656 7.44895C146.062 7.44895 149.135 10.7073 149.135 15.3931C149.135 20.0789 145.845 23.3373 141.066 23.3373C136.287 23.3373 133.246 20.0169 133.246 15.3931V3.66306ZM141.19 19.6755C143.549 19.6755 145.194 17.9067 145.194 15.3931C145.194 12.8795 143.611 11.0797 141.19 11.0797C138.77 11.0797 137.187 12.8485 137.187 15.3931C137.187 17.9377 138.832 19.6755 141.19 19.6755ZM158.103 7.44895C162.82 7.44895 166.109 10.7073 166.109 15.3931C166.109 20.0789 162.82 23.3373 158.103 23.3373C153.386 23.3373 150.159 20.0789 150.159 15.3931C150.159 10.7073 153.386 7.44895 158.103 7.44895ZM158.103 19.6755C160.461 19.6755 162.106 17.9067 162.106 15.3931C162.106 12.8795 160.461 11.1107 158.103 11.1107C155.744 11.1107 154.038 12.8795 154.038 15.3931C154.038 17.9067 155.682 19.6755 158.103 19.6755ZM175.201 7.44895C179.763 7.44895 183.021 10.7694 183.021 15.3931V22.9649H179.453V20.7927C178.522 22.3753 176.66 23.3373 174.612 23.3373C170.205 23.3373 167.133 20.0789 167.133 15.3931C167.133 10.7073 170.422 7.44895 175.201 7.44895ZM175.077 19.7065C177.436 19.7065 179.08 17.9377 179.08 15.3931C179.08 12.8485 177.436 11.1107 175.077 11.1107C172.719 11.1107 171.074 12.8795 171.074 15.3931C171.074 17.9067 172.657 19.7065 175.077 19.7065ZM184.355 3.66306H188.296V7.82133H193.664V11.359H188.296V15.9207C188.296 18.4653 189.258 19.4273 191.864 19.4273H193.664V22.9649H190.995C186.527 22.9649 184.355 20.7616 184.355 16.1379V3.66306Z" fill="#232626"/>
+                                </svg>
+                                <small>180K boats</small>
+                            </div>
+                            <div class="logo-item">
+                                <svg width="48" height="10" viewBox="0 0 230 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 23.3796C0 36.2787 10.4991 46.7592 23.4211 46.7592C36.3432 46.7592 46.8423 36.2787 46.8423 23.3796C46.8423 10.4805 36.3432 0 23.4211 0C10.4991 0 0 10.4805 0 23.3796Z" fill="#0A4195"/>
+                                    <path d="M60.9306 6.71832V19.8861H61.0203C61.2895 19.5278 61.5588 19.1695 61.9177 18.9008C62.2766 18.5425 62.7253 18.2738 63.2637 18.005C64.5201 17.2884 65.9558 16.9301 67.3019 17.0197C69.8145 17.0197 72.1476 18.005 73.8526 19.8861C74.6602 20.7819 75.2884 21.8568 75.7371 23.0213C76.1858 24.2754 76.455 25.5295 76.3652 26.8731C76.3652 28.2168 76.1858 29.4709 75.7371 30.725C75.3781 31.8895 74.75 32.9644 73.9423 33.8602C73.1347 34.7559 72.1476 35.4725 71.0708 36.01C69.9042 36.5475 68.5582 36.8162 67.2121 36.8162C65.9558 36.8162 64.6098 36.5475 63.4432 35.9204C62.2766 35.383 61.3793 34.4872 60.7511 33.4123H60.6614V36.1892H56.1746V6.62874L60.9306 6.71832ZM71.6995 26.7836C71.6995 26.067 71.6098 25.3504 71.3406 24.6338C71.1611 23.9171 70.8021 23.2901 70.3535 22.6631C69.9048 22.1256 69.3664 21.5881 68.6485 21.3194C67.9306 20.9611 67.1229 20.7819 66.2256 20.7819C65.418 20.7819 64.6103 20.9611 63.8924 21.3194C63.2643 21.6777 62.6361 22.1256 62.1875 22.7526C61.7388 23.2901 61.2901 24.0067 61.1106 24.7233C60.8414 25.4399 60.7517 26.1566 60.7517 26.8732C60.7517 27.5898 60.8414 28.3064 61.1106 29.023C61.3798 29.7396 61.7388 30.3667 62.1875 30.9937C62.6361 31.5312 63.2643 32.0686 63.8924 32.3374C65.418 33.054 67.123 33.054 68.5587 32.3374C69.1869 31.9791 69.815 31.5312 70.2637 30.9041C70.7124 30.2771 71.0714 29.6501 71.2508 28.9335C71.6098 28.3064 71.6995 27.5898 71.6995 26.7836Z" fill="#0A4195"/>
+                                </svg>
+                                <small>50K boats</small>
+                            </div>
+                            <div class="logo-item">
+                                <svg width="48" height="6" viewBox="0 0 218 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.2904 8.46122C33.2904 4.35961 29.889 0.205762 25.6613 0.114362C24.1871 0.0817184 14.5391 0.114362 14.5391 0.114362C6.83478 0.114362 0.589844 6.34431 0.589844 14.0301C0.589844 21.716 6.83478 27.9459 14.5391 27.9459C14.5391 27.9459 24.1871 27.9786 25.6613 27.9459C29.8873 27.8545 33.2887 23.7008 33.2887 19.5991C33.2887 17.4578 32.4788 15.5056 31.1504 14.0285C32.4804 12.5514 33.2887 10.5994 33.2887 8.45797L33.2904 8.46122Z" fill="#130111"/>
+                                    <path d="M49.7347 15.1429C49.7347 8.45595 53.6614 4.27274 60.1877 4.27274C65.9484 4.27274 69.2173 7.59581 69.9208 11.7758C69.988 12.1789 69.6852 12.5494 69.2745 12.5494H64.5217C64.201 12.5494 63.9229 12.3193 63.8754 12.0026C63.5843 10.0718 62.5666 8.54246 60.1877 8.54246C57.5308 8.54246 55.9355 10.457 55.9355 15.1413C55.9355 19.8256 57.5308 21.7988 60.1877 21.7988C62.5699 21.7988 63.5875 20.3135 63.8771 18.319C63.9245 17.9975 64.2075 17.7626 64.5331 17.7626H69.2501C69.6673 17.7626 69.9748 18.1445 69.8931 18.5525C69.0717 22.6574 65.9352 26.0687 60.1894 26.0687C53.9591 26.0687 49.7364 21.8267 49.7364 15.1397L49.7347 15.1429Z" fill="#130111"/>
+                                </svg>
+                                <small>50K boats</small>
+                            </div>
                         </div>
+
                         <div class="insight-box">
                             <p data-en="<strong>The bottom line:</strong> No true 'Airbnb of Boats' exists yet. This is our opportunity to build a platform that truly serves private owners and skilled renters." data-de="<strong>Fazit:</strong> Es gibt noch kein echtes 'Airbnb für Boote'. Das ist unsere Chance, eine Plattform zu schaffen, die wirklich privaten Besitzern und erfahrenen Mietern dient."><strong>The bottom line:</strong> No true "Airbnb of Boats" exists yet. This is our opportunity to build a platform that truly serves private owners and skilled renters.</p>
                         </div>
@@ -78,27 +170,38 @@
                 <!-- Slide 2: Market Trends -->
                 <section class="swiper-slide">
                     <div class="slide-content">
-                        <h2 data-en="Market Trends & Mobile-First World" data-de="Markttrends & Mobile-First-Welt">Market Trends & Mobile-First World</h2>
-                        <p data-en="The boat rental market is growing steadily, and users are booking on their phones more than ever." data-de="Der Bootsvermietungsmarkt wächst stetig, und Nutzer buchen mehr denn je über ihre Handys.">The boat rental market is growing steadily, and users are booking on their phones more than ever.</p>
-                        <div class="trend-stats">
-                            <div class="stat">
-                                <div class="stat-value">$22.3B</div>
-                                <div class="stat-label" data-en="Projected Market by 2027" data-de="Prognostizierter Markt bis 2027">Projected Market by 2027</div>
+                        <h2 data-en="Market Growth Trajectory" data-de="Marktwachstumstrend">Market Growth Trajectory</h2>
+                        
+                        <div class="market-icons">
+                            <div class="market-icon-item">
+                                <div class="icon">📈</div>
+                                <div class="icon-content">
+                                    <h4 data-en="Strong Growth" data-de="Starkes Wachstum">Strong Growth</h4>
+                                    <p data-en="~6% annual growth rate" data-de="~6% jährliche Wachstumsrate">~6% annual growth rate</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">~6%</div>
-                                <div class="stat-label" data-en="Annual Growth (CAGR)" data-de="Jährliches Wachstum (CAGR)">Annual Growth (CAGR)</div>
+                            <div class="market-icon-item">
+                                <div class="icon">💰</div>
+                                <div class="icon-content">
+                                    <h4 data-en="Market Size" data-de="Marktgröße">Market Size</h4>
+                                    <p data-en="$22.3B by 2027" data-de="$22,3B bis 2027">$22.3B by 2027</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">50%+</div>
-                                <div class="stat-label" data-en="Bookings on Mobile" data-de="Buchungen über Mobilgeräte">Bookings on Mobile</div>
+                            <div class="market-icon-item">
+                                <div class="icon">📱</div>
+                                <div class="icon-content">
+                                    <h4 data-en="Mobile Bookings" data-de="Mobile Buchungen">Mobile Bookings</h4>
+                                    <p data-en="50%+ of all bookings" data-de="50%+ aller Buchungen">50%+ of all bookings</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="chart-container">
+
+                        <div class="chart-container large">
                             <canvas id="growthChart"></canvas>
                         </div>
-                         <div class="insight-box">
-                            <p data-en="<strong>Our edge:</strong> A clean, simple experience that works perfectly on a phone is essential, especially for boat owners who may not be tech-savvy." data-de="<strong>Unser Vorteil:</strong> Ein sauberes, einfaches Erlebnis, das auf dem Handy perfekt funktioniert, ist unerlässlich, besonders für Bootsbesitzer, die möglicherweise nicht technikaffin sind."><strong>Our edge:</strong> A clean, simple experience that works perfectly on a phone is essential, especially for boat owners who may not be tech-savvy.</p>
+
+                        <div class="insight-box">
+                            <p data-en="🎯 The boat rental market is growing steadily, and mobile-first approach is critical for capturing the new generation of boat renters." data-de="🎯 Der Bootsvermietungsmarkt wächst stetig, und ein Mobile-First-Ansatz ist entscheidend für die Erfassung der neuen Generation von Bootsmietern.">🎯 The boat rental market is growing steadily, and mobile-first approach is critical for capturing the new generation of boat renters.</p>
                         </div>
                     </div>
                 </section>
@@ -106,30 +209,29 @@
                 <!-- Slide 3: User Pain Points -->
                 <section class="swiper-slide">
                     <div class="slide-content">
-                        <h2 data-en="What Frustrates Users Today?" data-de="Was frustriert Nutzer heute?">What Frustrates Users Today?</h2>
-                        <p data-en="Current platforms have common problems that leave both renters and owners unhappy." data-de="Aktuelle Plattformen haben häufige Probleme, die sowohl Mieter als auch Besitzer unzufrieden machen.">Current platforms have common problems that leave both renters and owners unhappy.</p>
-                         <div class="pain-solution-grid">
+                        <h2 data-en="Current Platform Challenges" data-de="Aktuelle Plattform-Herausforderungen">Current Platform Challenges</h2>
+                        
+                        <!-- Chart and KPI details removed as requested -->
+ 
+                        <div class="pain-solution-grid">
                             <div class="pain-points">
-                                <h4 data-en="❌ Common Complaints" data-de="❌ Häufige Beschwerden">❌ Common Complaints</h4>
+                                <h4 data-en="⚠️ Current Issues" data-de="⚠️ Aktuelle Probleme">⚠️ Current Issues</h4>
                                 <ul>
                                     <li data-en="Hidden fees & surprise charges" data-de="Versteckte Gebühren & überraschende Kosten">Hidden fees & surprise charges</li>
-                                    <li data-en="Poor earnings for boat owners (15-35% fees)" data-de="Geringe Einnahmen für Bootsbesitzer (15-35% Gebühren)">Poor earnings for boat owners (15-35% fees)</li>
-                                    <li data-en="Last-minute cancellations with no help" data-de="Last-Minute-Stornierungen ohne Hilfe">Last-minute cancellations with no help</li>
-                                    <li data-en="Slow or non-existent customer support" data-de="Langsamer oder nicht existierender Kundensupport">Slow or non-existent customer support</li>
+                                    <li data-en="Poor earnings for boat owners" data-de="Geringe Einnahmen für Bootsbesitzer">Poor earnings for boat owners</li>
+                                    <li data-en="Slow customer support response" data-de="Langsame Kundenbetreuung">Slow customer support response</li>
+                                    <li data-en="Limited verification & trust issues" data-de="Begrenzte Verifizierung & Vertrauensprobleme">Limited verification & trust issues</li>
                                 </ul>
                             </div>
                             <div class="our-solutions">
-                                <h4 data-en="✅ Our Solutions" data-de="✅ Unsere Lösungen">✅ Our Solutions</h4>
+                                <h4 data-en="💡 Our Solutions" data-de="💡 Unsere Lösungen">💡 Our Solutions</h4>
                                 <ul>
-                                    <li data-en="Live fee calculators for 100% transparency" data-de="Live-Gebührenrechner für 100% Transparenz">Live fee calculators for 100% transparency</li>
-                                    <li data-en="Lower booking fees for better owner earnings" data-de="Niedrigere Buchungsgebühren für bessere Einnahmen der Besitzer">Lower booking fees for better owner earnings</li>
-                                    <li data-en="Clear, fair cancellation rules & real support" data-de="Klare, faire Stornierungsregeln & echter Support">Clear, fair cancellation rules & real support</li>
-                                    <li data-en="A platform that respects both sides of the rental" data-de="Eine Plattform, die beide Seiten der Miete respektiert">A platform that respects both sides of the rental</li>
+                                    <li data-en="100% transparent pricing" data-de="100% transparente Preisgestaltung">100% transparent pricing</li>
+                                    <li data-en="Lower fees, better earnings" data-de="Niedrigere Gebühren, bessere Einnahmen">Lower fees, better earnings</li>
+                                    <li data-en="24/7 responsive support" data-de="24/7 reaktionsschneller Support">24/7 responsive support</li>
+                                    <li data-en="AI-powered verification system" data-de="KI-gestütztes Verifizierungssystem">AI-powered verification system</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="chart-container half-width">
-                            <canvas id="commissionChart"></canvas>
                         </div>
                     </div>
                 </section>
@@ -141,22 +243,22 @@
                         <p data-en="It comes down to building a platform centered on trust, quality, and fairness." data-de="Es geht darum, eine Plattform zu schaffen, die auf Vertrauen, Qualität und Fairness basiert.">It comes down to building a platform centered on trust, quality, and fairness.</p>
                         <div class="path-steps">
                             <div class="step">
-                                <div class="step-icon">🤝</div>
+                                <div class="step-icon">🛡️</div>
                                 <h4 data-en="1. Verified Trust" data-de="1. Verifiziertes Vertrauen">1. Verified Trust</h4>
                                 <p data-en="We check everyone's ID (<strong>Identity</strong>), boat ownership papers (<strong>Asset</strong>), and skipper licenses (<strong>Qualification</strong>) so you know who you're dealing with." data-de="Wir überprüfen den Ausweis (<strong>Identität</strong>), die Bootspapiere (<strong>Vermögenswert</strong>) und die Skipperlizenzen (<strong>Qualifikation</strong>) von jedem, damit Sie wissen, mit wem Sie es zu tun haben.">We check everyone's ID (<strong>Identity</strong>), boat ownership papers (<strong>Asset</strong>), and skipper licenses (<strong>Qualification</strong>) so you know who you're dealing with.</p>
                             </div>
                             <div class="step">
-                                <div class="step-icon">⭐</div>
+                                <div class="step-icon">⚓</div>
                                 <h4 data-en="2. Quality Boats & People" data-de="2. Qualitätsboote & Menschen">2. Quality Boats & People</h4>
                                 <p data-en="Honest reviews, boat inspections, and smart checks ensure a high-quality, safe experience every time." data-de="Ehrliche Bewertungen, Bootsinspektionen und intelligente Überprüfungen sorgen jedes Mal für ein hochwertiges und sicheres Erlebnis.">Honest reviews, boat inspections, and smart checks ensure a high-quality, safe experience every time.</p>
                             </div>
                             <div class="step">
-                                <div class="step-icon">透明</div>
+                                <div class="step-icon">📋</div>
                                 <h4 data-en="3. Full Transparency" data-de="3. Volle Transparenz">3. Full Transparency</h4>
                                 <p data-en="No hidden fees. No confusing policies. What you see is what you get, from booking to payout." data-de="Keine versteckten Gebühren. Keine verwirrenden Richtlinien. Was Sie sehen, ist was Sie bekommen, von der Buchung bis zur Auszahlung.">No hidden fees. No confusing policies. What you see is what you get, from booking to payout.</p>
                             </div>
                              <div class="step">
-                                <div class="step-icon">💬</div>
+                                <div class="step-icon">🎧</div>
                                 <h4 data-en="4. Reliable Support" data-de="4. Zuverlässiger Support">4. Reliable Support</h4>
                                 <p data-en="If something goes wrong, a real human is here to help you quickly and fairly." data-de="Wenn etwas schief geht, ist ein echter Mensch da, um Ihnen schnell und fair zu helfen.">If something goes wrong, a real human is here to help you quickly and fairly.</p>
                             </div>
@@ -183,14 +285,38 @@
                     <div class="slide-content">
                         <h2 data-en="Challenges to Watch For" data-de="Herausforderungen, auf die man achten sollte">Challenges to Watch For</h2>
                         <p data-en="Building a trusted platform means finding the right balance." data-de="Eine vertrauenswürdige Plattform aufzubauen bedeutet, die richtige Balance zu finden.">Building a trusted platform means finding the right balance.</p>
-                         <div class="challenge-box">
-                            <h4 data-en="Trust vs. Convenience" data-de="Vertrauen vs. Bequemlichkeit">Trust vs. Convenience</h4>
-                            <p data-en="Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible." data-de="Eine gründliche Überprüfung ist für die Sicherheit von entscheidender Bedeutung, kann aber die Anmeldung verlangsamen. Wir müssen diesen Prozess so reibungslos und schnell wie möglich gestalten.">Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible.</p>
+                         <div class="challenges-grid">
+                             <div class="challenge-box">
+                               <h4 data-en="Trust vs. Convenience" data-de="Vertrauen vs. Bequemlichkeit">Trust vs. Convenience</h4>
+                               <p data-en="Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible." data-de="Eine gründliche Überprüfung ist für die Sicherheit von entscheidender Bedeutung, kann aber die Anmeldung verlangsamen. Wir müssen diesen Prozess so reibungslos und schnell wie möglich gestalten.">Thorough verification is key for safety, but it can slow down sign-ups. We must make this process as smooth and fast as possible.</p>
+                            </div>
+                             <div class="challenge-box">
+                               <h4 data-en="High User Expectations" data-de="Hohe Nutzererwartungen">High User Expectations</h4>
+                               <p data-en="Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one." data-de="Benutzer erwarten ein schnelles, hochwertiges und fehlerfreies Erlebnis. Unsere Plattform muss vom ersten Tag an ausgefeilt und zuverlässig sein.">Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one.</p>
+                            </div>
+                         </div>
+                    </div>
+                </section>
+
+                <!-- Outro Slide -->
+                <section class="swiper-slide">
+                    <div class="slide-content outro-slide">
+                        <h2 data-en="Ready to Set Sail" data-de="Bereit zum Ablegen">Ready to Set Sail</h2>
+                        <p data-en="The opportunity is clear, the market is ready, and we have a plan to succeed." data-de="Die Chance ist klar, der Markt ist bereit, und wir haben einen Plan zum Erfolg.">The opportunity is clear, the market is ready, and we have a plan to succeed.</p>
+                        
+                        <div class="slide-icon">🚀</div>
+
+                        <div class="next-steps-box">
+                            <h4 data-en="Next Steps:" data-de="Nächste Schritte:">Next Steps:</h4>
+                            <ul>
+                                <li data-en="Finalize MVP feature set & user flows" data-de="MVP-Feature-Set & Nutzerflows finalisieren">Finalize MVP feature set & user flows</li>
+                                <li data-en="Complete technical architecture planning" data-de="Technische Architekturplanung abschließen">Complete technical architecture planning</li>
+                                <li data-en="Develop brand identity & design system" data-de="Markenidentität & Design-System entwickeln">Develop brand identity & design system</li>
+                                <li data-en="Begin prototype development" data-de="Prototyp-Entwicklung beginnen">Begin prototype development</li>
+                            </ul>
                         </div>
-                        <div class="challenge-box">
-                            <h4 data-en="High User Expectations" data-de="Hohe Nutzererwartungen">High User Expectations</h4>
-                            <p data-en="Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one." data-de="Benutzer erwarten ein schnelles, hochwertiges und fehlerfreies Erlebnis. Unsere Plattform muss vom ersten Tag an ausgefeilt und zuverlässig sein.">Users expect a fast, premium, and bug-free experience. Our platform needs to be polished and reliable from day one.</p>
-                        </div>
+
+                        <a href="../../index.html" class="home-btn" data-en="⇦ Back to Home" data-de="⇦ Zurück zur Übersicht">⇦ Back to Home</a>
                     </div>
                 </section>
             </div>
@@ -206,66 +332,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../../language.js"></script>
     <script src="presentation-charts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Language switcher logic
-            const langButtons = document.querySelectorAll('.lang-btn');
-            langButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
-            });
-
-            function switchLanguage(lang) {
-                // Set active button
-                langButtons.forEach(button => {
-                    button.classList.remove('active');
-                    if(button.getAttribute('data-lang') === lang) {
-                        button.classList.add('active');
-                    }
-                });
-
-                // Translate elements
-                const elements = document.querySelectorAll('[data-en]');
-                elements.forEach(el => {
-                    const translation = el.getAttribute(`data-${lang}`);
-                    if(translation) {
-                        el.innerHTML = translation;
-                    }
-                });
-            }
-
-            // Global Nav
-            const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const navMenu = document.getElementById('navMenu');
-            const closeMenu = document.getElementById('closeMenu');
-            const navOverlay = document.getElementById('navOverlay');
-            function openNav() {
-                navMenu.classList.add('open');
-                navOverlay.classList.add('show');
-            }
-            function closeNav() {
-                navMenu.classList.remove('open');
-                navOverlay.classList.remove('show');
-            }
-            hamburgerMenu.addEventListener('click', openNav);
-            closeMenu.addEventListener('click', closeNav);
-            navOverlay.addEventListener('click', closeNav);
-
-            // Swiper
-            const swiper = new Swiper('.swiper-container', {
-                loop: false,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        });
-    </script>
+    <script src="presentation.js"></script>
 </body>
 </html> 

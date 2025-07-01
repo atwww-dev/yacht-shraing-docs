@@ -7,7 +7,7 @@
     --text-dark: #000000;
     --text-gray: #4a4a4a;
     --text-light: #666666;
-    --bg-light: #f5f5f5;
+    --bg-light: #ffffff;
     --white: #ffffff;
     --accent-red: #dc2626;
 }
@@ -41,9 +41,9 @@ body {
 }
 
 .lang-btn {
-    background: var(--white);
+    background: var(--primary-black);
     border: 2px solid var(--primary-black);
-    color: var(--primary-black);
+    color: var(--white);
     padding: 0.8rem 1.5rem;
     font-weight: 700;
     font-size: 0.9rem;
@@ -53,31 +53,22 @@ body {
     letter-spacing: 1px;
 }
 
-.lang-btn:first-child {
-    border-right: 1px solid var(--primary-black);
-}
-
-.lang-btn:last-child {
-    border-left: 1px solid var(--primary-black);
-}
-
 .lang-btn:hover {
     background: var(--medium-gray);
     color: var(--white);
 }
 
 .lang-btn.active {
-    background: var(--primary-black);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-black);
 }
 
+/* Slimmer header consistent with other docs */
 .header {
     text-align: center;
-    background: var(--white);
-    padding: 4rem 3rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 3px solid var(--primary-black);
+    padding: 40px 0;
+    margin-bottom: 60px;
+    border-bottom: 4px solid var(--primary-black);
 }
 
 .header h1 {
@@ -97,11 +88,11 @@ body {
 }
 
 .abstract {
-    background: var(--primary-black);
-    color: var(--white);
+    background: #f8f8f8;
+    color: var(--text-dark);
     padding: 3rem;
-    margin-bottom: 2rem;
-    border: 2px solid var(--primary-black);
+    margin-bottom: 40px;
+    border-left: 4px solid var(--primary-black);
 }
 
 .abstract h3 {
@@ -111,10 +102,8 @@ body {
 }
 
 .main-content {
-    background: var(--white);
-    padding: 4rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 3px solid var(--primary-black);
+    background: transparent;
+    padding: 0;
 }
 
 .section {
@@ -133,7 +122,7 @@ body {
 }
 
 .section h3 {
-    color: var(--medium-gray);
+    color: var(--primary-black);
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
@@ -165,8 +154,9 @@ body {
     line-height: 1.7;
 }
 
+/* Neutral highlight box consistent with other reports */
 .highlight-box {
-    background: var(--bg-light);
+    background: #f8f8f8;
     border-left: 6px solid var(--primary-black);
     padding: 2rem;
     margin: 2rem 0;
@@ -184,7 +174,8 @@ body {
     background: var(--white);
     padding: 2.5rem;
     text-align: center;
-    border: 3px solid var(--primary-black);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -216,7 +207,8 @@ body {
 
 .platform-card {
     background: var(--white);
-    border: 3px solid var(--medium-gray);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     padding: 2.5rem;
     transition: all 0.3s ease;
 }
@@ -263,7 +255,8 @@ body {
     background: var(--white);
     padding: 3rem;
     margin: 3rem 0;
-    border: 3px solid var(--medium-gray);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .chart-title {
@@ -311,7 +304,8 @@ body {
 
 .legal-box {
     background: var(--white);
-    border: 3px solid var(--primary-black);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     padding: 2.5rem;
     margin: 3rem 0;
 }
@@ -345,7 +339,8 @@ body {
 
 .methodology {
     background: var(--bg-light);
-    border: 3px solid var(--medium-gray);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     margin: 3rem 0;
 }
@@ -357,7 +352,8 @@ body {
 
 .toc {
     background: var(--white);
-    border: 3px solid var(--medium-gray);
+    border: 2px solid var(--border-gray);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     margin: 3rem 0;
 }
@@ -447,6 +443,7 @@ body {
     color: var(--primary-black);
 }
 
+/* Alt responsive strategy: horizontal scroll keep table structure */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -470,5 +467,25 @@ body {
 
     .country-stats {
         grid-template-columns: 1fr;
+    }
+
+    .data-table {
+        display: inline-block;
+        /* restore default row layout */
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .data-table thead tr,
+    .data-table tbody tr {
+        display: table-row;
+    }
+
+    .data-table td {
+        padding: 0.6rem;
+    }
+
+    .data-table td:before {
+        content: none;
     }
 }

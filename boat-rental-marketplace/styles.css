@@ -1,0 +1,25 @@
+/* Language Toggle – unified with other reports */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 5px;
+}
+
+/* Header styling aligned with other reports */
+.header {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 60px;
+    border-bottom: 4px solid var(--primary-black);
+}
+
+/* Remove extra boxed wrapper for unified open layout */
+.main-content {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}

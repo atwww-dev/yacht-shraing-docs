@@ -493,6 +493,25 @@ body {
         justify-content: center;
         margin-bottom: 2rem;
     }
+
+    .data-table {
+        display: inline-block;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .data-table thead tr,
+    .data-table tbody tr {
+        display: table-row;
+    }
+
+    .data-table td {
+        padding: 0.6rem;
+    }
+
+    .data-table td:before {
+        content: none;
+    }
 }
 
 /* Print Styles */

@@ -13,12 +13,12 @@ window.charts.geographicChart = new Chart(geographicCtx, {
       {
         data: [10372, 7978, 6555, 5888, 5702, 12000],
         backgroundColor: [
-          "#000000",
-          "#1a1a1a",
-          "#333333",
-          "#4d4d4d",
-          "#666666",
-          "#999999",
+          "#2563eb", // France - Blue
+          "#059669", // Italy - Green
+          "#dc2626", // Croatia - Red
+          "#ea580c", // Greece - Orange
+          "#7c3aed", // Spain - Purple
+          "#64748b", // Others - Gray
         ],
         borderColor: "#ffffff",
         borderWidth: 3,
@@ -27,6 +27,7 @@ window.charts.geographicChart = new Chart(geographicCtx, {
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -67,6 +68,8 @@ window.charts.platformChart = new Chart(platformCtx, {
         backgroundColor: "#059669",
         borderColor: "#ffffff",
         borderWidth: 2,
+        barPercentage: 0.8,
+        categoryPercentage: 0.9,
       },
       {
         label: "1-Star Reviews (%)",
@@ -74,34 +77,53 @@ window.charts.platformChart = new Chart(platformCtx, {
         backgroundColor: "#dc2626",
         borderColor: "#ffffff",
         borderWidth: 2,
+        barPercentage: 0.8,
+        categoryPercentage: 0.9,
       },
     ],
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      intersect: false,
+      mode: "index",
+    },
     scales: {
       y: {
         beginAtZero: true,
         max: 100,
         grid: {
-          color: "#cccccc",
+          color: "#e5e7eb",
+          drawBorder: false,
         },
         ticks: {
-          color: "#000000",
+          color: "#374151",
           font: {
-            weight: "bold",
+            weight: "600",
+            size: 12,
           },
+          callback: function (value) {
+            return value + "%";
+          },
+        },
+        border: {
+          display: false,
         },
       },
       x: {
         grid: {
-          color: "#cccccc",
+          display: false,
         },
         ticks: {
-          color: "#000000",
+          color: "#374151",
           font: {
-            weight: "bold",
+            weight: "600",
+            size: 12,
           },
+        },
+        border: {
+          display: false,
         },
       },
     },
@@ -123,6 +145,8 @@ window.charts.platformChart = new Chart(platformCtx, {
           font: {
             weight: "bold",
           },
+          padding: 20,
+          usePointStyle: true,
         },
       },
     },
@@ -139,39 +163,61 @@ window.charts.economicsChart = new Chart(economicsCtx, {
       {
         label: "Annual Costs (€)",
         data: [5500, 2200, 3000, 4500],
-        backgroundColor: "#dc2626",
+        backgroundColor: [
+          "#dc2626", // Marina Fees - Red
+          "#ea580c", // Insurance - Orange
+          "#f59e0b", // Maintenance - Yellow
+          "#7c3aed", // Depreciation - Purple
+        ],
         borderColor: "#ffffff",
         borderWidth: 2,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8,
       },
     ],
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      intersect: false,
+      mode: "index",
+    },
     scales: {
       y: {
         beginAtZero: true,
         grid: {
-          color: "#cccccc",
+          color: "#e5e7eb",
+          drawBorder: false,
         },
         ticks: {
-          color: "#000000",
+          color: "#374151",
           font: {
-            weight: "bold",
+            weight: "600",
+            size: 12,
           },
           callback: function (value) {
-            return "€" + value;
+            return "€" + value.toLocaleString();
           },
+        },
+        border: {
+          display: false,
         },
       },
       x: {
         grid: {
-          color: "#cccccc",
+          display: false,
         },
         ticks: {
-          color: "#000000",
+          color: "#374151",
           font: {
-            weight: "bold",
+            weight: "600",
+            size: 12,
           },
+          maxRotation: 45,
+        },
+        border: {
+          display: false,
         },
       },
     },
