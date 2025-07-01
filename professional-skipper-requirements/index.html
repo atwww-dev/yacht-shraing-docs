@@ -6,61 +6,11 @@
     <title>What It Takes to Be a Pro Skipper in Europe - A Compliance Guide</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../navigation.css">
+    <link rel="stylesheet" href="../shared/language-toggle.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Global Navigation -->
-    <nav class="global-nav">
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <div class="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="nav-menu" id="navMenu">
-            <div class="nav-header">
-                <h3 data-en="YACHT SHARING WORKSPACE" data-de="YACHT-SHARING-ARBEITSBEREICH">YACHT SHARING WORKSPACE</h3>
-                <button class="close-menu" id="closeMenu">&times;</button>
-            </div>
-            
-            <div class="nav-section">
-                <h4 data-en="Main Dashboard" data-de="Haupt-Dashboard">Main Dashboard</h4>
-                <ul>
-                    <li><a href="../" data-en="■ Project Overview" data-de="■ Projektübersicht">■ Project Overview</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-section">
-                <h4 data-en="Research Documents" data-de="Forschungsdokumente">Research Documents</h4>
-                <ul>
-                    <li><a href="../boat-rental-markeplace/" data-en="European Boat Rental Marketplace Analysis" data-de="Europäische Bootsverleih-Marktplatz-Analyse">European Boat Rental Marketplace Analysis</a></li>
-                    <li><a href="../private-renters-experience-owners/" data-en="Private Boat Owners & Renters Study" data-de="Private Bootseigner & Mieter-Studie">Private Boat Owners & Renters Study</a></li>
-                    <li><a href="./" class="current-page" data-en="■ Professional Skipper Requirements" data-de="■ Professionelle Skipper-Anforderungen">■ Professional Skipper Requirements</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-section">
-                <h4 data-en="Development Phases" data-de="Entwicklungsphasen">Development Phases</h4>
-                <ul>
-                    <li><span class="phase-current" data-en="Discovery (Current)" data-de="Discovery (Aktuell)">Discovery (Current)</span></li>
-                    <li><span class="phase-upcoming" data-en="Product (TBD)" data-de="Produkt (TBD)">Product (TBD)</span></li>
-                    <li><span class="phase-upcoming" data-en="Design (TBD)" data-de="Design (TBD)">Design (TBD)</span></li>
-                    <li><span class="phase-upcoming" data-en="Development (TBD)" data-de="Entwicklung (TBD)">Development (TBD)</span></li>
-                </ul>
-            </div>
-
-            <div class="nav-section">
-                <h4 data-en="Client Summary" data-de="Kunden-Zusammenfassung">Client Summary</h4>
-                <ul>
-                    <li><a href="../client-presentation/presentation.html" data-en="■ Key Findings Presentation" data-de="■ Präsentation der wichtigsten Erkenntnisse">■ Key Findings Presentation</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="nav-overlay" id="navOverlay"></div>
-    </nav>
+    <!-- Shared Navigation will be injected dynamically -->
 
     <div class="container">
         <div class="language-toggle">
@@ -468,5 +418,7 @@
 
     <script src="../language.js"></script>
     <script src="../navigation.js"></script>
+    <script src="../shared/language-toggle.js" defer></script>
+    <script src="../load-navigation.js" defer></script>
 </body>
 </html> 

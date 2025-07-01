@@ -33,36 +33,6 @@ body {
     padding: 2rem;
 }
 
-.language-toggle {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2rem;
-    gap: 0;
-}
-
-.lang-btn {
-    background: var(--primary-black);
-    border: 2px solid var(--primary-black);
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.lang-btn:hover {
-    background: var(--medium-gray);
-    color: var(--white);
-}
-
-.lang-btn.active {
-    background: var(--white);
-    color: var(--primary-black);
-}
-
 /* Slimmer header consistent with other docs */
 .header {
     text-align: center;
@@ -489,3 +459,5 @@ body {
         content: none;
     }
 }
+
+/* language-toggle mobile rules now handled in shared css*/

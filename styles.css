@@ -1297,3 +1297,11 @@ body {
     color: #444;
     font-size: 0.98rem;
 }
+
+/* Ensure Development Roadmap text is left-aligned */
+.development-roadmap .step-content,
+.development-roadmap .step-content h3,
+.development-roadmap .deliverables-list.humanized .deliverable p,
+.development-roadmap .deliverables-list.humanized strong {
+    text-align: left;
+}
