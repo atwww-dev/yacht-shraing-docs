@@ -93,6 +93,24 @@ body {
     margin-bottom: 4rem;
 }
 
+/* Research Purpose Note */
+.research-purpose {
+    margin-bottom: 4rem;
+}
+
+.purpose-note {
+    background: var(--gray-light);
+    padding: 2rem;
+    border: 2px solid var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.purpose-note p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
 .executive-summary h2 {
     font-size: 1.8rem;
     font-weight: 900;
