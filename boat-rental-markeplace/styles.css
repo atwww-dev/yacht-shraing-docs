@@ -57,6 +57,7 @@ body {
     font-weight: 600;
 }
 
+/* Abstract */
 .abstract {
     background: #f8f8f8;
     color: var(--text-dark);
@@ -321,38 +322,40 @@ body {
 }
 
 .toc {
-    background: var(--white);
-    border: 2px solid var(--border-gray);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    padding: 2.5rem;
-    margin: 3rem 0;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 3px solid #000000;
 }
 
 .toc h3 {
-    color: var(--primary-black);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.toc ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.toc li {
-    margin-bottom: 0.8rem;
-    padding-left: 1rem;
+.toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .toc a {
-    color: var(--medium-gray);
+    color: #000000;
     text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 2px solid #cccccc;
+    transition: all 0.3s ease;
 }
 
 .toc a:hover {
-    color: var(--primary-black);
+    background-color: #f0f0f0;
+    padding-left: 15px;
+    border-bottom-color: #000000;
 }
 
 .data-table {
@@ -457,6 +460,78 @@ body {
 
     .data-table td:before {
         content: none;
+    }
+}
+
+/* language-toggle mobile rules now handled in shared css*/
+
+/* Key Insights */
+.key-insights {
+    margin: 2.5em 0 2em 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.key-insights h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.insight-item {
+    background: #f6f7fa;
+    border: 2px solid #222c36;
+    border-radius: 10px;
+    padding: 1.2em 1.1em 1em 1.1em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.insight-item h4 {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+    color: #222c36;
+}
+
+.insight-bullets {
+    margin: 0.6em 0 0.6em 1.1em;
+    padding: 0;
+    color: #333;
+    font-size: 0.97rem;
+    list-style-type: disc;
+}
+
+.insight-bullets li {
+    margin-bottom: 0.5rem;
+}
+
+.insight-implication {
+    background: #f9f6ee;
+    border-left: 4px solid #0074D9;
+    padding: 0.7em 1em;
+    margin-top: 1em;
+    font-weight: 600;
+    color: #1a2a3a;
+    font-size: 1.01rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 116, 217, 0.07);
+}
+
+.insight-implication strong {
+    font-weight: 900;
+}
+
+@media (max-width: 700px) {
+    .insight-item {
+        padding: 1em 0.5em 0.8em 0.5em;
     }
 }
 
