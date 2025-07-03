@@ -627,12 +627,12 @@ canvas {
         grid-template-columns: 1fr;
     }
 
-    .language-toggle {
-        position: relative;
-        top: auto;
-        right: auto;
-        justify-content: center;
-        margin-bottom: 20px;
+    .data-table,
+    .insurance-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 

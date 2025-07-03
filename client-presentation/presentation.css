@@ -635,6 +635,7 @@ body {
     height: 50px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 2px solid #000000;
+    z-index: 1010;
 }
 
 .swiper-button-next::after,
@@ -689,6 +690,12 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
     .slide-content {
         padding: 2rem;
         height: calc(100vh - 3rem);
@@ -762,15 +769,35 @@ body {
         gap: 1.5rem;
     }
 
-    .competitor-logos {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
     .slide-pagination {
         bottom: 1rem;
         left: 1rem;
         padding: 0.5rem 1rem;
+    }
+
+    .competitor-logos,
+    .market-icons,
+    .path-steps,
+    .trend-stats,
+    .platform-stats {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1.5rem;
+        scroll-snap-type: x mandatory;
+        gap: 1.5rem;
+    }
+
+    .logo-item,
+    .market-icon-item,
+    .step,
+    .stat,
+    .platform-stat-item {
+        scroll-snap-align: start;
+        white-space: normal;
+        width: 100%;
     }
 }
 
@@ -797,19 +824,19 @@ body {
 /* Scrollable sections styling */
 .market-icons::-webkit-scrollbar,
 .platform-stats::-webkit-scrollbar {
-    width: 6px;
+    height: 8px;
 }
 
 .market-icons::-webkit-scrollbar-track,
 .platform-stats::-webkit-scrollbar-track {
-    background: #f8f9fa;
-    border-radius: 3px;
+    background: #f1f1f1;
+    border-radius: 4px;
 }
 
 .market-icons::-webkit-scrollbar-thumb,
 .platform-stats::-webkit-scrollbar-thumb {
     background: #cccccc;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .market-icons::-webkit-scrollbar-thumb:hover,
@@ -1135,9 +1162,11 @@ body {
     }
 
     .competitor-logos,
-    .trend-stats,
     .market-icons,
+    .path-steps,
+    .trend-stats,
     .platform-stats {
+        grid-auto-columns: 85%;
         overflow-x: auto;
         white-space: nowrap;
         grid-auto-flow: column;
@@ -1148,7 +1177,7 @@ body {
     .stat,
     .market-icon-item,
     .platform-stat-item {
-        min-width: 260px;
+        min-width: 0;
     }
 
     .language-toggle {

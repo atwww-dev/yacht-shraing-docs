@@ -27,22 +27,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Global Nav
+  // Global Nav (only if loaded)
   const hamburgerMenu = document.getElementById("hamburgerMenu");
   const navMenu = document.getElementById("navMenu");
   const closeMenu = document.getElementById("closeMenu");
   const navOverlay = document.getElementById("navOverlay");
-  function openNav() {
-    navMenu.classList.add("open");
-    navOverlay.classList.add("show");
+
+  if (hamburgerMenu && navMenu && closeMenu && navOverlay) {
+    function openNav() {
+      navMenu.classList.add("open");
+      navOverlay.classList.add("show");
+    }
+    function closeNav() {
+      navMenu.classList.remove("open");
+      navOverlay.classList.remove("show");
+    }
+    hamburgerMenu.addEventListener("click", openNav);
+    closeMenu.addEventListener("click", closeNav);
+    navOverlay.addEventListener("click", closeNav);
   }
-  function closeNav() {
-    navMenu.classList.remove("open");
-    navOverlay.classList.remove("show");
-  }
-  hamburgerMenu.addEventListener("click", openNav);
-  closeMenu.addEventListener("click", closeNav);
-  navOverlay.addEventListener("click", closeNav);
 
   // Swiper
   const swiper = new Swiper(".swiper-container", {
