@@ -1,0 +1,346 @@
+/* MVP Canvas Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Canvas Header */
+.canvas-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.canvas-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid #333;
+    padding: 1rem 2rem;
+    display: inline-block;
+    background: #fff;
+    border-radius: 12px;
+}
+
+/* Canvas Grid */
+.canvas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Canvas Sections */
+.canvas-section {
+    background: #fff;
+    border-radius: 12px;
+    border: 3px solid #333;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.canvas-section:hover {
+    transform: translateY(-4px);
+}
+
+.section-header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-content {
+    padding: 1.5rem;
+}
+
+/* Vision Section */
+.vision-section {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+}
+
+.vision-section .section-header {
+    background: #2d5a2d;
+}
+
+.vision-section blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #2d5a2d;
+    margin: 0 0 1.5rem 0;
+    padding: 1rem;
+    border-left: 4px solid #2d5a2d;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.promises {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.promise-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #2d5a2d;
+}
+
+.promise-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d5a2d;
+    font-weight: 700;
+}
+
+/* User Personas Section */
+.personas-section {
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%);
+}
+
+.personas-section .section-header {
+    background: #1e4a72;
+}
+
+.personas-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.persona-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #1e4a72;
+}
+
+.persona-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1e4a72;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.persona-card p {
+    margin: 0 0 1rem 0;
+    font-style: italic;
+    color: #666;
+    font-weight: 600;
+}
+
+.persona-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.persona-card li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Value Proposition Section */
+.value-section {
+    background: linear-gradient(135deg, #fff3e0 0%, #fef7ed 100%);
+}
+
+.value-section .section-header {
+    background: #d97706;
+}
+
+.value-section p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.value-section ol {
+    margin: 1rem 0 0 0;
+    padding-left: 1.5rem;
+}
+
+.value-section li {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* USPs Section */
+.usps-section {
+    background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%);
+}
+
+.usps-section .section-header {
+    background: #7c3aed;
+}
+
+.usps-section ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.usps-section li {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Features Section */
+.features-section {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%);
+}
+
+.features-section .section-header {
+    background: #dc2626;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-category {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #dc2626;
+}
+
+.feature-category h3 {
+    margin: 0 0 1rem 0;
+    color: #dc2626;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dc2626;
+}
+
+.feature-category ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.feature-category li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .canvas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .canvas-header h1 {
+        font-size: 2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .canvas-grid {
+        gap: 1.5rem;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+
+    .vision-section blockquote {
+        font-size: 1.1rem;
+    }
+
+    .promises {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-category {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .canvas-header h1 {
+        font-size: 1.5rem;
+        padding: 0.6rem 1rem;
+        letter-spacing: 1px;
+    }
+
+    .section-header h2 {
+        font-size: 1rem;
+    }
+
+    .vision-section blockquote {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .persona-card,
+    .feature-category {
+        padding: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .language-toggle {
+        display: none;
+    }
+
+    .canvas-section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 2px solid #333;
+    }
+
+    .canvas-grid {
+        gap: 1rem;
+    }
+}

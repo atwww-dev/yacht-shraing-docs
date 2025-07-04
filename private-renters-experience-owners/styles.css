@@ -642,3 +642,7 @@ canvas {
         max-width: 98vw;
     }
 }
+
+.implication-label {
+    font-weight: bold;
+}

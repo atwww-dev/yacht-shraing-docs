@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Technical Architecture - Yacht Sharing Platform" data-de="Technische Architektur - Yacht-Sharing-Plattform">Technical Architecture - Yacht Sharing Platform</title>
+    <link rel="stylesheet" href="../navigation.css">
+    <link rel="stylesheet" href="../shared/language-toggle.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            cursor: help;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: #333;
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Adjust tooltip position for components that might be cut off */
+        .component-box.tooltip .tooltiptext {
+            bottom: auto;
+            top: 125%;
+        }
+        
+        .component-box.tooltip .tooltiptext::after {
+            top: -5px;
+            border-color: transparent transparent #333 transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Shared Navigation will be injected dynamically -->
+
+    <div class="container">
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <h1 data-en="■ Technical Architecture" data-de="■ Technische Architektur">■ Technical Architecture</h1>
+            <p class="subtitle" data-en="System design and infrastructure overview for the yacht sharing platform" data-de="Systemdesign und Infrastruktur-Übersicht für die Yacht-Sharing-Plattform">System design and infrastructure overview for the yacht sharing platform</p>
+        </header>
+
+        <!-- Architecture Overview -->
+        <section class="abstract">
+            <h3 data-en="ARCHITECTURE OVERVIEW" data-de="ARCHITEKTUR-ÜBERBLICK">ARCHITECTURE OVERVIEW</h3>
+            <p data-en="The yacht sharing platform is built on a modern, scalable architecture designed to handle the complexities of peer-to-peer boat rentals. The system consists of multiple frontend applications, a centralized API gateway, microservices backend, and integrations with third-party services for payments, identity verification, and mapping." data-de="Die Yacht-Sharing-Plattform basiert auf einer modernen, skalierbaren Architektur, die darauf ausgelegt ist, die Komplexitäten von Peer-to-Peer-Bootsvermietungen zu bewältigen. Das System besteht aus mehreren Frontend-Anwendungen, einem zentralisierten API-Gateway, einem Microservices-Backend und Integrationen mit Drittanbieter-Services für Zahlungen, Identitätsverifizierung und Kartierung.">The yacht sharing platform is built on a modern, scalable architecture designed to handle the complexities of peer-to-peer boat rentals. The system consists of multiple frontend applications, a centralized API gateway, microservices backend, and integrations with third-party services for payments, identity verification, and mapping.</p>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section class="architecture-diagram">
+            <h2 data-en="■ SYSTEM ARCHITECTURE DIAGRAM" data-de="■ SYSTEMARCHITEKTUR-DIAGRAMM">■ SYSTEM ARCHITECTURE DIAGRAM</h2>
+            
+            <div class="diagram-container">
+                <!-- Frontend Applications -->
+                <div class="architecture-layer">
+                    <h3 data-en="Frontend Applications" data-de="Frontend-Anwendungen">Frontend Applications</h3>
+                    <div class="components-row">
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="WEB APP" data-de="WEB APP">WEB APP</div>
+                            <div class="component-tech">Next.js</div>
+                            <span class="tooltiptext" data-en="This is the website that people will visit in their web browsers (like Chrome, Firefox, Safari). Think of it as the digital storefront where users can browse boats, make bookings, and manage their accounts - just like how you use Amazon or Facebook in your browser." data-de="Das ist die Website, die Leute in ihren Webbrowsern besuchen werden (wie Chrome, Firefox, Safari). Stellen Sie es sich als digitale Ladenfront vor, wo Benutzer Boote durchsuchen, Buchungen vornehmen und ihre Konten verwalten können - genau wie Sie Amazon oder Facebook in Ihrem Browser verwenden.">This is the website that people will visit in their web browsers (like Chrome, Firefox, Safari). Think of it as the digital storefront where users can browse boats, make bookings, and manage their accounts - just like how you use Amazon or Facebook in your browser.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="Mobile APP" data-de="Mobile APP">Mobile APP</div>
+                            <div class="component-tech">React Native</div>
+                            <span class="tooltiptext" data-en="This is the mobile application that people will download from the App Store (iPhone) or Google Play Store (Android). It's the same service as the website, but designed specifically for your phone - like having the Uber or Instagram app on your phone." data-de="Das ist die mobile Anwendung, die Leute vom App Store (iPhone) oder Google Play Store (Android) herunterladen werden. Es ist derselbe Service wie die Website, aber speziell für Ihr Handy entwickelt - wie die Uber- oder Instagram-App auf Ihrem Handy zu haben.">This is the mobile application that people will download from the App Store (iPhone) or Google Play Store (Android). It's the same service as the website, but designed specifically for your phone - like having the Uber or Instagram app on your phone.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="Administration Panel" data-de="Admin Panel">Administration Panel</div>
+                            <div class="component-tech">React</div>
+                            <span class="tooltiptext" data-en="This is a special dashboard that only our team can access. It's like the 'back office' where we can monitor the platform, handle customer support, review boat listings, and manage user accounts. Think of it as the control center that helps us keep everything running smoothly." data-de="Das ist ein spezielles Dashboard, auf das nur unser Team zugreifen kann. Es ist wie das 'Backoffice', wo wir die Plattform überwachen, Kundensupport handhaben, Bootsinserate überprüfen und Benutzerkonten verwalten können. Stellen Sie es sich als Kontrollzentrum vor, das uns hilft, alles reibungslos am Laufen zu halten.">This is a special dashboard that only our team can access. It's like the 'back office' where we can monitor the platform, handle customer support, review boat listings, and manage user accounts. Think of it as the control center that helps us keep everything running smoothly.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API Gateway -->
+                <div class="architecture-layer">
+                    <h3 data-en="API Gateway" data-de="API Gateway">API Gateway</h3>
+                    <div class="components-row">
+                        <div class="component-box gateway tooltip">
+                            <div class="component-title" data-en="API GATEWAY" data-de="API GATEWAY">API GATEWAY</div>
+                            <div class="component-tech">Node.js + Express</div>
+                            <span class="tooltiptext" data-en="Think of this as the 'front door' or 'security guard' of our system. Every request from the website or mobile app goes through here first. It checks if users are logged in, prevents spam, and directs requests to the right place - like a hotel receptionist who checks your ID and tells you which elevator to take." data-de="Stellen Sie sich das als 'Eingangstür' oder 'Sicherheitsbeamten' unseres Systems vor. Jede Anfrage von der Website oder Mobile App geht zuerst hier durch. Es prüft, ob Benutzer angemeldet sind, verhindert Spam und leitet Anfragen an die richtige Stelle weiter - wie ein Hotelrezeptionist, der Ihren Ausweis überprüft und Ihnen sagt, welchen Aufzug Sie nehmen sollen.">Think of this as the 'front door' or 'security guard' of our system. Every request from the website or mobile app goes through here first. It checks if users are logged in, prevents spam, and directs requests to the right place - like a hotel receptionist who checks your ID and tells you which elevator to take.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Services -->
+                <div class="architecture-layer">
+                    <h3 data-en="Backend Services" data-de="Backend Services">Backend Services</h3>
+                    <div class="components-row">
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="BACKEND" data-de="BACKEND">BACKEND</div>
+                            <div class="component-tech">Microservices</div>
+                            <span class="tooltiptext" data-en="This is the 'engine' or 'brain' behind the scenes that makes everything work. It handles all the business logic - like processing bookings, calculating prices, managing user accounts, and sending emails. Think of it as the kitchen in a restaurant - customers don't see it, but it's where all the magic happens to prepare their order." data-de="Das ist der 'Motor' oder das 'Gehirn' hinter den Kulissen, der alles zum Laufen bringt. Es behandelt die gesamte Geschäftslogik - wie die Verarbeitung von Buchungen, die Berechnung von Preisen, die Verwaltung von Benutzerkonten und das Versenden von E-Mails. Stellen Sie es sich als die Küche in einem Restaurant vor - Kunden sehen sie nicht, aber dort geschieht die ganze Magie, um ihre Bestellung zuzubereiten.">This is the 'engine' or 'brain' behind the scenes that makes everything work. It handles all the business logic - like processing bookings, calculating prices, managing user accounts, and sending emails. Think of it as the kitchen in a restaurant - customers don't see it, but it's where all the magic happens to prepare their order.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="WEBSOCKET MODULE" data-de="WEBSOCKET-MODUL">WEBSOCKET MODULE</div>
+                            <div class="component-tech">Socket.io</div>
+                            <span class="tooltiptext" data-en="This enables real-time communication - like instant messaging and live notifications. It's what makes the chat feature work instantly, shows live updates, and sends immediate alerts. Think of it as the 'instant messenger' system that lets users chat with boat owners in real-time, just like WhatsApp or Facebook Messenger." data-de="Dies ermöglicht Echtzeit-Kommunikation - wie Instant Messaging und Live-Benachrichtigungen. Es ist das, was die Chat-Funktion sofort funktionieren lässt, Live-Updates anzeigt und sofortige Benachrichtigungen sendet. Stellen Sie es sich als das 'Instant Messenger'-System vor, das Benutzern erlaubt, in Echtzeit mit Bootsbesitzern zu chatten, genau wie WhatsApp oder Facebook Messenger.">This enables real-time communication - like instant messaging and live notifications. It's what makes the chat feature work instantly, shows live updates, and sends immediate alerts. Think of it as the 'instant messenger' system that lets users chat with boat owners in real-time, just like WhatsApp or Facebook Messenger.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Layer -->
+                <div class="architecture-layer">
+                    <h3 data-en="Data Layer" data-de="Datenschicht">Data Layer</h3>
+                    <div class="components-row">
+                        <div class="component-box tooltip">
+                            <div class="component-title">PostgreSQL</div>
+                            <div class="component-tech" data-en="Primary Database" data-de="Primäre Datenbank">Primary Database</div>
+                            <span class="tooltiptext" data-en="This is our main 'digital filing cabinet' where we store all the important information - user accounts, boat listings, booking details, reviews, and messages. Think of it as a super-organized library where every piece of information has its exact place and can be found instantly when needed." data-de="Das ist unser hauptsächlicher 'digitaler Aktenschrank', wo wir alle wichtigen Informationen speichern - Benutzerkonten, Bootsinserate, Buchungsdetails, Bewertungen und Nachrichten. Stellen Sie es sich als super-organisierte Bibliothek vor, wo jedes Stück Information seinen genauen Platz hat und sofort gefunden werden kann, wenn es benötigt wird.">This is our main 'digital filing cabinet' where we store all the important information - user accounts, boat listings, booking details, reviews, and messages. Think of it as a super-organized library where every piece of information has its exact place and can be found instantly when needed.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title">AWS S3</div>
+                            <div class="component-tech" data-en="File Storage" data-de="Dateispeicher">File Storage</div>
+                            <span class="tooltiptext" data-en="This is where we store all the photos and documents - boat pictures, user profile photos, ID documents, and any other files. Think of it as a massive digital photo album and document storage that can hold millions of images and files, accessible from anywhere in the world." data-de="Hier speichern wir alle Fotos und Dokumente - Bootsbilder, Benutzerprofilfotos, Ausweisdokumente und alle anderen Dateien. Stellen Sie es sich als riesiges digitales Fotoalbum und Dokumentenspeicher vor, der Millionen von Bildern und Dateien speichern kann, von überall auf der Welt zugänglich.">This is where we store all the photos and documents - boat pictures, user profile photos, ID documents, and any other files. Think of it as a massive digital photo album and document storage that can hold millions of images and files, accessible from anywhere in the world.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Party APIs -->
+                <div class="architecture-layer">
+                    <h3 data-en="3rd Party APIs" data-de="Drittanbieter-APIs">3rd Party APIs</h3>
+                    <div class="components-row">
+                        <div class="component-box tooltip">
+                            <div class="component-title">OnFido</div>
+                            <div class="component-tech" data-en="Identity Verification" data-de="Identitätsverifizierung">Identity Verification</div>
+                            <span class="tooltiptext" data-en="This is our 'digital bouncer' that checks if people are who they claim to be. It scans ID documents and verifies that users are real people, not fake accounts. Think of it as the security check at an airport - it makes sure everyone is legitimate before they can use the platform." data-de="Das ist unser 'digitaler Türsteher', der überprüft, ob Leute die sind, die sie zu sein behaupten. Er scannt Ausweisdokumente und verifiziert, dass Benutzer echte Menschen sind, keine gefälschten Konten. Stellen Sie es sich als Sicherheitskontrolle am Flughafen vor - es stellt sicher, dass alle legitim sind, bevor sie die Plattform nutzen können.">This is our 'digital bouncer' that checks if people are who they claim to be. It scans ID documents and verifies that users are real people, not fake accounts. Think of it as the security check at an airport - it makes sure everyone is legitimate before they can use the platform.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title">Mapbox</div>
+                            <div class="component-tech" data-en="Maps & Geocoding" data-de="Karten & Geocoding">Maps & Geocoding</div>
+                            <span class="tooltiptext" data-en="This provides the interactive maps you see on the platform - showing where boats are located, helping users find nearby marinas, and giving directions. Think of it as the 'Google Maps' of our platform that helps users navigate and find the perfect boat location." data-de="Dies stellt die interaktiven Karten bereit, die Sie auf der Plattform sehen - zeigt, wo sich Boote befinden, hilft Benutzern, nahegelegene Marinas zu finden, und gibt Wegbeschreibungen. Stellen Sie es sich als die 'Google Maps' unserer Plattform vor, die Benutzern hilft, zu navigieren und den perfekten Bootsstandort zu finden.">This provides the interactive maps you see on the platform - showing where boats are located, helping users find nearby marinas, and giving directions. Think of it as the 'Google Maps' of our platform that helps users navigate and find the perfect boat location.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title">Stripe</div>
+                            <div class="component-tech" data-en="Payment Processing" data-de="Zahlungsverarbeitung">Payment Processing</div>
+                            <span class="tooltiptext" data-en="This is our 'digital cashier' that handles all the money transactions safely and securely. It processes credit card payments, manages refunds, and ensures boat owners get paid. Think of it as the secure payment system that works behind the scenes, like when you buy something online from any major retailer." data-de="Das ist unser 'digitaler Kassierer', der alle Geldtransaktionen sicher und geschützt abwickelt. Er verarbeitet Kreditkartenzahlungen, verwaltet Rückerstattungen und stellt sicher, dass Bootsbesitzer bezahlt werden. Stellen Sie es sich als das sichere Zahlungssystem vor, das hinter den Kulissen arbeitet, wie wenn Sie online etwas bei einem großen Einzelhändler kaufen.">This is our 'digital cashier' that handles all the money transactions safely and securely. It processes credit card payments, manages refunds, and ensures boat owners get paid. Think of it as the secure payment system that works behind the scenes, like when you buy something online from any major retailer.</span>
+                        </div>
+                        <div class="component-box tooltip">
+                            <div class="component-title">Firebase</div>
+                            <div class="component-tech" data-en="Analytics & Notifications" data-de="Analytics & Benachrichtigungen">Analytics & Notifications</div>
+                            <span class="tooltiptext" data-en="This is our 'digital assistant' that sends push notifications to your phone (like 'Your booking is confirmed!') and helps us understand how people use the platform. It's like having a personal assistant that keeps you informed and helps us improve the service based on user behavior." data-de="Das ist unser 'digitaler Assistent', der Push-Benachrichtigungen an Ihr Handy sendet (wie 'Ihre Buchung ist bestätigt!') und uns hilft zu verstehen, wie Menschen die Plattform nutzen. Es ist wie einen persönlichen Assistenten zu haben, der Sie informiert hält und uns hilft, den Service basierend auf Benutzerverhalten zu verbessern.">This is our 'digital assistant' that sends push notifications to your phone (like 'Your booking is confirmed!') and helps us understand how people use the platform. It's like having a personal assistant that keeps you informed and helps us improve the service based on user behavior.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication Services -->
+                <div class="architecture-layer">
+                    <h3 data-en="Communication Services" data-de="Kommunikationsdienste">Communication Services</h3>
+                    <div class="components-row">
+                        <div class="component-box tooltip">
+                            <div class="component-title" data-en="EMAIL/SMS PROVIDERS" data-de="EMAIL/SMS-ANBIETER">EMAIL/SMS PROVIDERS</div>
+                            <div class="component-tech">SendGrid + Twilio</div>
+                            <span class="tooltiptext" data-en="These are our 'digital postmen' that send emails and text messages to users. They handle booking confirmations, password resets, reminders, and important updates. Think of them as the reliable mail service that ensures users receive all important communications about their bookings and account." data-de="Das sind unsere 'digitalen Postboten', die E-Mails und Textnachrichten an Benutzer senden. Sie handhaben Buchungsbestätigungen, Passwort-Resets, Erinnerungen und wichtige Updates. Stellen Sie sie sich als zuverlässigen Postdienst vor, der sicherstellt, dass Benutzer alle wichtigen Mitteilungen über ihre Buchungen und ihr Konto erhalten.">These are our 'digital postmen' that send emails and text messages to users. They handle booking confirmations, password resets, reminders, and important updates. Think of them as the reliable mail service that ensures users receive all important communications about their bookings and account.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Technical Decisions -->
+        <section class="content-section">
+            <h2 data-en="■ KEY TECHNICAL DECISIONS" data-de="■ WICHTIGE TECHNISCHE ENTSCHEIDUNGEN">■ KEY TECHNICAL DECISIONS</h2>
+            
+            <div class="subsection">
+                <h3 data-en="Frontend Strategy" data-de="Frontend-Strategie">Frontend Strategy</h3>
+                <p data-en="Next.js was chosen for the web application to provide excellent SEO capabilities and fast loading times through server-side rendering. React Native enables code sharing between iOS and Android while maintaining native performance." data-de="Next.js wurde für die Webanwendung gewählt, um ausgezeichnete SEO-Fähigkeiten und schnelle Ladezeiten durch serverseitiges Rendering zu bieten. React Native ermöglicht Code-Sharing zwischen iOS und Android bei gleichzeitiger Beibehaltung der nativen Performance.">Next.js was chosen for the web application to provide excellent SEO capabilities and fast loading times through server-side rendering. React Native enables code sharing between iOS and Android while maintaining native performance.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 data-en="Backend Architecture" data-de="Backend-Architektur">Backend Architecture</h3>
+                <p data-en="The microservices approach allows for independent scaling of different platform components. The API Gateway centralizes authentication, rate limiting, and routing while maintaining service autonomy." data-de="Der Microservices-Ansatz ermöglicht eine unabhängige Skalierung verschiedener Plattformkomponenten. Das API-Gateway zentralisiert Authentifizierung, Rate-Limiting und Routing bei gleichzeitiger Beibehaltung der Service-Autonomie.">The microservices approach allows for independent scaling of different platform components. The API Gateway centralizes authentication, rate limiting, and routing while maintaining service autonomy.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 data-en="Data Strategy" data-de="Datenstrategie">Data Strategy</h3>
+                <p data-en="PostgreSQL serves as the primary database for relational data integrity, while AWS S3 handles file storage with global CDN distribution for optimal performance across European markets." data-de="PostgreSQL dient als primäre Datenbank für relationale Datenintegrität, während AWS S3 die Dateispeicherung mit globaler CDN-Verteilung für optimale Performance in europäischen Märkten übernimmt.">PostgreSQL serves as the primary database for relational data integrity, while AWS S3 handles file storage with global CDN distribution for optimal performance across European markets.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 data-en="Integration Approach" data-de="Integrationsansatz">Integration Approach</h3>
+                <p data-en="Third-party services are integrated through standardized APIs to handle specialized functions: OnFido for identity verification, Stripe for payments, Mapbox for mapping, and Firebase for analytics and push notifications." data-de="Drittanbieter-Services werden über standardisierte APIs integriert, um spezialisierte Funktionen zu handhaben: OnFido für Identitätsverifizierung, Stripe für Zahlungen, Mapbox für Kartierung und Firebase für Analytics und Push-Benachrichtigungen.">Third-party services are integrated through standardized APIs to handle specialized functions: OnFido for identity verification, Stripe for payments, Mapbox for mapping, and Firebase for analytics and push notifications.</p>
+            </div>
+        </section>
+
+        <!-- MVP Cost Breakdown -->
+        <section class="content-section">
+            <h2 data-en="■ MVP COST BREAKDOWN" data-de="■ MVP-KOSTENAUFSCHLÜSSELUNG">■ MVP COST BREAKDOWN</h2>
+            
+            <div class="subsection">
+                <h3 data-en="Estimated Cost for 1,000 Daily Active Users (DAU)" data-de="Geschätzte Kosten für 1.000 täglich aktive Nutzer (DAU)">Estimated Cost for 1,000 Daily Active Users (DAU)</h3>
+                
+                <div class="cost-table-container">
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th data-en="Component" data-de="Komponente">Component</th>
+                                <th data-en="Tool/Service" data-de="Tool/Service">Tool/Service</th>
+                                <th data-en="Free Tier?" data-de="Kostenlos?">Free Tier?</th>
+                                <th data-en="Est. Monthly Cost" data-de="Geschätzte monatliche Kosten">Est. Monthly Cost</th>
+                                <th data-en="Notes" data-de="Notizen">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-en="Web Hosting" data-de="Web-Hosting">Web Hosting</td>
+                                <td>Vercel / Netlify</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td>$20</td>
+                                <td data-en="Hosts your Next.js site and assets" data-de="Hostet Ihre Next.js-Site und Assets">Hosts your Next.js site and assets</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Mobile Builds" data-de="Mobile Builds">Mobile Builds</td>
+                                <td>Expo EAS</td>
+                                <td class="free-limited" data-en="✓ Limited" data-de="✓ Begrenzt">✓ Limited</td>
+                                <td>$29</td>
+                                <td data-en="Compiles & ships your mobile apps" data-de="Kompiliert & versendet Ihre Mobile Apps">Compiles & ships your mobile apps</td>
+                            </tr>
+                            <tr>
+                                <td data-en="API Gateway" data-de="API Gateway">API Gateway</td>
+                                <td>AWS API Gateway</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td>$10</td>
+                                <td data-en="SSL, rate-limits, routing for all traffic" data-de="SSL, Rate-Limits, Routing für allen Traffic">SSL, rate-limits, routing for all traffic</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Backend Server" data-de="Backend Server">Backend Server</td>
+                                <td>AWS Fargate (NestJS monolith)</td>
+                                <td class="free-no" data-en="✗ No" data-de="✗ Nein">✗ No</td>
+                                <td>$80</td>
+                                <td data-en="Runs your core business logic & chat sockets" data-de="Führt Ihre Kerngeschäftslogik & Chat-Sockets aus">Runs your core business logic & chat sockets</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Database" data-de="Datenbank">Database</td>
+                                <td>PostgreSQL (RDS)</td>
+                                <td class="free-limited" data-en="✓ Limited" data-de="✓ Begrenzt">✓ Limited</td>
+                                <td>$25</td>
+                                <td data-en="Stores users, bookings, boats, reviews" data-de="Speichert Benutzer, Buchungen, Boote, Bewertungen">Stores users, bookings, boats, reviews</td>
+                            </tr>
+                            <tr>
+                                <td data-en="File Storage" data-de="Dateispeicher">File Storage</td>
+                                <td>AWS S3</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td>$10</td>
+                                <td data-en="Boat photos & ID scans storage" data-de="Boot-Fotos & ID-Scan-Speicher">Boat photos & ID scans storage</td>
+                            </tr>
+                            <tr>
+                                <td data-en="OCR / KYC" data-de="OCR / KYC">OCR / KYC</td>
+                                <td>OnFido / AWS Textract</td>
+                                <td class="free-no" data-en="✗ No" data-de="✗ Nein">✗ No</td>
+                                <td>$150</td>
+                                <td data-en="Verifies skipper IDs with OCR" data-de="Verifiziert Skipper-IDs mit OCR">Verifies skipper IDs with OCR</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Maps & Geocoding" data-de="Karten & Geocoding">Maps & Geocoding</td>
+                                <td>Mapbox</td>
+                                <td class="free-limited" data-en="✓ 50K free" data-de="✓ 50K kostenlos">✓ 50K free</td>
+                                <td>$0</td>
+                                <td data-en="Browsing boats on the map under free tier" data-de="Boot-Suche auf der Karte unter kostenlosem Tarif">Browsing boats on the map under free tier</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Push Notifications" data-de="Push-Benachrichtigungen">Push Notifications</td>
+                                <td>OneSignal / Firebase</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td>$0</td>
+                                <td data-en="Sends booking alerts & reminders" data-de="Sendet Buchungsalarme & Erinnerungen">Sends booking alerts & reminders</td>
+                            </tr>
+                            <tr>
+                                <td data-en="AI Assistance" data-de="KI-Unterstützung">AI Assistance</td>
+                                <td>OpenAI API</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td>$20</td>
+                                <td data-en="Smart matching & copy-generation" data-de="Intelligente Zuordnung & Content-Generierung">Smart matching & copy-generation</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Payments" data-de="Zahlungen">Payments</td>
+                                <td>Stripe Connect</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td data-en="Transaction fees" data-de="Transaktionsgebühren">Transaction fees</td>
+                                <td data-en="Stripe deducts a % per transaction" data-de="Stripe zieht einen % pro Transaktion ab">Stripe deducts a % per transaction</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Real-Time Chat" data-de="Echtzeit-Chat">Real-Time Chat</td>
+                                <td>NestJS Gateway + Socket.io</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td data-en="Included" data-de="Enthalten">Included</td>
+                                <td data-en="Enables instant messaging without extra cost" data-de="Ermöglicht Instant Messaging ohne zusätzliche Kosten">Enables instant messaging without extra cost</td>
+                            </tr>
+                            <tr>
+                                <td data-en="Admin Panel" data-de="Admin Panel">Admin Panel</td>
+                                <td>React Admin / Next.js dashboard</td>
+                                <td class="free-yes" data-en="✓ Yes" data-de="✓ Ja">✓ Yes</td>
+                                <td data-en="Included" data-de="Enthalten">Included</td>
+                                <td data-en="Internal UI for reviews, verifications" data-de="Interne UI für Bewertungen, Verifizierungen">Internal UI for reviews, verifications</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 data-en="Key Insights" data-de="Wichtige Erkenntnisse">Key Insights</h3>
+                
+                <div class="insights-grid">
+                    <div class="insight-box">
+                        <p data-en="Most of the tools we need have free tiers which we can use to start implement the platform and test it out with few users." data-de="Die meisten Tools, die wir benötigen, haben kostenlose Tarife, die wir nutzen können, um die Plattform zu implementieren und mit wenigen Benutzern zu testen.">Most of the tools we need have free tiers which we can use to start implement the platform and test it out with few users.</p>
+                    </div>
+                    
+                    <div class="insight-box">
+                        <p data-en="For 1,000 DAU the estimated cost per month is around 350 euros." data-de="Für 1.000 DAU betragen die geschätzten Kosten pro Monat etwa 350 Euro.">For 1,000 DAU the estimated cost per month is around 350 euros.</p>
+                    </div>
+                    
+                    <div class="insight-box">
+                        <p data-en="The costs goes up as we scale to more users." data-de="Die Kosten steigen, wenn wir auf mehr Benutzer skalieren.">The costs goes up as we scale to more users.</p>
+                    </div>
+                    
+                    <div class="insight-box">
+                        <p data-en="Our most expensive tool is OnFido - we know their lowest option is around 150 euro/month. We will delay the verification feature closer to the end of the project in order to cut initial costs." data-de="Unser teuerstes Tool ist OnFido - wir wissen, dass ihre günstigste Option etwa 150 Euro/Monat kostet. Wir werden die Verifizierungsfunktion bis zum Ende des Projekts verschieben, um die anfänglichen Kosten zu senken.">Our most expensive tool is OnFido - we know their lowest option is around 150 euro/month. We will delay the verification feature closer to the end of the project in order to cut initial costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include shared scripts -->
+    <script src="../load-navigation.js"></script>
+    <script src="../shared/language-toggle.js"></script>
+</body>
+</html> 

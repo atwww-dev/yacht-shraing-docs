@@ -10,7 +10,8 @@
   }
 
   function setLanguage(lang) {
-    translatableElements.forEach((el) => {
+    // Update all elements with data attributes
+    document.querySelectorAll("[data-en]").forEach((el) => {
       const text = el.getAttribute(`data-${lang}`);
       if (text) {
         // Check if the element is an input/textarea or a regular element
@@ -24,20 +25,10 @@
       }
     });
 
-    languageToggles.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
-    });
-
     localStorage.setItem("preferredLanguage", lang);
     // use page-specific languageManager if available
     if (window.languageManager && window.languageManager.switchLanguage) {
       window.languageManager.switchLanguage(lang);
-    } else {
-      // generic fallback: swap data attributes
-      document.querySelectorAll("[data-en]").forEach((el) => {
-        const txt = el.dataset[lang];
-        if (txt) el.textContent = txt;
-      });
     }
     setActiveButtons(lang);
     document.dispatchEvent(
