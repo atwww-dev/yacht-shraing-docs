@@ -12,6 +12,11 @@
     --accent-red: #dc2626;
 }
 
+/* Bold text styling to replace <strong> tags */
+.bold {
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -555,7 +560,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 116, 217, 0.07);
 }
 
-.insight-implication strong {
+.insight-implication .bold {
     font-weight: 900;
 }
 
