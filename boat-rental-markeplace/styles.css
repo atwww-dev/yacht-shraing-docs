@@ -566,8 +566,184 @@ body {
 
 @media (max-width: 768px) {
     .insight-item {
-        padding: 1em 0.8em;
+        padding: 1.5rem;
     }
 }
 
 /* language-toggle mobile rules now handled in shared css*/
+
+/* User Testimonials and Insights Styling */
+.user-testimonials,
+.recommendation-summary {
+    margin: 3rem 0;
+    background: #fafafa;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.user-testimonials h4 {
+    color: var(--primary-black);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 1rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    border-color: var(--primary-black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.testimonial-header strong {
+    color: var(--primary-black);
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-quote {
+    background: #f8f9fa;
+    border-left: 4px solid var(--primary-black);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    position: relative;
+}
+
+.user-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--light-gray);
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    font-family: serif;
+    line-height: 1;
+}
+
+.user-quote p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin: 0 0 1rem 0;
+    padding-left: 2rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.user-quote cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 1rem;
+    padding-right: 1rem;
+}
+
+.insight-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.insight-list li {
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid var(--primary-black);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.insight-list li::before {
+    content: '▶';
+    color: var(--primary-black);
+    font-weight: 700;
+    margin-right: 0.8rem;
+    font-size: 0.8rem;
+}
+
+.insight-list li:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-insights {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-gray);
+}
+
+.recommendation-insights h5 {
+    color: var(--primary-black);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Mobile responsiveness for testimonials */
+@media (max-width: 768px) {
+
+    .user-testimonials,
+    .recommendation-summary {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .user-quote {
+        padding: 1rem;
+    }
+
+    .user-quote::before {
+        font-size: 3rem;
+        top: -0.3rem;
+        left: 0.5rem;
+    }
+
+    .user-quote p {
+        padding-left: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .testimonial-header strong {
+        font-size: 1rem;
+    }
+
+    .insight-list li {
+        padding: 0.8rem 1rem;
+    }
+}

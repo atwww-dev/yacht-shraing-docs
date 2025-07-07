@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Debug mobile issues
+  console.log("Presentation loading...");
+  console.log("Viewport:", window.innerWidth, "x", window.innerHeight);
+  console.log("User Agent:", navigator.userAgent.substring(0, 100));
+
   // Language switcher logic
   const langButtons = document.querySelectorAll(".lang-btn");
   langButtons.forEach((btn) => {
@@ -18,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Update HTML lang attribute for proper hyphenation
-    const htmlElement = document.getElementById("htmlElement") || document.documentElement;
+    const htmlElement =
+      document.getElementById("htmlElement") || document.documentElement;
     htmlElement.setAttribute("lang", lang);
 
     // Translate elements
@@ -54,9 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Swiper
   const swiper = new Swiper(".swiper-container", {
     loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    touchRatio: 1,
+    simulateTouch: true,
+    allowTouchMove: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: false,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -64,14 +76,18 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     observer: true,
     observeParents: true,
+    watchOverflow: true,
+    preventInteractionOnTransition: false,
     on: {
       init: function () {
         updatePagination(this);
         adjustSlideAlignment(this);
+        console.log(`Swiper initialized with ${this.slides.length} slides`);
       },
       slideChange: function () {
         updatePagination(this);
         adjustSlideAlignment(this);
+        console.log(`Slide changed to: ${this.realIndex + 1}`);
       },
     },
   });
@@ -80,30 +96,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalSlides = swiper.slides.length;
     const currentSlide = swiper.realIndex + 1;
 
-    document.getElementById("currentSlide").textContent = currentSlide;
-    document.getElementById("totalSlides").textContent = totalSlides;
+    const currentSlideEl = document.getElementById("currentSlide");
+    const totalSlidesEl = document.getElementById("totalSlides");
+
+    if (currentSlideEl) currentSlideEl.textContent = currentSlide;
+    if (totalSlidesEl) totalSlidesEl.textContent = totalSlides;
 
     const slideDots = document.getElementById("slideDots");
-    slideDots.innerHTML = "";
+    if (slideDots) {
+      slideDots.innerHTML = "";
 
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement("div");
-      dot.classList.add("slide-dot");
-      if (i === swiper.realIndex) {
-        dot.classList.add("active");
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("slide-dot");
+        if (i === swiper.realIndex) {
+          dot.classList.add("active");
+        }
+        dot.addEventListener("click", () => {
+          swiper.slideTo(i);
+        });
+        slideDots.appendChild(dot);
       }
-      dot.addEventListener("click", () => {
-        swiper.slideTo(i);
-      });
-      slideDots.appendChild(dot);
     }
+
+    // Debug for mobile
+    console.log(`Pagination updated: slide ${currentSlide} of ${totalSlides}`);
   }
 
   // TOC Navigation
-  const tocItems = document.querySelectorAll(".toc-item");
-  tocItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const slideIndex = parseInt(item.getAttribute("data-slide"));
+  const tocLinks = document.querySelectorAll(".toc-link");
+  tocLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const slideIndex = parseInt(link.getAttribute("data-slide"));
       swiper.slideTo(slideIndex);
     });
   });
@@ -111,19 +136,48 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dynamic slide alignment: center short slides
   function adjustSlideAlignment(swiperInstance) {
     const viewportHeight = window.innerHeight;
-    swiperInstance.slides.forEach((slide) => {
+    const isMobile = window.innerWidth <= 768;
+
+    swiperInstance.slides.forEach((slide, index) => {
       const content = slide.querySelector(".slide-content");
       if (!content) return;
+
       const contentHeight = content.scrollHeight;
-      if (contentHeight < viewportHeight - 80) {
-        // 80px buffer for padding
+      const buffer = isMobile ? 40 : 80; // Smaller buffer on mobile
+
+      if (contentHeight < viewportHeight - buffer && !isMobile) {
+        // Only center on desktop - mobile slides always start from top
         slide.classList.add("center-content");
       } else {
         slide.classList.remove("center-content");
       }
+
+      // Ensure slide is visible (debug mobile issues)
+      slide.style.display = "flex";
+      slide.style.visibility = "visible";
     });
+
+    // Log for mobile debugging
+    if (isMobile) {
+      console.log(
+        `Mobile detected - ${swiperInstance.slides.length} slides processed`
+      );
+    }
   }
 
-  // Re-check on window resize
-  window.addEventListener("resize", () => adjustSlideAlignment(swiper));
+  // Re-check on window resize and orientation change
+  window.addEventListener("resize", () => {
+    setTimeout(() => {
+      adjustSlideAlignment(swiper);
+      swiper.update();
+    }, 100);
+  });
+
+  // Handle orientation change on mobile
+  window.addEventListener("orientationchange", () => {
+    setTimeout(() => {
+      adjustSlideAlignment(swiper);
+      swiper.update();
+    }, 300);
+  });
 });

@@ -1,12 +1,41 @@
 // A dedicated charts file for the presentation
 document.addEventListener("DOMContentLoaded", function () {
   // Common Chart Options
+  const isMobile = window.innerWidth <= 768;
   const commonOptions = {
     responsive: true,
     maintainAspectRatio: false,
+    interaction: {
+      intersect: false,
+      mode: "index",
+    },
     plugins: {
       legend: {
         display: false,
+      },
+      tooltip: {
+        titleFont: {
+          size: isMobile ? 10 : 12,
+        },
+        bodyFont: {
+          size: isMobile ? 9 : 11,
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: isMobile ? 8 : 10,
+          },
+        },
+      },
+      y: {
+        ticks: {
+          font: {
+            size: isMobile ? 8 : 10,
+          },
+        },
       },
     },
   };
@@ -47,11 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
             position: "bottom",
             labels: {
               font: {
-                size: 12,
+                size: isMobile ? 10 : 12,
                 weight: "bold",
               },
               color: "#000000",
-              padding: 15,
+              padding: isMobile ? 8 : 15,
             },
           },
           tooltip: {
@@ -96,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             position: "top",
             labels: {
               font: {
-                size: 14,
+                size: isMobile ? 11 : 14,
                 weight: "bold",
               },
               color: "#000000",
@@ -107,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
           x: {
             ticks: {
               font: {
-                size: 12,
+                size: isMobile ? 9 : 12,
                 weight: "bold",
               },
               color: "#4a4a4a",
@@ -120,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
             beginAtZero: false,
             ticks: {
               font: {
-                size: 12,
+                size: isMobile ? 9 : 12,
                 weight: "bold",
               },
               color: "#4a4a4a",
@@ -176,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
           x: {
             ticks: {
               font: {
-                size: 12,
+                size: isMobile ? 9 : 12,
                 weight: "bold",
               },
               color: "#000000",
@@ -190,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
             max: 40,
             ticks: {
               font: {
-                size: 12,
+                size: isMobile ? 9 : 12,
                 weight: "bold",
               },
               color: "#4a4a4a",
