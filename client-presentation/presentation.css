@@ -1449,3 +1449,8 @@ code, pre, table, th, td {
     hyphenate-limit-lines: 2;
     hyphenate-limit-zone: 8%;
 }
+
+/* Bold text styling to replace <strong> tags */
+.bold {
+    font-weight: 700;
+}
