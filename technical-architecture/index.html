@@ -100,7 +100,7 @@
                         </div>
                         <div class="component-box tooltip">
                             <div class="component-title" data-en="Mobile APP" data-de="Mobile APP">Mobile APP</div>
-                            <div class="component-tech">React Native</div>
+                            <div class="component-tech">Expo</div>
                             <span class="tooltiptext" data-en="This is the mobile application that people will download from the App Store (iPhone) or Google Play Store (Android). It's the same service as the website, but designed specifically for your phone - like having the Uber or Instagram app on your phone." data-de="Das ist die mobile Anwendung, die Leute vom App Store (iPhone) oder Google Play Store (Android) herunterladen werden. Es ist derselbe Service wie die Website, aber speziell für Ihr Handy entwickelt - wie die Uber- oder Instagram-App auf Ihrem Handy zu haben.">This is the mobile application that people will download from the App Store (iPhone) or Google Play Store (Android). It's the same service as the website, but designed specifically for your phone - like having the Uber or Instagram app on your phone.</span>
                         </div>
                         <div class="component-box tooltip">
@@ -129,7 +129,7 @@
                     <div class="components-row">
                         <div class="component-box tooltip">
                             <div class="component-title" data-en="BACKEND" data-de="BACKEND">BACKEND</div>
-                            <div class="component-tech">Microservices</div>
+                            <div class="component-tech">NestJS</div>
                             <span class="tooltiptext" data-en="This is the 'engine' or 'brain' behind the scenes that makes everything work. It handles all the business logic - like processing bookings, calculating prices, managing user accounts, and sending emails. Think of it as the kitchen in a restaurant - customers don't see it, but it's where all the magic happens to prepare their order." data-de="Das ist der 'Motor' oder das 'Gehirn' hinter den Kulissen, der alles zum Laufen bringt. Es behandelt die gesamte Geschäftslogik - wie die Verarbeitung von Buchungen, die Berechnung von Preisen, die Verwaltung von Benutzerkonten und das Versenden von E-Mails. Stellen Sie es sich als die Küche in einem Restaurant vor - Kunden sehen sie nicht, aber dort geschieht die ganze Magie, um ihre Bestellung zuzubereiten.">This is the 'engine' or 'brain' behind the scenes that makes everything work. It handles all the business logic - like processing bookings, calculating prices, managing user accounts, and sending emails. Think of it as the kitchen in a restaurant - customers don't see it, but it's where all the magic happens to prepare their order.</span>
                         </div>
                         <div class="component-box tooltip">
@@ -198,28 +198,51 @@
             </div>
         </section>
 
-        <!-- Key Technical Decisions -->
+        <!-- Business Benefits -->
         <section class="content-section">
-            <h2 data-en="■ KEY TECHNICAL DECISIONS" data-de="■ WICHTIGE TECHNISCHE ENTSCHEIDUNGEN">■ KEY TECHNICAL DECISIONS</h2>
+            <h2 data-en="■ BUSINESS BENEFITS & COMPETITIVE ADVANTAGES" data-de="■ GESCHÄFTSVORTEILE & WETTBEWERBSVORTEILE">■ BUSINESS BENEFITS & COMPETITIVE ADVANTAGES</h2>
             
-            <div class="subsection">
-                <h3 data-en="Frontend Strategy" data-de="Frontend-Strategie">Frontend Strategy</h3>
-                <p data-en="Next.js was chosen for the web application to provide excellent SEO capabilities and fast loading times through server-side rendering. React Native enables code sharing between iOS and Android while maintaining native performance." data-de="Next.js wurde für die Webanwendung gewählt, um ausgezeichnete SEO-Fähigkeiten und schnelle Ladezeiten durch serverseitiges Rendering zu bieten. React Native ermöglicht Code-Sharing zwischen iOS und Android bei gleichzeitiger Beibehaltung der nativen Performance.">Next.js was chosen for the web application to provide excellent SEO capabilities and fast loading times through server-side rendering. React Native enables code sharing between iOS and Android while maintaining native performance.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3 data-en="Faster Time to Market" data-de="Schnellere Markteinführung">Faster Time to Market</h3>
+                    <p data-en="Our platform architecture allows us to launch on web, iOS, and Android simultaneously using Expo. This means we can capture users across all devices from day one, rather than building separate apps over months." data-de="Unsere Plattformarchitektur ermöglicht es uns, gleichzeitig auf Web, iOS und Android mit Expo zu starten. Das bedeutet, wir können Benutzer auf allen Geräten vom ersten Tag an erfassen, anstatt separate Apps über Monate zu entwickeln.">Our platform architecture allows us to launch on web, iOS, and Android simultaneously using Expo. This means we can capture users across all devices from day one, rather than building separate apps over months.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 data-en="Efficient Development" data-de="Effiziente Entwicklung">Efficient Development</h3>
+                    <p data-en="By sharing 80% of code between mobile platforms and using proven cloud services, we significantly reduce development time compared to building everything from scratch. This approach lets us focus on perfecting the user experience rather than rebuilding basic infrastructure." data-de="Durch das Teilen von 80% des Codes zwischen mobilen Plattformen und die Nutzung bewährter Cloud-Services reduzieren wir die Entwicklungszeit erheblich im Vergleich zum Aufbau von Grund auf. Dieser Ansatz ermöglicht es uns, uns auf die Perfektionierung der Benutzererfahrung zu konzentrieren, anstatt grundlegende Infrastruktur neu aufzubauen.">By sharing 80% of code between mobile platforms and using proven cloud services, we significantly reduce development time compared to building everything from scratch. This approach lets us focus on perfecting the user experience rather than rebuilding basic infrastructure.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3 data-en="Enterprise-Grade Security" data-de="Sicherheit auf Unternehmensniveau">Enterprise-Grade Security</h3>
+                    <p data-en="We leverage industry leaders like Stripe for payments and OnFido for identity verification. This means your users' financial data and personal information are protected by the same systems used by major banks and fintech companies." data-de="Wir nutzen Branchenführer wie Stripe für Zahlungen und OnFido für Identitätsverifizierung. Das bedeutet, dass die Finanzdaten und persönlichen Informationen Ihrer Benutzer durch dieselben Systeme geschützt sind, die von großen Banken und Fintech-Unternehmen verwendet werden.">We leverage industry leaders like Stripe for payments and OnFido for identity verification. This means your users' financial data and personal information are protected by the same systems used by major banks and fintech companies.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3 data-en="Built to Scale" data-de="Für Skalierung gebaut">Built to Scale</h3>
+                    <p data-en="Our architecture can handle growth from 100 to 100,000 users without major rebuilds. Components scale independently, so busy booking periods won't crash the chat system, and heavy photo uploads won't slow down searches." data-de="Unsere Architektur kann Wachstum von 100 auf 100.000 Benutzer ohne größere Umbauten bewältigen. Komponenten skalieren unabhängig, sodass geschäftige Buchungsphasen das Chat-System nicht zum Absturz bringen und schwere Foto-Uploads die Suche nicht verlangsamen.">Our architecture can handle growth from 100 to 100,000 users without major rebuilds. Components scale independently, so busy booking periods won't crash the chat system, and heavy photo uploads won't slow down searches.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3 data-en="Global Performance" data-de="Globale Performance">Global Performance</h3>
+                    <p data-en="With AWS's global infrastructure, your platform loads fast whether users are in Barcelona, Berlin, or Stockholm. Boat photos load instantly, and search results appear in under 2 seconds across Europe." data-de="Mit AWS' globaler Infrastruktur lädt Ihre Plattform schnell, ob Benutzer in Barcelona, Berlin oder Stockholm sind. Bootsfotos laden sofort und Suchergebnisse erscheinen in unter 2 Sekunden in ganz Europa.">With AWS's global infrastructure, your platform loads fast whether users are in Barcelona, Berlin, or Stockholm. Boat photos load instantly, and search results appear in under 2 seconds across Europe.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤖</div>
+                    <h3 data-en="AI-Powered Intelligence" data-de="KI-gestützte Intelligenz">AI-Powered Intelligence</h3>
+                    <p data-en="Built-in AI helps write compelling boat descriptions, matches renters with perfect boats, and provides intelligent customer support. This enhances the user experience while automating routine tasks, allowing you to focus on growing the business." data-de="Eingebaute KI hilft beim Schreiben überzeugender Bootsbeschreibungen, bringt Mieter mit perfekten Booten zusammen und bietet intelligenten Kundensupport. Dies verbessert die Benutzererfahrung und automatisiert Routineaufgaben, sodass Sie sich auf das Wachstum des Unternehmens konzentrieren können.">Built-in AI helps write compelling boat descriptions, matches renters with perfect boats, and provides intelligent customer support. This enhances the user experience while automating routine tasks, allowing you to focus on growing the business.</p>
+                </div>
             </div>
 
-            <div class="subsection">
-                <h3 data-en="Backend Architecture" data-de="Backend-Architektur">Backend Architecture</h3>
-                <p data-en="The microservices approach allows for independent scaling of different platform components. The API Gateway centralizes authentication, rate limiting, and routing while maintaining service autonomy." data-de="Der Microservices-Ansatz ermöglicht eine unabhängige Skalierung verschiedener Plattformkomponenten. Das API-Gateway zentralisiert Authentifizierung, Rate-Limiting und Routing bei gleichzeitiger Beibehaltung der Service-Autonomie.">The microservices approach allows for independent scaling of different platform components. The API Gateway centralizes authentication, rate limiting, and routing while maintaining service autonomy.</p>
-            </div>
-
-            <div class="subsection">
-                <h3 data-en="Data Strategy" data-de="Datenstrategie">Data Strategy</h3>
-                <p data-en="PostgreSQL serves as the primary database for relational data integrity, while AWS S3 handles file storage with global CDN distribution for optimal performance across European markets." data-de="PostgreSQL dient als primäre Datenbank für relationale Datenintegrität, während AWS S3 die Dateispeicherung mit globaler CDN-Verteilung für optimale Performance in europäischen Märkten übernimmt.">PostgreSQL serves as the primary database for relational data integrity, while AWS S3 handles file storage with global CDN distribution for optimal performance across European markets.</p>
-            </div>
-
-            <div class="subsection">
-                <h3 data-en="Integration Approach" data-de="Integrationsansatz">Integration Approach</h3>
-                <p data-en="Third-party services are integrated through standardized APIs to handle specialized functions: OnFido for identity verification, Stripe for payments, Mapbox for mapping, and Firebase for analytics and push notifications." data-de="Drittanbieter-Services werden über standardisierte APIs integriert, um spezialisierte Funktionen zu handhaben: OnFido für Identitätsverifizierung, Stripe für Zahlungen, Mapbox für Kartierung und Firebase für Analytics und Push-Benachrichtigungen.">Third-party services are integrated through standardized APIs to handle specialized functions: OnFido for identity verification, Stripe for payments, Mapbox for mapping, and Firebase for analytics and push notifications.</p>
+            <div class="competitive-advantage">
+                <h3 data-en="🎯 COMPETITIVE ADVANTAGE" data-de="🎯 WETTBEWERBSVORTEIL">🎯 COMPETITIVE ADVANTAGE</h3>
+                <p data-en="While competitors like GetMyBoat struggle with outdated technology and poor customer service, our modern architecture enables rapid feature development, excellent performance, and superior user experience. We can implement new features in weeks, not months." data-de="Während Konkurrenten wie GetMyBoat mit veralteter Technologie und schlechtem Kundenservice kämpfen, ermöglicht unsere moderne Architektur schnelle Feature-Entwicklung, exzellente Performance und überlegene Benutzererfahrung. Wir können neue Features in Wochen implementieren, nicht in Monaten.">While competitors like GetMyBoat struggle with outdated technology and poor customer service, our modern architecture enables rapid feature development, excellent performance, and superior user experience. We can implement new features in weeks, not months.</p>
             </div>
         </section>
 
