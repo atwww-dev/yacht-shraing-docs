@@ -7,6 +7,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    /* Text breaking for long German words */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .swiper-container {
@@ -62,6 +68,12 @@ body {
     letter-spacing: 1px;
     border-bottom: 4px solid #000000;
     padding-bottom: 0.6rem;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .slide-content p {
@@ -71,6 +83,12 @@ body {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 1rem auto;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .slide-content h3 {
@@ -81,6 +99,12 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 /* Enhanced Competitor Logos */
@@ -277,6 +301,12 @@ body {
     margin-bottom: 0.3rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .icon-content p {
@@ -418,6 +448,12 @@ body {
     letter-spacing: 1px;
     border-bottom: 2px solid #dc2626;
     padding-bottom: 0.4rem;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .our-solutions h4 {
@@ -429,6 +465,12 @@ body {
     letter-spacing: 1px;
     border-bottom: 2px solid #059669;
     padding-bottom: 0.4rem;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .pain-points ul,
@@ -517,6 +559,12 @@ body {
     margin-bottom: 1rem;
     color: #000000;
     font-weight: 700;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .step p {
@@ -574,6 +622,12 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .challenge-box h4::before {
@@ -955,6 +1009,12 @@ body {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #000000;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .toc-content p {
@@ -1310,6 +1370,12 @@ body {
     margin-bottom: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    /* Text breaking for long German compound words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 .promise-card p {
@@ -1347,4 +1413,39 @@ body {
     .promise-card {
         padding: 1.5rem;
     }
+}
+
+/* General text breaking for all text elements to handle long German words */
+p, li, span, div, button, label, a, blockquote {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+/* Ensure tables and code blocks don't break inappropriately */
+code, pre, table, th, td {
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+}
+
+/* Language-specific hyphenation settings */
+:lang(de) {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphenate-limit-chars: 6 3 3; /* Minimum 6 chars, 3 before, 3 after hyphen */
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-zone: 8%;
+}
+
+:lang(en) {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-zone: 8%;
 }

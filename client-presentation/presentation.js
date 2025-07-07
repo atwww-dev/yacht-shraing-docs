@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // Update HTML lang attribute for proper hyphenation
+    const htmlElement = document.getElementById("htmlElement") || document.documentElement;
+    htmlElement.setAttribute("lang", lang);
+
     // Translate elements
     const elements = document.querySelectorAll("[data-en]");
     elements.forEach((el) => {
