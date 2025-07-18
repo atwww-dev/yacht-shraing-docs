@@ -1,0 +1,1152 @@
+/* Competitor Analysis Specific Styles */
+@import url('../styles.css');
+
+/* Override container for competitor analysis */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Abstract Section Styling */
+.abstract {
+    background: var(--white);
+    border: 3px solid var(--primary-black);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.abstract h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--primary-black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid var(--primary-black);
+    padding-bottom: 1rem;
+}
+
+.abstract p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+/* Comparison Table Styling */
+.comparison-table-container {
+    overflow-x: auto;
+    margin: 2rem 0;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--primary-black);
+}
+
+.comparison-table th {
+    background: var(--primary-black);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--primary-black);
+}
+
+.comparison-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.comparison-table tr:nth-child(even) {
+    background: var(--bg-light);
+}
+
+.comparison-table tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+}
+
+.comparison-table td:first-child {
+    font-weight: 700;
+    color: var(--primary-black);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Business Model Details */
+.business-model-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.model-item {
+    background: var(--bg-light);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
+
+.model-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-black);
+}
+
+.model-title {
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.model-value {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Enhanced Table Styling for Data Tables */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--primary-black);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.data-table th {
+    background: var(--primary-black);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--primary-black);
+}
+
+.data-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.data-table tr:nth-child(even) {
+    background: var(--bg-light);
+}
+
+.data-table tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+}
+
+.data-table td:first-child {
+    font-weight: 700;
+    color: var(--primary-black);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Partnership Status Icons */
+.data-table td:contains("✅") {
+    color: var(--accent-green);
+}
+
+.data-table td:contains("❌") {
+    color: var(--accent-red);
+}
+
+.data-table td:contains("🤔") {
+    color: var(--accent-orange);
+}
+
+/* Responsive Design for Tables */
+@media (max-width: 768px) {
+    .comparison-table-container {
+        margin: 1rem -1rem;
+        border-radius: 0;
+    }
+    
+    .comparison-table,
+    .data-table {
+        font-size: 0.8rem;
+        border-radius: 0;
+    }
+    
+    .comparison-table th,
+    .data-table th {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .comparison-table td,
+    .data-table td {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Mobile table layout */
+    .comparison-table,
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .comparison-table tbody,
+    .data-table tbody {
+        display: block;
+    }
+    
+    .comparison-table tr,
+    .data-table tr {
+        display: block;
+        border: 1px solid var(--border-gray);
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        background: var(--bg-light);
+        border-radius: 8px;
+    }
+    
+    .comparison-table th,
+    .data-table th {
+        display: none;
+    }
+    
+    .comparison-table td,
+    .data-table td {
+        display: block;
+        border: none;
+        padding: 0.5rem;
+        position: relative;
+        padding-left: 30%;
+        text-align: left;
+        border-bottom: 1px solid var(--border-gray);
+    }
+    
+    .comparison-table td:before,
+    .data-table td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 25%;
+        font-weight: bold;
+        color: var(--primary-black);
+        font-size: 0.8rem;
+    }
+    
+    .comparison-table td:last-child,
+    .data-table td:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Business Model Cards Enhancement */
+.business-model-details .model-item {
+    border-left: 4px solid var(--primary-black);
+    background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+}
+
+.business-model-details .model-item:hover {
+    border-left-color: var(--accent-blue);
+}
+
+/* Enhanced spacing for mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .abstract {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .abstract h3 {
+        font-size: 1.5rem;
+    }
+    
+    .abstract p {
+        font-size: 1rem;
+    }
+    
+    .business-model-details {
+        gap: 1rem;
+    }
+    
+    .model-item {
+        padding: 1rem;
+    }
+    
+    .model-title {
+        font-size: 0.9rem;
+    }
+    
+    .model-value {
+        font-size: 0.85rem;
+    }
+}
+
+/* Business Profiles Section */
+.business-profiles {
+    margin-bottom: 4rem;
+}
+
+.business-profiles h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--primary-black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid var(--primary-black);
+    padding-bottom: 1rem;
+}
+
+.profiles-intro {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border-gray);
+}
+
+.profiles-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    text-align: center;
+    margin: 0;
+}
+
+/* Business Profile Cards */
+.business-profile-card {
+    background: var(--white);
+    border: 3px solid var(--primary-black);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.business-profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Header */
+.profile-header {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--dark-gray) 100%);
+    color: var(--white);
+    padding: 3rem;
+}
+
+.company-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.company-info h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-location,
+.company-founded,
+.company-status {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding: 0.3rem 0;
+}
+
+.company-status {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Company Metrics */
+.company-metrics {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 3rem;
+}
+
+.profile-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.profile-section h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 0.5rem;
+}
+
+.profile-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+/* Performance Grid */
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.performance-item {
+    background: var(--bg-light);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.performance-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-black);
+}
+
+.perf-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.perf-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-black);
+}
+
+/* Strengths Grid */
+.strengths-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.strength-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.strength-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-black);
+}
+
+.strength-icon {
+    font-size: 2.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.strength-content {
+    flex: 1;
+}
+
+.strength-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+}
+
+.strength-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* Partnership Analysis */
+.partnership-analysis {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.partnership-opportunity {
+    background: var(--white);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.partnership-opportunity:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Detailed Partnership Analysis */
+.partnership-detailed-analysis {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.partnership-opportunity-detailed {
+    background: var(--white);
+    border: 3px solid var(--border-gray);
+    border-radius: 16px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partnership-opportunity-detailed:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-black);
+}
+
+.opp-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.opp-status.high {
+    background: var(--accent-green);
+    color: var(--white);
+}
+
+.opp-status.excellent {
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+.opp-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.opp-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+/* Partnership Why/How Sections */
+.partnership-why,
+.partnership-how {
+    margin-bottom: 2.5rem;
+}
+
+.partnership-why h5,
+.partnership-how h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 0.5rem;
+}
+
+.partnership-why ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.partnership-why li {
+    background: var(--bg-light);
+    border-left: 4px solid var(--accent-blue);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    position: relative;
+}
+
+.partnership-why li:before {
+    content: "✓";
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 1.2rem;
+}
+
+.partnership-why li {
+    padding-left: 2.5rem;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: var(--bg-light);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-black);
+}
+
+.step-number {
+    background: var(--primary-black);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h6 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    text-align: justify;
+    margin: 0;
+}
+
+/* Partnership Benefits */
+.partnership-benefits {
+    margin-bottom: 2.5rem;
+}
+
+.partnership-benefits h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 0.5rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.benefit-column {
+    background: var(--bg-light);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-column:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-black);
+}
+
+.benefit-column h6 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-gray);
+    padding-bottom: 0.5rem;
+}
+
+.benefit-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-column li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-gray);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.benefit-column li:before {
+    content: "•";
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
+/* Partnership Examples */
+.partnership-example {
+    margin-bottom: 2.5rem;
+}
+
+.partnership-example h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 0.5rem;
+}
+
+.example-scenario {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.example-scenario p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Partnership Innovation */
+.partnership-innovation {
+    margin-bottom: 2.5rem;
+}
+
+.partnership-innovation h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-black);
+    padding-bottom: 0.5rem;
+}
+
+.innovation-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.innovation-item {
+    background: var(--bg-light);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-orange);
+}
+
+.innovation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-black);
+}
+
+.innovation-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.innovation-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    text-align: justify;
+}
+
+/* Responsive Design for Business Profiles */
+@media (max-width: 768px) {
+    .company-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .company-info h3 {
+        font-size: 2rem;
+    }
+    
+    .company-metrics {
+        justify-content: center;
+    }
+    
+    .performance-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strengths-grid {
+        gap: 1rem;
+    }
+    
+    .strength-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .strength-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .partnership-analysis {
+        gap: 1.5rem;
+    }
+    
+    .partnership-opportunity {
+        padding: 1.5rem;
+    }
+    
+    /* Responsive Design for Detailed Partnership Analysis */
+    .partnership-detailed-analysis {
+        gap: 2rem;
+    }
+    
+    .partnership-opportunity-detailed {
+        padding: 2rem;
+    }
+    
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-column {
+        padding: 1.5rem;
+    }
+    
+    .innovation-points {
+        gap: 1rem;
+    }
+    
+    .innovation-item {
+        padding: 1.5rem;
+    }
+    
+    .example-scenario {
+        padding: 1.5rem;
+    }
+    
+    .partnership-why li {
+        padding: 1rem 1.2rem;
+        padding-left: 2rem;
+    }
+    
+    .partnership-why li:before {
+        left: 0.3rem;
+        top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 2rem;
+    }
+    
+    .profile-content {
+        padding: 2rem;
+    }
+    
+    .company-info h3 {
+        font-size: 1.8rem;
+    }
+    
+    .metric-card {
+        min-width: 100px;
+        padding: 1rem;
+    }
+    
+    .metric-value {
+        font-size: 1.8rem;
+    }
+    
+    .profile-section h4 {
+        font-size: 1.3rem;
+    }
+    
+    .profile-section p {
+        font-size: 1rem;
+    }
+    
+    .performance-item {
+        padding: 1rem;
+    }
+    
+    .strength-item {
+        padding: 1rem;
+    }
+    
+    .partnership-opportunity {
+        padding: 1rem;
+    }
+    
+    /* Mobile responsive for detailed partnership analysis */
+    .partnership-opportunity-detailed {
+        padding: 1.5rem;
+    }
+    
+    .opp-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .partnership-why h5,
+    .partnership-how h5,
+    .partnership-benefits h5,
+    .partnership-example h5,
+    .partnership-innovation h5 {
+        font-size: 1.1rem;
+    }
+    
+    .step-item {
+        padding: 1.5rem;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .step-content h6 {
+        font-size: 1rem;
+    }
+    
+    .benefit-column {
+        padding: 1rem;
+    }
+    
+    .benefit-column h6 {
+        font-size: 1rem;
+    }
+    
+    .innovation-item {
+        padding: 1rem;
+    }
+    
+    .innovation-title {
+        font-size: 1rem;
+    }
+    
+    .example-scenario {
+        padding: 1rem;
+    }
+    
+    .example-scenario p {
+        font-size: 1rem;
+    }
+    
+    .partnership-why li {
+        padding: 0.8rem 1rem;
+        padding-left: 1.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .partnership-why li:before {
+        left: 0.2rem;
+        top: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .language-toggle {
+        display: none;
+    }
+    
+    .comparison-table,
+    .data-table {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+    
+    .comparison-table th,
+    .data-table th {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    
+    .comparison-table tr,
+    .data-table tr {
+        page-break-inside: avoid;
+    }
+    
+    .business-profile-card {
+        page-break-inside: avoid;
+        border: 1px solid #000;
+        margin-bottom: 2rem;
+    }
+    
+    .profile-header {
+        background: #000 !important;
+        color: #fff !important;
+    }
+}
