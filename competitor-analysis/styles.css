@@ -840,12 +840,13 @@
 }
 
 .example-scenario {
-    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
-    color: var(--white);
+    background: var(--bg-light);
+    color: var(--text-dark);
     padding: 2rem;
     border-radius: 12px;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--primary-black);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .example-scenario p {
@@ -853,6 +854,7 @@
     line-height: 1.7;
     margin: 0;
     text-align: justify;
+    color: var(--text-dark);
 }
 
 /* Partnership Innovation */
